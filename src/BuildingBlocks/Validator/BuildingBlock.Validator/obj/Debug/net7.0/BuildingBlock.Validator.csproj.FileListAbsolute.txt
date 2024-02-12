@@ -1,0 +1,15 @@
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\bin\Debug\net7.0\BuildingBlock.Validator.deps.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\bin\Debug\net7.0\BuildingBlock.Validator.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\bin\Debug\net7.0\BuildingBlock.Validator.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\bin\Debug\net7.0\BuildingBlock.Base.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\bin\Debug\net7.0\BuildingBlock.Base.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.csproj.AssemblyReference.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.AssemblyInfoInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.AssemblyInfo.cs
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.csproj.CoreCompileInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.csproj.CopyComplete
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\refint\BuildingBlock.Validator.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\ref\BuildingBlock.Validator.dll

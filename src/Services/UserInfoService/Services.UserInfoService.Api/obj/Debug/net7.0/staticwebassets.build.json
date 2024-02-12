@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hwtzwVyt/ujakOQu5WRNL04ilSYr6bFMTHvQMzfgICY=",
+  "Source": "Services.UserInfoService.Api",
+  "BasePath": "_content/Services.UserInfoService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

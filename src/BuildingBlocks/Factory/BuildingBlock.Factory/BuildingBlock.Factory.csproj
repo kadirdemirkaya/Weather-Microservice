@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\BuildingBlock.Base\BuildingBlock.Base.csproj" />
+    <ProjectReference Include="..\..\Dapper\BuildingBlock.Dapper\BuildingBlock.Dapper.csproj" />
+    <ProjectReference Include="..\..\Email\BuildingBlock.Email\BuildingBlock.Email.csproj" />
+    <ProjectReference Include="..\..\Mongo\BuildingBlock.Mongo\BuildingBlock.Mongo.csproj" />
+    <ProjectReference Include="..\..\MsSql\BuildingBlock.MsSql\BuildingBlock.MsSql.csproj" />
+    <ProjectReference Include="..\..\PostgreSql\BuildingBlock.PostgreSql\BuildingBlock.PostgreSql.csproj" />
+    <ProjectReference Include="..\..\RabbitMq\BuildingBlock.RabbitMq\BuildingBlock.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\Redis\BuildingBlock.Redis\BuildingBlock.Redis.csproj" />
+  </ItemGroup>
+
+</Project>

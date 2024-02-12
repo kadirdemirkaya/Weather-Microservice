@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "YjyxlBoxR2CBN988hNkKCRyMIfFnZuS4ovpIY8R2dD0=",
+  "Source": "Services.ClientAndServerService.Api",
+  "BasePath": "_content/Services.ClientAndServerService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

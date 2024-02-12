@@ -1,0 +1,35 @@
+# version: '3.7'
+# services: 
+#     mongodb_container:
+#         image: mongo:latest
+#         environment:
+#             MONGO_INITDB_ROOT_USERNAME: root
+#             MONGO_INITDB_ROOT_PASSWORD: rootpassword
+#         ports:
+#           - 27017:27017
+#         volumes:
+#           - mongodb_data_container:/data/db
+
+# volumes:
+#   mongodb_data_container:
+
+#mongodb://root:rootpassword@localhost:27017
+#mongodb://root:rootpassword@127.0.0.1:27017
+
+
+
+
+
+
+
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017

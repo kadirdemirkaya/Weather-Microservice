@@ -1,0 +1,2 @@
+obj\Debug\net7.0\Protos/User.cs \
+obj\Debug\net7.0\Protos/UserGrpc.cs: Protos/user.proto

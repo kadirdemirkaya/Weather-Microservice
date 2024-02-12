@@ -1,0 +1,202 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\HealthCheck\\BuildingBlock.HealthCheck\\BuildingBlock.HealthCheck.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj",
+        "projectName": "BuildingBlock.Base",
+        "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj",
+        "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Casper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Users\\Casper\\Desktop\\GitHub Projects\\BasicMicroserviceApp\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.7.14.1, )"
+            },
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.19.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.6.122, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\HealthCheck\\BuildingBlock.HealthCheck\\BuildingBlock.HealthCheck.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\HealthCheck\\BuildingBlock.HealthCheck\\BuildingBlock.HealthCheck.csproj",
+        "projectName": "BuildingBlock.HealthCheck",
+        "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\HealthCheck\\BuildingBlock.HealthCheck\\BuildingBlock.HealthCheck.csproj",
+        "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\HealthCheck\\BuildingBlock.HealthCheck\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Casper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Users\\Casper\\Desktop\\GitHub Projects\\BasicMicroserviceApp\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AspNetCore.HealthChecks.MongoDb": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "AspNetCore.HealthChecks.NpgSql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "AspNetCore.HealthChecks.Rabbitmq": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "AspNetCore.HealthChecks.Redis": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "AspNetCore.HealthChecks.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

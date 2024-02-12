@@ -1,0 +1,421 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Dapper\\BuildingBlock.Dapper\\BuildingBlock.Dapper.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj",
+        "projectName": "BuildingBlock.Base",
+        "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj",
+        "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Casper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Users\\Casper\\Desktop\\GitHub Projects\\BasicMicroserviceApp\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.7.14.1, )"
+            },
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.19.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.6.122, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Dapper\\BuildingBlock.Dapper\\BuildingBlock.Dapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Dapper\\BuildingBlock.Dapper\\BuildingBlock.Dapper.csproj",
+        "projectName": "BuildingBlock.Dapper",
+        "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Dapper\\BuildingBlock.Dapper\\BuildingBlock.Dapper.csproj",
+        "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Dapper\\BuildingBlock.Dapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Casper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Users\\Casper\\Desktop\\GitHub Projects\\BasicMicroserviceApp\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj"
+              },
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj"
+              },
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mapper\\BuildingBlock.Mapper\\BuildingBlock.Mapper.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mapper\\BuildingBlock.Mapper\\BuildingBlock.Mapper.csproj"
+              },
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\MsSql\\BuildingBlock.MsSql\\BuildingBlock.MsSql.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\MsSql\\BuildingBlock.MsSql\\BuildingBlock.MsSql.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj",
+        "projectName": "BuildingBlock.Logger",
+        "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj",
+        "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Casper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Users\\Casper\\Desktop\\GitHub Projects\\BasicMicroserviceApp\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Elastic.CommonSchema.Serilog": {
+              "target": "Package",
+              "version": "[8.6.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Enrichers.CorrelationId": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.Async": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Serilog.Sinks.Elasticsearch": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[5.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mapper\\BuildingBlock.Mapper\\BuildingBlock.Mapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mapper\\BuildingBlock.Mapper\\BuildingBlock.Mapper.csproj",
+        "projectName": "BuildingBlock.Mapper",
+        "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mapper\\BuildingBlock.Mapper\\BuildingBlock.Mapper.csproj",
+        "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mapper\\BuildingBlock.Mapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Casper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Users\\Casper\\Desktop\\GitHub Projects\\BasicMicroserviceApp\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\MsSql\\BuildingBlock.MsSql\\BuildingBlock.MsSql.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\MsSql\\BuildingBlock.MsSql\\BuildingBlock.MsSql.csproj",
+        "projectName": "BuildingBlock.MsSql",
+        "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\MsSql\\BuildingBlock.MsSql\\BuildingBlock.MsSql.csproj",
+        "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\MsSql\\BuildingBlock.MsSql\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Casper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Users\\Casper\\Desktop\\GitHub Projects\\BasicMicroserviceApp\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Base\\BuildingBlock.Base\\BuildingBlock.Base.csproj"
+              },
+              "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj": {
+                "projectPath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

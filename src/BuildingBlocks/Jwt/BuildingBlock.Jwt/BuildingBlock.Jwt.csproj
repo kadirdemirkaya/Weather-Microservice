@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\BuildingBlock.Base\BuildingBlock.Base.csproj" />
+    <ProjectReference Include="..\..\Dapper\BuildingBlock.Dapper\BuildingBlock.Dapper.csproj" />
+    <ProjectReference Include="..\..\MsSql\BuildingBlock.MsSql\BuildingBlock.MsSql.csproj" />
+  </ItemGroup>
+
+</Project>

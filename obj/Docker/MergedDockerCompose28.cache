@@ -1,0 +1,59 @@
+name: dockercompose13092348111822341576
+services:
+  mongo:
+    container_name: mongo-db
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionUrl: mongodb://mongo:27017/WeatherDbContext
+      DatabaseName: WeatherDbContext
+      TableName: Location
+    image: mongo
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 27017
+      published: "18005"
+      protocol: tcp
+  services.locationservice.api:
+    build:
+      context: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice
+      dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+    container_name: location-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      ConnectionUrl: mongodb://mongo:27017/WeatherDbContext
+      DatabaseName: WeatherDbContext
+      TableName: Location
+    image: serviceslocationserviceapi
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "18006"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Casper\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Casper\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  backend:
+    name: dockercompose13092348111822341576_backend
+    driver: bridge

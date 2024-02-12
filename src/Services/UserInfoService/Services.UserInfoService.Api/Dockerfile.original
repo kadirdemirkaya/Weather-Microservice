@@ -1,0 +1,27 @@
+
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+COPY ["src/BuildingBlocks/Base/BuildingBlock.Base/BuildingBlock.Base.csproj", "src/BuildingBlocks/Base/BuildingBlock.Base/"]
+COPY ["src/BuildingBlocks/Dapper/BuildingBlock.Dapper/BuildingBlock.Dapper.csproj", "src/BuildingBlocks/Dapper/BuildingBlock.Dapper/"]
+COPY ["src/BuildingBlocks/Factory/BuildingBlock.Factory/BuildingBlock.Factory.csproj", "src/BuildingBlocks/Factory/BuildingBlock.Factory/"]
+COPY ["src/BuildingBlocks/Logger/BuildingBlock.Logger/BuildingBlock.Logger.csproj", "src/BuildingBlocks/Logger/BuildingBlock.Logger/"]
+COPY ["src/BuildingBlocks/Mapper/BuildingBlock.Mapper/BuildingBlock.Mapper.csproj", "src/BuildingBlocks/Mapper/BuildingBlock.Mapper/"]
+COPY ["src/BuildingBlocks/Mongo/BuildingBlock.Mongo/BuildingBlock.Mongo.csproj", "src/BuildingBlocks/Mongo/BuildingBlock.Mongo/"]
+COPY ["src/Services/LocationService/Services.LocationService/Services.LocationService.csproj", "src/Services/LocationService/Services.LocationService/"]
+RUN dotnet restore "src/Services/LocationService/Services.LocationService.Api/Services.LocationService.Api.csproj"
+COPY . .
+WORKDIR "/src/src/Services/LocationService/Services.LocationService.Api"
+RUN dotnet build "Services.LocationService.Api.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Services.LocationService.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Services.LocationService.Api.dll"]

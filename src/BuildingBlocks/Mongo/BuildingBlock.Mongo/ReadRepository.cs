@@ -1,0 +1,536 @@
+﻿using BuildingBlock.Base.Abstractions;
+using BuildingBlock.Base.Configs;
+using BuildingBlock.Base.Exceptions;
+using BuildingBlock.Base.Models.Base;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using MongoDB.Driver.Linq;
+using System.Linq.Expressions;
+
+namespace BuildingBlock.Mongo
+{
+    public class ReadRepository<T, TId> : IReadRepository<T, TId>
+            where T : Entity<TId>
+            where TId : ValueObject
+    {
+        private MongoPersistenceConnection<T> persistenceConnection;
+        private IMongoCollection<T> _collection;
+
+        public ReadRepository(IMongoDatabase database, string? collectionName = null)
+        {
+            persistenceConnection = new(database, null, collectionName, 5);
+            _collection = persistenceConnection.GetCollection();
+        }
+
+        public ReadRepository(DatabaseConfig databaseConfig, string? collectionName = null)
+        {
+            if (databaseConfig.ConnectionString != null)
+            {
+                persistenceConnection = new(databaseConfig);
+                _collection = persistenceConnection.GetCollection();
+            }
+        }
+
+        private string GetRepoName()
+            => typeof(ReadRepository<,>).Name;
+
+        public Task<bool> AnyAsync()
+            => AnyAsync(null);
+
+        public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression, bool tracking = true)
+        {
+            try
+            {
+                if (expression != null)
+                {
+                    var filter = Builders<T>.Filter.Where(expression);
+                    var result = _collection.CountDocuments(filter);
+                    return result > 0;
+                }
+                else
+                {
+                    var result = _collection.EstimatedDocumentCount();
+                    return result > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public Task<int> CountAsync()
+            => CountAsync(null);
+
+        public async Task<int> CountAsync(Expression<Func<T, bool>> expression = null, bool tracking = true)
+        {
+            try
+            {
+                if (expression != null)
+                {
+                    var filter = Builders<T>.Filter.Where(expression);
+                    var result = _collection.CountDocuments(filter);
+                    return (int)result;
+                }
+                else
+                {
+                    var result = _collection.EstimatedDocumentCount();
+                    return (int)result;
+                }
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<List<T>> GetAllAsync()
+            => await GetAllAsync(null);
+
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, bool tracking = true, params Expression<Func<T, object>>[] includeEntity)
+        {
+            try
+            {
+                var result = new List<T>();
+
+                if (expression == null)
+                    result = await _collection.Find(new BsonDocument()).ToListAsync();
+                else
+                    result = await _collection.Find(expression).ToListAsync();
+
+                foreach (var item in result)
+                {
+                    var id = GetIdFromObject(item);
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<T> GetAsync(Expression<Func<T, bool>> expression = null, bool tracking = true, params Expression<Func<T, object>>[] includeEntity)
+        {
+            try
+            {
+                var filter = expression ?? Builders<T>.Filter.Empty;
+                var cursor = await _collection.FindAsync(filter);
+                var result = await cursor.FirstOrDefaultAsync();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<T> GetByGuidAsync(string id, bool tracking = true)
+        {
+            try
+            {
+                var filter = Builders<T>.Filter.Eq("_id._id", ObjectId.Parse(id));
+                var cursor = await _collection.FindAsync(filter);
+                var result = await cursor.FirstOrDefaultAsync();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        private object GetValueFromExpression(Expression expression)
+        {
+            if (expression is ConstantExpression)
+            {
+                return (expression as ConstantExpression).Value;
+            }
+            else if (expression is MemberExpression)
+            {
+                var objectMember = Expression.Convert(expression, typeof(object));
+                var getterLambda = Expression.Lambda<Func<object>>(objectMember);
+                var getter = getterLambda.Compile();
+                return getter();
+            }
+            else
+            {
+                throw new InvalidOperationException("Invalid expression type");
+            }
+        }
+
+        private string GetIdFromObject(T obj)
+        {
+            var idProperty = typeof(T).GetProperty("Id");
+            if (idProperty != null)
+            {
+                var idValue = idProperty.GetValue(obj) as ObjectId?;
+                if (idValue != null)
+                {
+                    return idValue.ToString();
+                }
+            }
+
+            return null;
+        }
+    }
+
+
+
+
+
+    #region OLD
+    //public class ReadRepository<T> : IReadRepository2<T>
+    //  where T : class
+    //{
+    //    private readonly IMongoCollection<T> _collection;
+
+    //    public ReadRepository(IMongoDatabase database, string? collectionName = null)
+    //    {
+    //        _collection = database.GetCollection<T>(collectionName ?? typeof(T).Name);
+    //    }
+
+    //    public Task<bool> AnyAsync(Expression<Func<T, bool>> expression, bool tracking = true)
+    //    {
+    //        if (expression != null)
+    //        {
+    //            var filter = Builders<T>.Filter.Where(expression);
+
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert && filter.Inject());
+
+    //                var cursor = _collection.Watch(pipeline);
+    //                return Task.FromResult(cursor.ToEnumerable().Any());
+    //            }
+    //            else
+    //            {
+    //                var result = _collection.CountDocuments(filter);
+    //                return Task.FromResult(result > 0);
+    //            }
+    //        }
+    //        else
+    //        {
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert);
+
+    //                var cursor = _collection.Watch(pipeline);
+    //                return Task.FromResult(cursor.ToEnumerable().Any());
+    //            }
+    //            else
+    //            {
+    //                var result = _collection.EstimatedDocumentCount();
+    //                return Task.FromResult(result > 0);
+    //            }
+    //        }
+    //    }
+
+    //    public Task<bool> AnyAsync()
+    //    {
+    //        return AnyAsync(null, true); // Varsayılan olarak tüm elemanları kontrol et
+    //    }
+
+    //    public Task<int> CountAsync(Expression<Func<T, bool>> filterExpression = null, bool tracking = true)
+    //    {
+    //        if (filterExpression != null)
+    //        {
+    //            var filter = Builders<T>.Filter.Where(filterExpression);
+
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert && filter.Inject());
+
+    //                var cursor = _collection.Watch(pipeline); // WatchAsync kullanmamıza gerek yok, çünkü sadece sayıyı alıyoruz
+    //                var changeCount = cursor.ToEnumerable().Count();
+    //                return Task.FromResult(changeCount);
+    //            }
+    //            else
+    //            {
+    //                var result = _collection.CountDocuments(filter);
+    //                return Task.FromResult((int)result);
+    //            }
+    //        }
+    //        else
+    //        {
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert);
+
+    //                var cursor = _collection.Watch(pipeline);
+    //                var changeCount = cursor.ToEnumerable().Count();
+    //                return Task.FromResult(changeCount);
+    //            }
+    //            else
+    //            {
+    //                var result = _collection.EstimatedDocumentCount(); // Tüm belgeleri saymak için kullanılır
+    //                return Task.FromResult((int)result);
+    //            }
+    //        }
+    //    }
+
+    //    public Task<int> CountAsync()
+    //    {
+    //        return CountAsync(null, true);
+    //    }
+
+    //    public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filterExpression = null, bool tracking = true)
+    //    {
+    //        var options = new FindOptions<T> { Projection = Builders<T>.Projection.Exclude("_id") };
+
+    //        if (filterExpression != null)
+    //        {
+    //            var filter = Builders<T>.Filter.Where(filterExpression);
+
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert && filter.Inject());
+
+    //                var cursor = await _collection.WatchAsync(pipeline);
+    //                return cursor.ToList().Select(change => change.FullDocument).ToList();
+    //            }
+    //            else
+    //            {
+    //                var cursor = await _collection.FindAsync(filter, options);
+    //                return await cursor.ToListAsync();
+    //            }
+    //        }
+    //        else
+    //        {
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert);
+
+    //                var cursor = await _collection.WatchAsync(pipeline);
+    //                return cursor.ToList().Select(change => change.FullDocument).ToList();
+    //            }
+    //            else
+    //            {
+    //                var cursor = await _collection.FindAsync(FilterDefinition<T>.Empty, options);
+    //                return await cursor.ToListAsync();
+    //            }
+    //        }
+    //    }
+
+    //    public async Task<List<T>> GetAllAsync()
+    //    {
+    //        return await GetAllAsync(null, true);
+    //    }
+
+    //    public async Task<T> GetAsync(Expression<Func<T, bool>> expression = null, bool tracking = true)
+    //    {
+    //        if (expression != null)
+    //        {
+    //            var filter = Builders<T>.Filter.Where(expression);
+
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert && filter.Inject());
+
+    //                var cursor = await _collection.WatchAsync(pipeline);
+    //                var change = cursor.FirstOrDefault();
+    //                return change?.FullDocument;
+    //            }
+    //            else
+    //            {
+    //                var result = await _collection.FindAsync(filter);
+    //                return await result.FirstOrDefaultAsync();
+    //            }
+    //        }
+    //        else
+    //        {
+    //            if (tracking)
+    //            {
+    //                var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                    .Match(change => change.OperationType == ChangeStreamOperationType.Insert);
+
+    //                var cursor = await _collection.WatchAsync(pipeline);
+    //                var change = cursor.FirstOrDefault();
+    //                return change?.FullDocument;
+    //            }
+    //            else
+    //            {
+    //                var result = await _collection.FindAsync(FilterDefinition<T>.Empty);
+    //                return await result.FirstOrDefaultAsync();
+    //            }
+    //        }
+    //    }
+
+    //    public async Task<T> GetByGuidAsync(Guid id, bool tracking = true)
+    //    {
+    //        var filter = Builders<T>.Filter.Eq("_id", id);
+
+    //        if (tracking)
+    //        {
+    //            var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<T>>()
+    //                .Match(change => change.OperationType == ChangeStreamOperationType.Insert && filter.Inject());
+
+    //            var cursor = await _collection.WatchAsync(pipeline);
+    //            var change = cursor.FirstOrDefault();
+    //            return change?.FullDocument;
+    //        }
+    //        else
+    //        {
+    //            var result = await _collection.FindAsync(filter);
+    //            return await result.FirstOrDefaultAsync();
+    //        }
+    //    }
+    //}
+    #endregion
+
+
+
+
+
+    public class ReadRepository<T> : IReadRepository<T>
+      where T : class
+    {
+        private MongoPersistenceConnection<T> persistenceConnection;
+        private IMongoCollection<T> _collection;
+
+        public ReadRepository(IMongoDatabase database, string? collectionName = null)
+        {
+            persistenceConnection = new(database, null, collectionName, 5);
+        }
+
+        public ReadRepository(DatabaseConfig databaseConfig, string? collectionName = null)
+        {
+            if (databaseConfig.ConnectionString != null)
+            {
+                persistenceConnection = new(databaseConfig);
+                _collection = persistenceConnection.GetCollection();
+            }
+        }
+
+        private string GetRepoName()
+            => typeof(ReadRepository<>).Name;
+
+        public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression, bool tracking = true)
+        {
+            try
+            {
+                return await _collection.Find(expression).AnyAsync();
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<bool> AnyAsync()
+            => await AnyAsync(null, true);
+
+        public async Task<int> CountAsync()
+            => await CountAsync(null, true);
+
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, bool tracking = true)
+        {
+            try
+            {
+                if (expression != null)
+                {
+                    return await _collection.Find(expression).ToListAsync();
+                }
+                else
+                {
+                    return await _collection.Find(_ => true).ToListAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<List<T>> GetAllAsync()
+            => await GetAllAsync(null, true, null);
+
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, bool? tracking = true, params Expression<Func<T, object>>[]? includeEntity)
+        {
+            try
+            {
+                return await _collection.Find(_ => true).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<T> GetAsync(Expression<Func<T, bool>> expression = null, bool? tracking = true, params Expression<Func<T, object>>[]? includeEntity)
+        {
+            try
+            {
+                return await _collection.Find(expression).FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<T> GetByGuidAsync(string id, bool? tracking = true)
+        {
+            try
+            {
+                var filter = Builders<T>.Filter.Eq("_id", ObjectId.Parse(id));
+                return await _collection.Find(filter).FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression, bool? tracking = true)
+        {
+            try
+            {
+                return await _collection.Find(_ => true).AnyAsync();
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+
+        public async Task<int> CountAsync(Expression<Func<T, bool>> expression = null, bool? tracking = true)
+        {
+            try
+            {
+                if (expression != null)
+                {
+                    return (int)await _collection.CountDocumentsAsync(expression);
+                }
+                else
+                {
+                    return (int)await _collection.CountDocumentsAsync(_ => true);
+                }
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Warning("MongoDb Repository Error: " + ex.Message);
+                throw new RepositoryErrorException(GetRepoName(), ex.Message);
+            }
+        }
+    }
+}

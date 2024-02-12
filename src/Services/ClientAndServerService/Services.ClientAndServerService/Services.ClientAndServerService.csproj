@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Configurations\" />
+		<Folder Include="Features\User\Queries\" />
+		<Folder Include="Features\Weather\Commands\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+	  <PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+	  <PackageReference Include="Grpc.Tools" Version="2.60.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\BuildingBlocks\Base\BuildingBlock.Base\BuildingBlock.Base.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\HealthCheck\BuildingBlock.HealthCheck\BuildingBlock.HealthCheck.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Logger\BuildingBlock.Logger\BuildingBlock.Logger.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Mapper\BuildingBlock.Mapper\BuildingBlock.Mapper.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Validator\BuildingBlock.Validator\BuildingBlock.Validator.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\user.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,51 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "UserInfoService";
+
+service GrpcUser {
+	rpc UserLogin (UserLoginModelRequest) returns (UserLoginModelResponse);
+	rpc UserLogout (UserLogoutModelRequest) returns (UserLogoutModelResponse);
+	rpc UserRegister (UserRegisterModelRequest) returns (UserRegisterModelResponse);
+}
+
+//User Login
+message UserLoginModelRequest {
+	UserLoginModel UserLoginModel = 1;
+}
+
+message UserLoginModelResponse {
+	bool issuccess = 1;	
+	string token = 2;
+}
+
+message UserLoginModel {
+	string email = 1;
+	string password = 2;
+}
+
+//User Logout
+message UserLogoutModelRequest {
+	UserLogoutModel UserLogoutModel = 1;
+}
+
+message UserLogoutModelResponse {
+	bool response = 1;
+}
+
+message UserLogoutModel {
+	string token = 1;
+}
+
+//User Register
+message UserRegisterModelRequest {
+	UserRegisterModel UserRegisterModel = 1;
+}
+
+message UserRegisterModel {
+	string email = 1;
+	string password = 2;
+}
+
+message UserRegisterModelResponse {
+	bool response = 1;
+}

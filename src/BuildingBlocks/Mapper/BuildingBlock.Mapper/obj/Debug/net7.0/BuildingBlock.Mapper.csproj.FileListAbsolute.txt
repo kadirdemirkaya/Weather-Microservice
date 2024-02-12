@@ -1,0 +1,15 @@
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\bin\Debug\net7.0\BuildingBlock.Mapper.deps.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\bin\Debug\net7.0\BuildingBlock.Mapper.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\bin\Debug\net7.0\BuildingBlock.Mapper.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\bin\Debug\net7.0\BuildingBlock.Base.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\bin\Debug\net7.0\BuildingBlock.Base.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.csproj.AssemblyReference.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.AssemblyInfoInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.AssemblyInfo.cs
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.csproj.CoreCompileInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.csproj.CopyComplete
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\refint\BuildingBlock.Mapper.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\BuildingBlock.Mapper.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mapper\BuildingBlock.Mapper\obj\Debug\net7.0\ref\BuildingBlock.Mapper.dll

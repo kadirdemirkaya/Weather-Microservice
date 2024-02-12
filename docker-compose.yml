@@ -1,0 +1,168 @@
+# version: '3.4'
+
+# services:
+#   mongo:
+#     container_name: mongo-db
+#     image: mongo
+#     ports:
+#       - 18005:27017
+#     networks:
+#       - backend
+
+#   services.locationservice.api:
+#     container_name: location-api
+#     image: ${DOCKER_REGISTRY-}serviceslocationserviceapi
+#     build:
+#       context: .
+#       dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+#     ports:
+#       - 18006:80
+#     networks:
+#       - backend
+#     environment:
+#       - ASPNETCORE_ENVIRONMENT=Production
+#       - DB_HOST=localhost
+#       - DB_NAME=WeatherDbContext
+
+# networks:
+#   backend:
+#     driver: bridge
+
+
+  # services.locationservice.api:
+  #   image: ${DOCKER_REGISTRY-}serviceslocationserviceapi
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+
+
+
+
+
+
+
+# version: '3.4'
+
+# services:
+#   mongo:
+#     container_name: mongo-db
+#     image: mongo
+#     ports:
+#       - 18005:27017
+#     networks:
+#       - backend
+
+#   services.locationservice.api:
+#     container_name: location-api
+#     image: ${DOCKER_REGISTRY-}serviceslocationserviceapi
+#     build:
+#       context: .
+#       dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+#     ports:
+#       - 18006:80
+#     networks:
+#       - backend
+#     env_file:
+#       - C:/Users/Casper/Desktop/GitHub Projects/WeatherMicroservice/.env.production
+
+# networks:
+#   backend:
+#     driver: bridge
+
+
+
+
+
+
+
+
+# version: '3.4'
+
+# services:
+#   mongo:
+#     container_name: mongo-db
+#     image: mongo
+#     ports:
+#       - 18005:27017
+#     networks:
+#       - backend
+#     env_file:
+#       - locationveriable.env
+
+#   services.locationservice.api:
+#     container_name: location-api
+#     image: ${DOCKER_REGISTRY-}serviceslocationserviceapi
+#     build:
+#       context: .
+#       dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+#     ports:
+#       - 18006:80
+#     networks:
+#       - backend
+#     env_file:
+#       - locationveriable.env
+
+# networks:
+#   backend:
+#     driver: bridge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+version: '3.4'
+
+services:
+  mongo:
+    container_name: mongo-db
+    image: mongo
+    ports:
+      - 18005:27017
+    networks:
+      - backend
+    env_file:
+      - locationveriable.env
+
+  services.locationservice.api:
+    container_name: location-api
+    image: ${DOCKER_REGISTRY-}serviceslocationserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+    ports:
+      - 18006:80
+    networks:
+      - backend
+    env_file:
+      - locationveriable.env
+  
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    networks:
+      - backend
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+
+       
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  rabbitmq:

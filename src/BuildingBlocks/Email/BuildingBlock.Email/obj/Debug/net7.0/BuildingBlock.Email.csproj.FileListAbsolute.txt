@@ -1,0 +1,17 @@
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\bin\Debug\net7.0\BuildingBlock.Email.deps.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\bin\Debug\net7.0\BuildingBlock.Email.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\bin\Debug\net7.0\BuildingBlock.Email.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\bin\Debug\net7.0\BuildingBlock.Base.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\bin\Debug\net7.0\BuildingBlock.Logger.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\bin\Debug\net7.0\BuildingBlock.Base.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\bin\Debug\net7.0\BuildingBlock.Logger.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.csproj.AssemblyReference.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.AssemblyInfoInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.AssemblyInfo.cs
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.csproj.CoreCompileInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.csproj.CopyComplete
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\refint\BuildingBlock.Email.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\ref\BuildingBlock.Email.dll

@@ -1,0 +1,15 @@
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.csproj.AssemblyReference.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.AssemblyInfoInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.AssemblyInfo.cs
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.csproj.CoreCompileInputs.cache
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\bin\Debug\net7.0\BuildingBlock.Logger.deps.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\bin\Debug\net7.0\BuildingBlock.Logger.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\bin\Debug\net7.0\BuildingBlock.Logger.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\bin\Debug\net7.0\BuildingBlock.Base.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\bin\Debug\net7.0\BuildingBlock.Base.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.csproj.CopyComplete
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\refint\BuildingBlock.Logger.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\ref\BuildingBlock.Logger.dll
