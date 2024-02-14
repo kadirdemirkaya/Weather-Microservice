@@ -19,7 +19,11 @@ namespace Services.ClientAndServerService.Features.Weather.Queries.DailyWeather
         public async Task<DailyWeatherQueryResponse> Handle(DailyWeatherQueryRequest request, CancellationToken cancellationToken)
         {
             var dailyWeatherModelResponse = await _locationService.GetDailyWeatherModelResponse(request.City);
+            
+            // !
             var mapData = _mapper.Map<DailyWeatherDataModel>(dailyWeatherModelResponse.DailyWeatherDataModel);
+            // !
+
             return new(mapData);
         }
     }

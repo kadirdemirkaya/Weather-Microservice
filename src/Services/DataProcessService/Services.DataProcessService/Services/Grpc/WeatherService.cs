@@ -29,6 +29,19 @@ namespace Services.DataProcessService.Services.Grpc
 
                 var airPollutionModel = _mapper.Map<AirPollutionModel>(airPollutionQueryResponse.AirPollutionModel);
 
+                RepeatedField<AirListModel> currentWeatherList = new RepeatedField<AirListModel>();
+                foreach (var airListModel in airPollutionModel.AirListModel)
+                {
+                    var airList = _mapper.Map<AirListModel>(airListModel);
+                    var airComponent = _mapper.Map<AirComponent>(airListModel.AirComponent);
+                    var airmain = _mapper.Map<AirMain>(airListModel.Main);
+
+                    airList.Main = airmain;
+                    airList.AirComponent = airComponent;
+
+                    currentWeatherList.Add(airList);
+                }
+                airPollutionModel.AirListModel.Add(currentWeatherList);
                 return new() { AirPollutionModel = airPollutionModel };
             }
             catch (Exception ex)
@@ -36,9 +49,6 @@ namespace Services.DataProcessService.Services.Grpc
                 return new(default);
             }
         }
-
-
-
 
 
 
@@ -74,12 +84,6 @@ namespace Services.DataProcessService.Services.Grpc
             }
         }
 
-
-
-
-
-
-
         public override async Task<DailyWeatherModelResponse> DailyWeather(DailyWeatherModelRequest request, ServerCallContext context)
         {
             try
@@ -88,6 +92,37 @@ namespace Services.DataProcessService.Services.Grpc
                 DailyWeatherQueryResponse dailyWeatherQueryResponse = await _mediator.Send(dailyWeatherQueryRequest);
 
                 var dailyWeatherDataModel = _mapper.Map<DailyWeatherDataModel>(dailyWeatherQueryResponse.DailyWeatherModel);
+
+                var dailyCity = _mapper.Map<DailyCity>(dailyWeatherQueryResponse.DailyWeatherModel.City);
+                var cityCoord = _mapper.Map<DailyCoord>(dailyWeatherQueryResponse.DailyWeatherModel.City.coord);
+                dailyCity.DailyCoord = cityCoord;
+                RepeatedField<DailyListModel> dailyListModels = new RepeatedField<DailyListModel>();
+                foreach (var dListModel in dailyWeatherQueryResponse.DailyWeatherModel.DListModels)
+                {
+                    var dailyList = _mapper.Map<DailyListModel>(dListModel);
+                    var dailyMain = _mapper.Map<DailyMain>(dListModel.Main);
+                    var dailyRain = _mapper.Map<DailyRain>(dListModel.Rain);
+                    var dailyCloud = _mapper.Map<DailyCloud>(dListModel.Cloud);
+
+                    dailyList.DailyCloud = dailyCloud;
+                    dailyList.DailyMain = dailyMain;
+                    dailyList.DailyRain = dailyRain;
+
+                    RepeatedField<DailyWeatherModel> dailyWeatherModels = new RepeatedField<DailyWeatherModel>();
+                    foreach (var dWeatherModel in dListModel.DWeatherModels)
+                    {
+                        var dailyWeatherModel = _mapper.Map<DailyWeatherModel>(dWeatherModel);
+
+                        dailyWeatherModels.Add(dailyWeatherModel);
+                    }
+
+                    dailyList.DailyWeatherModel.AddRange(dailyWeatherModels);
+
+                    dailyListModels.Add(dailyList);
+                }
+
+                dailyWeatherDataModel.DailyCity = dailyCity;
+                dailyWeatherDataModel.DailyListModel.Add(dailyListModels);
 
                 return new() { DailyWeatherDataModel = dailyWeatherDataModel };
             }

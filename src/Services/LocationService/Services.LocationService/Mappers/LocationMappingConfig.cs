@@ -33,6 +33,28 @@ namespace Services.LocationService.Mappers
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id)).ReverseMap()
                 .ForMember(dest => dest.Main, opt => opt.MapFrom(src => src.Main)).ReverseMap()
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description)).ReverseMap();
+
+            //Air
+            CreateMap<AirPollutionModel, DataCaptureService.AirPollutionModel>()
+             .ForMember(dest => dest.AirListModel, opt => opt.MapFrom(src => src.AirListModel)).ReverseMap();
+
+            CreateMap<AirListModel, DataCaptureService.AirListModel>()
+             .ForMember(dest => dest.AirComponent, opt => opt.MapFrom(src => src.AirComponent)).ReverseMap()
+             .ForMember(dest => dest.Dt, opt => opt.MapFrom(src => src.Dt)).ReverseMap()
+             .ForMember(dest => dest.Main, opt => opt.MapFrom(src => src.Main)).ReverseMap();
+
+            CreateMap<AirMain, DataCaptureService.AirMain>()
+             .ForMember(dest => dest.Aqi, opt => opt.MapFrom(src => src.Aqi)).ReverseMap();
+
+            CreateMap<AirComponent, DataCaptureService.AirComponent>()
+             .ForMember(dest => dest.Co, opt => opt.MapFrom(src => src.Co)).ReverseMap()
+             .ForMember(dest => dest.Nh3, opt => opt.MapFrom(src => src.Nh3)).ReverseMap()
+             .ForMember(dest => dest.No, opt => opt.MapFrom(src => src.No)).ReverseMap()
+             .ForMember(dest => dest.No2, opt => opt.MapFrom(src => src.No2)).ReverseMap()
+             .ForMember(dest => dest.O3, opt => opt.MapFrom(src => src.O3)).ReverseMap()
+             .ForMember(dest => dest.Pm10, opt => opt.MapFrom(src => src.Pm10)).ReverseMap()
+             .ForMember(dest => dest.Pm2, opt => opt.MapFrom(src => src.Pm2)).ReverseMap()
+             .ForMember(dest => dest.So2, opt => opt.MapFrom(src => src.So2)).ReverseMap();
         }
     }
 }

@@ -34,13 +34,6 @@ namespace Services.ClientAndServerService.Services.Grpc
             }
         }
 
-
-
-
-
-
-
-
         public async Task<CurrentWeatherModelResponse> GetCurrentWeatherModelResponse(string city)
         {
             try
@@ -55,11 +48,6 @@ namespace Services.ClientAndServerService.Services.Grpc
                 throw new ServiceErrorException(nameof(UserService), ex.Message);
             }
         }
-
-
-
-
-
 
 
         public async Task<DailyWeatherModelResponse> GetDailyWeatherModelResponse(string city)

@@ -19,21 +19,26 @@ namespace Services.LocationService.Services.Grpc
         public override async Task<AirPollutionModelResponse> AirPollution(AirPollutionModelRequest request, ServerCallContext context)
         {
             var reply = await _weatherService.GetAirPollutionAsync(request.City);
+            
+
             var airPollutionModel = _mapper.Map<AirPollutionModel>(reply);
+
+            RepeatedField<AirListModel> currentWeatherList = new RepeatedField<AirListModel>();
+            foreach (var airListModel in airPollutionModel.AirListModel)
+            {
+                var airList = _mapper.Map<AirListModel>(airListModel);
+                var airComponent = _mapper.Map<AirComponent>(airListModel.AirComponent);
+                var airmain = _mapper.Map<AirMain>(airListModel.Main);
+
+                airList.Main = airmain;
+                airList.AirComponent = airComponent;
+
+                currentWeatherList.Add(airList);
+            }
+            airPollutionModel.AirListModel.Add(currentWeatherList);
+
             return new() { AirPollutionModel = airPollutionModel };
         }
-        public override async Task<DailyWeatherModelResponse> DailyWeather(DailyWeatherModelRequest request, ServerCallContext context)
-        {
-            var reply = await _weatherService.GetDailyWeatherAsync(request.City);
-            var dailyWeatherDataModel = _mapper.Map<DailyWeatherDataModel>(reply);
-            return new() { DailyWeatherDataModel = dailyWeatherDataModel };
-        }
-
-
-
-
-
-
         public override async Task<CurrentWeatherModelResponse> CurrentWeather(CurrentWeatherModelRequest request, ServerCallContext context)
         {
             try
@@ -63,5 +68,15 @@ namespace Services.LocationService.Services.Grpc
                 return new();
             }
         }
+
+
+        public override async Task<DailyWeatherModelResponse> DailyWeather(DailyWeatherModelRequest request, ServerCallContext context)
+        {
+            var reply = await _weatherService.GetDailyWeatherAsync(request.City);
+            var dailyWeatherDataModel = _mapper.Map<DailyWeatherDataModel>(reply);
+            return new() { DailyWeatherDataModel = dailyWeatherDataModel };
+        }
+
+      
     }
 }

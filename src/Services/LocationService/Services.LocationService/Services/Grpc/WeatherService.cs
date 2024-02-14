@@ -73,16 +73,6 @@ namespace Services.LocationService.Services.Grpc
             }
         }
 
-
-
-
-
-
-
-
-
-
-
         public async Task<DailyWeatherDataModel> GetDailyWeatherAsync(string city)
         {
             DailyWeatherQueryRequest dailyWeatherQueryRequest = new(city);
