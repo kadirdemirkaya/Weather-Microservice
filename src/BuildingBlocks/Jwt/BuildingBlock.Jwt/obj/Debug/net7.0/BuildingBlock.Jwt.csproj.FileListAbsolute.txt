@@ -21,3 +21,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\J
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Jwt\BuildingBlock.Jwt\obj\Debug\net7.0\refint\BuildingBlock.Jwt.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Jwt\BuildingBlock.Jwt\obj\Debug\net7.0\BuildingBlock.Jwt.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Jwt\BuildingBlock.Jwt\obj\Debug\net7.0\ref\BuildingBlock.Jwt.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Jwt\BuildingBlock.Jwt\obj\Debug\net7.0\BuildingBlock.Jwt.sourcelink.json

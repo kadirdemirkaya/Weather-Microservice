@@ -33,3 +33,6 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCap
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService\bin\Debug\net7.0\BuildingBlock.MsSql.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService\bin\Debug\net7.0\BuildingBlock.PostgreSql.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService\bin\Debug\net7.0\BuildingBlock.Redis.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService\bin\Debug\net7.0\BuildingBlock.HealthCheck.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService\bin\Debug\net7.0\BuildingBlock.HealthCheck.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService\obj\Debug\net7.0\Services.DataCaptureService.sourcelink.json

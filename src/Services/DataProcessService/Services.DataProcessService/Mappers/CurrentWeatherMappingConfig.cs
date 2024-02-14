@@ -10,17 +10,17 @@ namespace Services.DataProcessService.Mappers
         {
             CreateMap<WeatherData, CurrentWeather>().ReverseMap();
 
-            CreateMap<Services.DataProcessService.Aggregate.Current.ValueObjects.Coord, Services.DataProcessService.Models.Coord>().ReverseMap();
+            CreateMap<Aggregate.Current.ValueObjects.Coord, Models.Coord>().ReverseMap();
 
-            CreateMap<Services.DataProcessService.Aggregate.Current.ValueObjects.Main, Services.DataProcessService.Models.Main>().ReverseMap();
+            CreateMap<Aggregate.Current.ValueObjects.Main, Models.Main>().ReverseMap();
 
-            CreateMap<Services.DataProcessService.Aggregate.Current.ValueObjects.Wind, Services.DataProcessService.Models.Wind>().ReverseMap();
+            CreateMap<Aggregate.Current.ValueObjects.Wind, Models.Wind>().ReverseMap();
 
-            CreateMap<Services.DataProcessService.Aggregate.Current.ValueObjects.Rain, Services.DataProcessService.Models.Rain>().ReverseMap();
+            CreateMap<Aggregate.Current.ValueObjects.Rain, Models.Rain>().ReverseMap();
 
-            CreateMap<Services.DataProcessService.Aggregate.Current.ValueObjects.Cloud, Services.DataProcessService.Models.Cloud>().ReverseMap();
+            CreateMap<Aggregate.Current.ValueObjects.Cloud, Models.Cloud>().ReverseMap();
 
-            CreateMap<Services.DataProcessService.Aggregate.Current.ValueObjects.Sys, Services.DataProcessService.Models.Sys>().ReverseMap();
+            CreateMap<Aggregate.Current.ValueObjects.Sys, Models.Sys>().ReverseMap();
         }
     }
 }

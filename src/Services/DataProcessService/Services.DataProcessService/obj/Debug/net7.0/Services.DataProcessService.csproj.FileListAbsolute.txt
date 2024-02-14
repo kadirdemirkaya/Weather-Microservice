@@ -39,3 +39,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataPro
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService\bin\Debug\net7.0\BuildingBlock.Validator.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService\bin\Debug\net7.0\BuildingBlock.HealthCheck.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService\bin\Debug\net7.0\BuildingBlock.Validator.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService\obj\Debug\net7.0\Services.DataProcessService.sourcelink.json

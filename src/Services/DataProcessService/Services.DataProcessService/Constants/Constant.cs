@@ -28,7 +28,7 @@ namespace Services.DataProcessService.Constants
             public const string Clouds = $"{nameof(Cloud)}s";
             public const string Coords = $"{nameof(Aggregate.Current.ValueObjects.Coord)}s";
             public const string Cities = $"Cities";
-            public const string Main = $"{nameof(Services.DataProcessService.Aggregate.Current.ValueObjects.Main)}s";
+            public const string Main = $"Mains";
             public const string Rains = $"{nameof(Rain)}s";
             public const string Syss = $"{nameof(Sys)}s";
             public const string Winds = $"{nameof(Wind)}s";

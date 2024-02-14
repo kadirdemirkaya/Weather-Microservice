@@ -99,3 +99,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\bin\Debug\BuildingBl
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\bin\Debug\BuildingBlock.PostgreSql.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\bin\Debug\BuildingBlock.Redis.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\bin\Debug\BuildingBlock.Redis.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\bin\Debug\Microsoft.OpenApi.dll

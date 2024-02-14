@@ -1,0 +1,151 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "DataCaptureService";
+
+service GrpcWeather {
+	rpc AirPollution (AirPollutionModelRequest) returns (AirPollutionModelResponse);
+	rpc CurrentWeather (CurrentWeatherModelRequest) returns (CurrentWeatherModelResponse);
+	rpc DailyWeather (DailyWeatherModelRequest) returns (DailyWeatherModelResponse);
+}
+
+//AirPollution
+message AirPollutionModelRequest {
+	double lat = 1;
+	double lon = 2;
+}
+
+message AirPollutionModelResponse {
+	AirPollutionModel AirPollutionModel = 1;
+}
+
+message AirPollutionModel {
+	repeated AirListModel AirListModel = 1;
+}
+
+message AirListModel {
+	int32 Dt = 1;
+	AirMain Main = 2;
+	AirComponent AirComponent  = 3;
+}
+
+message AirMain {
+	int32 aqi = 1;
+}
+
+message AirComponent {
+	double co = 1;
+	double no = 2;
+	double no2 = 3;
+	double o3 = 4;
+	double so2 = 5;
+	double pm2 = 6;
+	double pm10 = 7;
+	double nh3 = 8;
+}
+
+//CurrentWeather
+message CurrentWeatherModelRequest {
+	double lat = 1;
+	double lon = 2;
+}
+
+message CurrentWeatherModelResponse {
+	CurrentWeatherModel CurrentWeatherModel = 1;
+}
+
+message CurrentWeatherModel {
+	string base = 1;
+	int32 dt = 2;
+	CurrentRain CurrentRain = 3;
+	CurrentCloud CurrentCloud = 4;
+	CurrentSys CurrentSys = 5;
+	repeated CurrentWeather CurrentWeather = 6;
+}
+
+message CurrentRain {
+	double _1h = 1;
+}
+
+message CurrentCloud {
+	int32 all = 1;
+}
+
+message CurrentSys {
+	int32 type = 1;
+	int32 id = 2;
+	string country = 3;
+	int32 sunrise = 4;
+}
+
+message CurrentWeather {
+	int32 id = 1;
+	int32 main = 2;
+	string description = 3;
+	string icon = 4;
+}
+
+//Daily Weather
+message DailyWeatherModelRequest {
+	double lat = 1;
+	double lon = 2;
+}
+
+message DailyWeatherModelResponse {
+	DailyWeatherDataModel DailyWeatherDataModel = 1;
+}
+
+message DailyWeatherDataModel {
+	DailyCity DailyCity = 1;
+	repeated DailyListModel DailyListModel = 2;
+}
+
+message DailyCity {
+	int32 id = 1;
+	string name = 2;
+	string country = 3;
+	int32 population = 4;
+	int32 timezone = 5;
+	int32 sunrise = 6;
+	int32 sunset = 7;
+	DailyCoord DailyCoord = 8;
+}
+
+message DailyCoord {
+	double lat = 1;
+	double lon = 2;
+}
+
+message DailyListModel {
+	int32 dt = 1;
+	DailyMain DailyMain = 2;
+	DailyCloud DailyCloud = 3;
+	DailyRain DailyRain = 4;
+	repeated DailyWeatherModel DailyWeatherModel = 5;
+}
+
+message DailyMain {
+	double temp = 1;
+	double feelslike = 2;
+	double tempmin = 3;
+	double tempmax = 4;
+	double pressure = 5;
+	double sealevel = 6;
+	double grndlevel = 7;
+	double humidity = 8;
+	double tempkf = 9;
+}
+
+message DailyCloud {
+	int32 all = 1;
+}
+
+message DailyRain {
+	double _3h = 1;
+}
+
+message DailyWeatherModel {
+	int32 id = 1;
+	int32 main = 2;
+	string description = 3;
+	string icon = 4;
+}

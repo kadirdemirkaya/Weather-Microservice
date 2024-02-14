@@ -1,5 +1,4 @@
-﻿using BuildingBlock.Base.Abstractions;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Services.ClientAndServerService.Dtos;
 using Services.ClientAndServerService.Features.User.Commands.UserLogin;
@@ -58,29 +57,29 @@ namespace Services.ClientAndServerService.Api.Controllers
 
         [HttpGet]
         [Route("ClientAndServer/Server/Weather/Current-Weather")]
-        public async Task<IActionResult> CurrentWeather()
+        public async Task<IActionResult> CurrentWeather([FromQuery] string city)
         {
-            CurrentWeatherQueryRequest currentWeatherQueryRequest = new();
+            CurrentWeatherQueryRequest currentWeatherQueryRequest = new(city);
             CurrentWeatherQueryResponse currentWeatherQueryResponse = await _mediator.Send(currentWeatherQueryRequest);
-            return Ok();
+            return Ok(currentWeatherQueryResponse.CurrentWeatherModel);
         }
 
         [HttpGet]
         [Route("ClientAndServer/Server/Weather/Daily-Weather")]
-        public async Task<IActionResult> DailyWeather()
+        public async Task<IActionResult> DailyWeather([FromQuery] string city)
         {
-            DailyWeatherQueryRequest dailyWeatherQueryRequest = new();
+            DailyWeatherQueryRequest dailyWeatherQueryRequest = new(city);
             DailyWeatherQueryResponse dailyWeatherQueryResponse = await _mediator.Send(dailyWeatherQueryRequest);
-            return Ok();
+            return Ok(dailyWeatherQueryResponse.DailyWeatherDataModel);
         }
 
         [HttpGet]
         [Route("ClientAndServer/Server/Weather/Air-Pollution-Weather")]
-        public async Task<IActionResult> AirPollutionWeather()
+        public async Task<IActionResult> AirPollutionWeather([FromQuery] string city)
         {
-            AirPollutionWeatherQueryRequest airPollutionWeatherQueryRequest = new();
+            AirPollutionWeatherQueryRequest airPollutionWeatherQueryRequest = new(city);
             AirPollutionWeatherQueryResponse airPollutionWeatherQueryResponse = await _mediator.Send(airPollutionWeatherQueryRequest);
-            return Ok();
+            return Ok(airPollutionWeatherQueryResponse.AirPollutionModel);
         }
     }
 }

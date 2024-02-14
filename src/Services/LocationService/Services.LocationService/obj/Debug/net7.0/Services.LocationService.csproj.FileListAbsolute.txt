@@ -35,3 +35,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\Locatio
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService\bin\Debug\net7.0\BuildingBlock.PostgreSql.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService\bin\Debug\net7.0\BuildingBlock.Redis.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService\bin\Debug\net7.0\BuildingBlock.Redis.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService\obj\Debug\net7.0\Services.LocationService.sourcelink.json

@@ -1,27 +1,42 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\BuildingBlocks\Base\BuildingBlock.Base\BuildingBlock.Base.csproj" />
-    <ProjectReference Include="..\..\..\BuildingBlocks\Factory\BuildingBlock.Factory\BuildingBlock.Factory.csproj" />
-    <ProjectReference Include="..\..\..\BuildingBlocks\HealthCheck\BuildingBlock.HealthCheck\BuildingBlock.HealthCheck.csproj" />
-    <ProjectReference Include="..\..\..\BuildingBlocks\Logger\BuildingBlock.Logger\BuildingBlock.Logger.csproj" />
-    <ProjectReference Include="..\..\..\BuildingBlocks\Mapper\BuildingBlock.Mapper\BuildingBlock.Mapper.csproj" />
-    <ProjectReference Include="..\..\..\BuildingBlocks\Mongo\BuildingBlock.Mongo\BuildingBlock.Mongo.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\BuildingBlocks\Base\BuildingBlock.Base\BuildingBlock.Base.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Factory\BuildingBlock.Factory\BuildingBlock.Factory.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\HealthCheck\BuildingBlock.HealthCheck\BuildingBlock.HealthCheck.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Logger\BuildingBlock.Logger\BuildingBlock.Logger.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Mapper\BuildingBlock.Mapper\BuildingBlock.Mapper.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Mongo\BuildingBlock.Mongo\BuildingBlock.Mongo.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Aggregate\Entities\" />
-    <Folder Include="Aggregate\Enums\" />
-    <Folder Include="Aggregate\Events\" />
-    <Folder Include="Events\" />
-    <Folder Include="Features\Commands\Location\" />
-    <Folder Include="Features\Queries\Location\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Aggregate\Entities\" />
+		<Folder Include="Aggregate\Enums\" />
+		<Folder Include="Aggregate\Events\" />
+		<Folder Include="Events\" />
+		<Folder Include="Features\Commands\Location\" />
+		<Folder Include="Models\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" Version="3.25.1" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.59.0" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.60.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\weather.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\location.proto" GrpcServices="Server" />
+	</ItemGroup>
 
 </Project>

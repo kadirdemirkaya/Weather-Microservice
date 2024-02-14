@@ -163,3 +163,11 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\Locatio
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\BuildingBlock.Redis.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\BuildingBlock.Redis.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Consul.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\obj\Debug\net7.0\Services.LocationService.Api.sourcelink.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\LocationService\Services.LocationService.Api\bin\Debug\net7.0\Grpc.Net.Common.dll

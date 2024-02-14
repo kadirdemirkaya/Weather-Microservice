@@ -217,3 +217,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Tests\BuildingBl
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Tests\BuildingBlockTest\BBlockTest\bin\Debug\net7.0\BuildingBlock.Redis.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Tests\BuildingBlockTest\BBlockTest\bin\Debug\net7.0\BuildingBlock.Redis.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Tests\BuildingBlockTest\BBlockTest\bin\Debug\net7.0\Consul.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Tests\BuildingBlockTest\BBlockTest\obj\Debug\net7.0\BBlockTest.sourcelink.json

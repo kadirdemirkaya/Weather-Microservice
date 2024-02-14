@@ -168,3 +168,11 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataPro
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\BuildingBlock.HealthCheck.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\BuildingBlock.Validator.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Consul.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\obj\Debug\net7.0\Services.DataProcessService.Api.sourcelink.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataProcessService\Services.DataProcessService.Api\bin\Debug\net7.0\Grpc.Net.Common.dll

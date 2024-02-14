@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildingBlock.Jwt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee653fecb049c0fb703a9ceb745366db317350b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildingBlock.Jwt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildingBlock.Jwt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

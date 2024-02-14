@@ -14,6 +14,8 @@ namespace Services.ClientAndServerService.Registrations
 
             services.AddScoped<IUserService, UserService>();
 
+            services.AddScoped<ILocationService, Services.Grpc.LocationService>();
+
             return services;
         }
     }

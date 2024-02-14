@@ -3,7 +3,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services.DataProcessService.Data;
 using Services.DataProcessService.Registrations;
-using Services.DataProcessService.Seeds;
 
 namespace Services.DataProcessService
 {
@@ -16,15 +15,18 @@ namespace Services.DataProcessService
                     .MediatrServiceRegistration()
                     .RepositoryServiceRegistration()
                     .UnitOfWorkServiceRegistration()
-                    .EventBusServiceRegistration(configuration)
-                    .SeedServiceRegistration();
+                    //.EventBusServiceRegistration(configuration)
+                    .SeedServiceRegistration()
+                    .ServiceRegistration()
+                    .GrpcServiceRegistration();
 
             return services;
         }
 
         public static WebApplication DataProcessServiceApplicationRegistration(this WebApplication app, IServiceProvider serviceProvider)
         {
-            app.EventBusApplicationRegistration(serviceProvider)
+            app//EventBusApplicationRegistration(serviceProvider)
+                .GrpcApplicationRegistration()
                 .MiddlewaresApplicationRegistration()
                 .HostSettingServiceRegistration<WeatherDbContext>(async (context, serviceProvider) =>
                 {

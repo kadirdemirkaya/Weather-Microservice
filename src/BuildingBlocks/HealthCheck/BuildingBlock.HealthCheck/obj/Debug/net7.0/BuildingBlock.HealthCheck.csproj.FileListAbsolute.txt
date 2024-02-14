@@ -13,3 +13,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\H
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\HealthCheck\BuildingBlock.HealthCheck\obj\Debug\net7.0\refint\BuildingBlock.HealthCheck.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\HealthCheck\BuildingBlock.HealthCheck\obj\Debug\net7.0\BuildingBlock.HealthCheck.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\HealthCheck\BuildingBlock.HealthCheck\obj\Debug\net7.0\ref\BuildingBlock.HealthCheck.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\HealthCheck\BuildingBlock.HealthCheck\obj\Debug\net7.0\BuildingBlock.HealthCheck.sourcelink.json

@@ -13,9 +13,10 @@ namespace Services.LocationService
                     .RepositoryServiceRegistration()
                     .UnitOfWorkServiceRegistration()
                     .MediatrServiceRegistration()
-                    .HealthCheckServiceRegistration()
                     .MapperServiceRegistration()
-                    .SeedServiceRegistration();
+                    .SeedServiceRegistration()
+                    .ServiceRegistration()
+                    .GrpcServiceRegistration();
 
 
             return services;
@@ -29,8 +30,8 @@ namespace Services.LocationService
         }
         public static WebApplication LocationServiceApplicationRegistration(this WebApplication app, IConfiguration configuration)
         {
-            app.HealthCheckApplicationRegistration()
-               .MiddlewaresApplicationRegistration();
+            app.MiddlewaresApplicationRegistration()
+               .GrpcApplicationRegistration();
 
             return app;
         }

@@ -21,3 +21,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientA
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService\obj\Debug\net7.0\refint\Services.ClientAndServerService.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService\obj\Debug\net7.0\Services.ClientAndServerService.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService\obj\Debug\net7.0\ref\Services.ClientAndServerService.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService\obj\Debug\net7.0\Services.ClientAndServerService.sourcelink.json

@@ -53,7 +53,7 @@ namespace Services.LocationService.Seeds
         private List<City> GetCityValues()
         {
             List<City> cities = new();
-            cities.Add(City.Create("Istanbul", "Turkiye", 41.00527, 28.97696));
+            cities.Add(City.Create("Istanbul", "Turkiye", 41.1634, 28.7664));
             cities.Add(City.Create("Ankara", "Turkiye", 39.92077, 32.85411));
             cities.Add(City.Create("Izmir", "Turkiye", 38.41885, 27.12872));
             cities.Add(City.Create("Bursa", "Turkiye", 40.266864, 29.063448));

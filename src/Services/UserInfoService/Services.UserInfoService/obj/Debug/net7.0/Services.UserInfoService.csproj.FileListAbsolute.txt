@@ -41,3 +41,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInf
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService\obj\Debug\net7.0\Services.UserInfoService.genruntimeconfig.cache
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService\bin\Debug\net7.0\BuildingBlock.HealthCheck.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService\bin\Debug\net7.0\BuildingBlock.HealthCheck.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService\obj\Debug\net7.0\Services.UserInfoService.sourcelink.json
