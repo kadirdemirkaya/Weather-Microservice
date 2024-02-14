@@ -2,10 +2,10 @@
 {
     public interface IWeatherService
     {
-        Task<DataCaptureService.AirPollutionModel> GetAirPollutionAsync(string city);
+        Task<DataProcessService.AirPollutionModel> GetAirPollutionAsync(string city);
 
-        Task<DataCaptureService.CurrentWeatherModel> GetCurrentWeatherAsync(string city);
+        Task<DataProcessService.CurrentWeatherModel> GetCurrentWeatherAsync(string city);
 
-        Task<DataCaptureService.DailyWeatherDataModel> GetDailyWeatherAsync(string city);
+        Task<DataProcessService.DailyWeatherDataModel> GetDailyWeatherAsync(string city);
     }
 }

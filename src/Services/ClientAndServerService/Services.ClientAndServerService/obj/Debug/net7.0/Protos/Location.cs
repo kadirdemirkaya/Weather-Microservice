@@ -60,11 +60,11 @@ namespace LocationService {
             "RGFpbHlSYWluGAQgASgLMgouRGFpbHlSYWluEi0KEURhaWx5V2VhdGhlck1v",
             "ZGVsGAUgAygLMhIuRGFpbHlXZWF0aGVyTW9kZWwipwEKCURhaWx5TWFpbhIM",
             "CgR0ZW1wGAEgASgBEhEKCWZlZWxzbGlrZRgCIAEoARIPCgd0ZW1wbWluGAMg",
-            "ASgBEg8KB3RlbXBtYXgYBCABKAESEAoIcHJlc3N1cmUYBSABKAESEAoIc2Vh",
+            "ASgBEg8KB3RlbXBtYXgYBCABKAESEAoIcHJlc3N1cmUYBSABKAUSEAoIc2Vh",
             "bGV2ZWwYBiABKAESEQoJZ3JuZGxldmVsGAcgASgBEhAKCGh1bWlkaXR5GAgg",
-            "ASgBEg4KBnRlbXBrZhgJIAEoASIZCgpEYWlseUNsb3VkEgsKA2FsbBgBIAEo",
+            "ASgFEg4KBnRlbXBrZhgJIAEoASIZCgpEYWlseUNsb3VkEgsKA2FsbBgBIAEo",
             "BSIYCglEYWlseVJhaW4SCwoDXzNoGAEgASgBIlAKEURhaWx5V2VhdGhlck1v",
-            "ZGVsEgoKAmlkGAEgASgFEgwKBG1haW4YAiABKAUSEwoLZGVzY3JpcHRpb24Y",
+            "ZGVsEgoKAmlkGAEgASgFEgwKBG1haW4YAiABKAkSEwoLZGVzY3JpcHRpb24Y",
             "AyABKAkSDAoEaWNvbhgEIAEoCTLpAQoMR3JwY0xvY2F0aW9uEkUKDEFpclBv",
             "bGx1dGlvbhIZLkFpclBvbGx1dGlvbk1vZGVsUmVxdWVzdBoaLkFpclBvbGx1",
             "dGlvbk1vZGVsUmVzcG9uc2USSwoOQ3VycmVudFdlYXRoZXISGy5DdXJyZW50",
@@ -5120,10 +5120,10 @@ namespace LocationService {
 
     /// <summary>Field number for the "pressure" field.</summary>
     public const int PressureFieldNumber = 5;
-    private double pressure_;
+    private int pressure_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double Pressure {
+    public int Pressure {
       get { return pressure_; }
       set {
         pressure_ = value;
@@ -5156,10 +5156,10 @@ namespace LocationService {
 
     /// <summary>Field number for the "humidity" field.</summary>
     public const int HumidityFieldNumber = 8;
-    private double humidity_;
+    private int humidity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double Humidity {
+    public int Humidity {
       get { return humidity_; }
       set {
         humidity_ = value;
@@ -5197,10 +5197,10 @@ namespace LocationService {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Feelslike, other.Feelslike)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Tempmin, other.Tempmin)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Tempmax, other.Tempmax)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Pressure, other.Pressure)) return false;
+      if (Pressure != other.Pressure) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Sealevel, other.Sealevel)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Grndlevel, other.Grndlevel)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Humidity, other.Humidity)) return false;
+      if (Humidity != other.Humidity) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Tempkf, other.Tempkf)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5213,10 +5213,10 @@ namespace LocationService {
       if (Feelslike != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Feelslike);
       if (Tempmin != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Tempmin);
       if (Tempmax != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Tempmax);
-      if (Pressure != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Pressure);
+      if (Pressure != 0) hash ^= Pressure.GetHashCode();
       if (Sealevel != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Sealevel);
       if (Grndlevel != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Grndlevel);
-      if (Humidity != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Humidity);
+      if (Humidity != 0) hash ^= Humidity.GetHashCode();
       if (Tempkf != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Tempkf);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5252,9 +5252,9 @@ namespace LocationService {
         output.WriteRawTag(33);
         output.WriteDouble(Tempmax);
       }
-      if (Pressure != 0D) {
-        output.WriteRawTag(41);
-        output.WriteDouble(Pressure);
+      if (Pressure != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Pressure);
       }
       if (Sealevel != 0D) {
         output.WriteRawTag(49);
@@ -5264,9 +5264,9 @@ namespace LocationService {
         output.WriteRawTag(57);
         output.WriteDouble(Grndlevel);
       }
-      if (Humidity != 0D) {
-        output.WriteRawTag(65);
-        output.WriteDouble(Humidity);
+      if (Humidity != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(Humidity);
       }
       if (Tempkf != 0D) {
         output.WriteRawTag(73);
@@ -5298,9 +5298,9 @@ namespace LocationService {
         output.WriteRawTag(33);
         output.WriteDouble(Tempmax);
       }
-      if (Pressure != 0D) {
-        output.WriteRawTag(41);
-        output.WriteDouble(Pressure);
+      if (Pressure != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Pressure);
       }
       if (Sealevel != 0D) {
         output.WriteRawTag(49);
@@ -5310,9 +5310,9 @@ namespace LocationService {
         output.WriteRawTag(57);
         output.WriteDouble(Grndlevel);
       }
-      if (Humidity != 0D) {
-        output.WriteRawTag(65);
-        output.WriteDouble(Humidity);
+      if (Humidity != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(Humidity);
       }
       if (Tempkf != 0D) {
         output.WriteRawTag(73);
@@ -5340,8 +5340,8 @@ namespace LocationService {
       if (Tempmax != 0D) {
         size += 1 + 8;
       }
-      if (Pressure != 0D) {
-        size += 1 + 8;
+      if (Pressure != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Pressure);
       }
       if (Sealevel != 0D) {
         size += 1 + 8;
@@ -5349,8 +5349,8 @@ namespace LocationService {
       if (Grndlevel != 0D) {
         size += 1 + 8;
       }
-      if (Humidity != 0D) {
-        size += 1 + 8;
+      if (Humidity != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Humidity);
       }
       if (Tempkf != 0D) {
         size += 1 + 8;
@@ -5379,7 +5379,7 @@ namespace LocationService {
       if (other.Tempmax != 0D) {
         Tempmax = other.Tempmax;
       }
-      if (other.Pressure != 0D) {
+      if (other.Pressure != 0) {
         Pressure = other.Pressure;
       }
       if (other.Sealevel != 0D) {
@@ -5388,7 +5388,7 @@ namespace LocationService {
       if (other.Grndlevel != 0D) {
         Grndlevel = other.Grndlevel;
       }
-      if (other.Humidity != 0D) {
+      if (other.Humidity != 0) {
         Humidity = other.Humidity;
       }
       if (other.Tempkf != 0D) {
@@ -5425,8 +5425,8 @@ namespace LocationService {
             Tempmax = input.ReadDouble();
             break;
           }
-          case 41: {
-            Pressure = input.ReadDouble();
+          case 40: {
+            Pressure = input.ReadInt32();
             break;
           }
           case 49: {
@@ -5437,8 +5437,8 @@ namespace LocationService {
             Grndlevel = input.ReadDouble();
             break;
           }
-          case 65: {
-            Humidity = input.ReadDouble();
+          case 64: {
+            Humidity = input.ReadInt32();
             break;
           }
           case 73: {
@@ -5476,8 +5476,8 @@ namespace LocationService {
             Tempmax = input.ReadDouble();
             break;
           }
-          case 41: {
-            Pressure = input.ReadDouble();
+          case 40: {
+            Pressure = input.ReadInt32();
             break;
           }
           case 49: {
@@ -5488,8 +5488,8 @@ namespace LocationService {
             Grndlevel = input.ReadDouble();
             break;
           }
-          case 65: {
-            Humidity = input.ReadDouble();
+          case 64: {
+            Humidity = input.ReadInt32();
             break;
           }
           case 73: {
@@ -5945,13 +5945,13 @@ namespace LocationService {
 
     /// <summary>Field number for the "main" field.</summary>
     public const int MainFieldNumber = 2;
-    private int main_;
+    private string main_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Main {
+    public string Main {
       get { return main_; }
       set {
-        main_ = value;
+        main_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6006,7 +6006,7 @@ namespace LocationService {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Main != 0) hash ^= Main.GetHashCode();
+      if (Main.Length != 0) hash ^= Main.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Icon.Length != 0) hash ^= Icon.GetHashCode();
       if (_unknownFields != null) {
@@ -6031,9 +6031,9 @@ namespace LocationService {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Main != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Main);
+      if (Main.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Main);
       }
       if (Description.Length != 0) {
         output.WriteRawTag(26);
@@ -6057,9 +6057,9 @@ namespace LocationService {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Main != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Main);
+      if (Main.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Main);
       }
       if (Description.Length != 0) {
         output.WriteRawTag(26);
@@ -6082,8 +6082,8 @@ namespace LocationService {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Main != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Main);
+      if (Main.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Main);
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
@@ -6106,7 +6106,7 @@ namespace LocationService {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Main != 0) {
+      if (other.Main.Length != 0) {
         Main = other.Main;
       }
       if (other.Description.Length != 0) {
@@ -6134,8 +6134,8 @@ namespace LocationService {
             Id = input.ReadInt32();
             break;
           }
-          case 16: {
-            Main = input.ReadInt32();
+          case 18: {
+            Main = input.ReadString();
             break;
           }
           case 26: {
@@ -6165,8 +6165,8 @@ namespace LocationService {
             Id = input.ReadInt32();
             break;
           }
-          case 16: {
-            Main = input.ReadInt32();
+          case 18: {
+            Main = input.ReadString();
             break;
           }
           case 26: {

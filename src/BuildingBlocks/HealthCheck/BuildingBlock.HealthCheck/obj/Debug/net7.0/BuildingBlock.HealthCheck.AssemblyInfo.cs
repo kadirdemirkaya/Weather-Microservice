@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildingBlock.HealthCheck")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee653fecb049c0fb703a9ceb745366db317350b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5afdfcd7b7356c823178e97b33f24a323fde1535")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildingBlock.HealthCheck")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildingBlock.HealthCheck")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

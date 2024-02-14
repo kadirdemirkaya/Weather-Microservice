@@ -125,10 +125,10 @@ message DailyMain {
 	double feelslike = 2;
 	double tempmin = 3;
 	double tempmax = 4;
-	double pressure = 5;
+	int32 pressure = 5;
 	double sealevel = 6;
 	double grndlevel = 7;
-	double humidity = 8;
+	int32 humidity = 8;
 	double tempkf = 9;
 }
 
@@ -142,7 +142,7 @@ message DailyRain {
 
 message DailyWeatherModel {
 	int32 id = 1;
-	int32 main = 2;
+	string main = 2;
 	string description = 3;
 	string icon = 4;
 }

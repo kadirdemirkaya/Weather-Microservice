@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DataCaptureService;
+using DataProcessService;
 using Google.Protobuf.Collections;
 using Grpc.Core;
 using MediatR;
@@ -49,9 +49,6 @@ namespace Services.DataProcessService.Services.Grpc
                 return new(default);
             }
         }
-
-
-
 
         public override async Task<CurrentWeatherModelResponse> CurrentWeather(CurrentWeatherModelRequest request, ServerCallContext context)
         {

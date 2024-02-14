@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace DataCaptureService {
+namespace DataProcessService {
 
   /// <summary>Holder for reflection information generated from Protos/weather.proto</summary>
   public static partial class WeatherReflection {
@@ -61,44 +61,44 @@ namespace DataCaptureService {
             "BCABKAsyCi5EYWlseVJhaW4SLQoRRGFpbHlXZWF0aGVyTW9kZWwYBSADKAsy",
             "Ei5EYWlseVdlYXRoZXJNb2RlbCKnAQoJRGFpbHlNYWluEgwKBHRlbXAYASAB",
             "KAESEQoJZmVlbHNsaWtlGAIgASgBEg8KB3RlbXBtaW4YAyABKAESDwoHdGVt",
-            "cG1heBgEIAEoARIQCghwcmVzc3VyZRgFIAEoARIQCghzZWFsZXZlbBgGIAEo",
-            "ARIRCglncm5kbGV2ZWwYByABKAESEAoIaHVtaWRpdHkYCCABKAESDgoGdGVt",
+            "cG1heBgEIAEoARIQCghwcmVzc3VyZRgFIAEoBRIQCghzZWFsZXZlbBgGIAEo",
+            "ARIRCglncm5kbGV2ZWwYByABKAESEAoIaHVtaWRpdHkYCCABKAUSDgoGdGVt",
             "cGtmGAkgASgBIhkKCkRhaWx5Q2xvdWQSCwoDYWxsGAEgASgFIhgKCURhaWx5",
             "UmFpbhILCgNfM2gYASABKAEiUAoRRGFpbHlXZWF0aGVyTW9kZWwSCgoCaWQY",
-            "ASABKAUSDAoEbWFpbhgCIAEoBRITCgtkZXNjcmlwdGlvbhgDIAEoCRIMCgRp",
+            "ASABKAUSDAoEbWFpbhgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIMCgRp",
             "Y29uGAQgASgJMugBCgtHcnBjV2VhdGhlchJFCgxBaXJQb2xsdXRpb24SGS5B",
             "aXJQb2xsdXRpb25Nb2RlbFJlcXVlc3QaGi5BaXJQb2xsdXRpb25Nb2RlbFJl",
             "c3BvbnNlEksKDkN1cnJlbnRXZWF0aGVyEhsuQ3VycmVudFdlYXRoZXJNb2Rl",
             "bFJlcXVlc3QaHC5DdXJyZW50V2VhdGhlck1vZGVsUmVzcG9uc2USRQoMRGFp",
             "bHlXZWF0aGVyEhkuRGFpbHlXZWF0aGVyTW9kZWxSZXF1ZXN0GhouRGFpbHlX",
-            "ZWF0aGVyTW9kZWxSZXNwb25zZUIVqgISRGF0YUNhcHR1cmVTZXJ2aWNlYgZw",
+            "ZWF0aGVyTW9kZWxSZXNwb25zZUIVqgISRGF0YVByb2Nlc3NTZXJ2aWNlYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.AirPollutionModelRequest), global::DataCaptureService.AirPollutionModelRequest.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.AirPollutionModelResponse), global::DataCaptureService.AirPollutionModelResponse.Parser, new[]{ "AirPollutionModel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.AirPollutionModel), global::DataCaptureService.AirPollutionModel.Parser, new[]{ "AirListModel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.AirListModel), global::DataCaptureService.AirListModel.Parser, new[]{ "Dt", "Main", "AirComponent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.AirMain), global::DataCaptureService.AirMain.Parser, new[]{ "Aqi" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.AirComponent), global::DataCaptureService.AirComponent.Parser, new[]{ "Co", "No", "No2", "O3", "So2", "Pm2", "Pm10", "Nh3" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.CurrentWeatherModelRequest), global::DataCaptureService.CurrentWeatherModelRequest.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.CurrentWeatherModelResponse), global::DataCaptureService.CurrentWeatherModelResponse.Parser, new[]{ "CurrentWeatherModel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.CurrentWeatherModel), global::DataCaptureService.CurrentWeatherModel.Parser, new[]{ "Base", "Dt", "CurrentRain", "CurrentCloud", "CurrentSys", "CurrentWeather" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.CurrentRain), global::DataCaptureService.CurrentRain.Parser, new[]{ "_1H" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.CurrentCloud), global::DataCaptureService.CurrentCloud.Parser, new[]{ "All" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.CurrentSys), global::DataCaptureService.CurrentSys.Parser, new[]{ "Type", "Id", "Country", "Sunrise" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.CurrentWeather), global::DataCaptureService.CurrentWeather.Parser, new[]{ "Id", "Main", "Description", "Icon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyWeatherModelRequest), global::DataCaptureService.DailyWeatherModelRequest.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyWeatherModelResponse), global::DataCaptureService.DailyWeatherModelResponse.Parser, new[]{ "DailyWeatherDataModel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyWeatherDataModel), global::DataCaptureService.DailyWeatherDataModel.Parser, new[]{ "DailyCity", "DailyListModel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyCity), global::DataCaptureService.DailyCity.Parser, new[]{ "Id", "Name", "Country", "Population", "Timezone", "Sunrise", "Sunset", "DailyCoord" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyCoord), global::DataCaptureService.DailyCoord.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyListModel), global::DataCaptureService.DailyListModel.Parser, new[]{ "Dt", "DailyMain", "DailyCloud", "DailyRain", "DailyWeatherModel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyMain), global::DataCaptureService.DailyMain.Parser, new[]{ "Temp", "Feelslike", "Tempmin", "Tempmax", "Pressure", "Sealevel", "Grndlevel", "Humidity", "Tempkf" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyCloud), global::DataCaptureService.DailyCloud.Parser, new[]{ "All" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyRain), global::DataCaptureService.DailyRain.Parser, new[]{ "_3H" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DataCaptureService.DailyWeatherModel), global::DataCaptureService.DailyWeatherModel.Parser, new[]{ "Id", "Main", "Description", "Icon" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.AirPollutionModelRequest), global::DataProcessService.AirPollutionModelRequest.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.AirPollutionModelResponse), global::DataProcessService.AirPollutionModelResponse.Parser, new[]{ "AirPollutionModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.AirPollutionModel), global::DataProcessService.AirPollutionModel.Parser, new[]{ "AirListModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.AirListModel), global::DataProcessService.AirListModel.Parser, new[]{ "Dt", "Main", "AirComponent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.AirMain), global::DataProcessService.AirMain.Parser, new[]{ "Aqi" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.AirComponent), global::DataProcessService.AirComponent.Parser, new[]{ "Co", "No", "No2", "O3", "So2", "Pm2", "Pm10", "Nh3" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.CurrentWeatherModelRequest), global::DataProcessService.CurrentWeatherModelRequest.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.CurrentWeatherModelResponse), global::DataProcessService.CurrentWeatherModelResponse.Parser, new[]{ "CurrentWeatherModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.CurrentWeatherModel), global::DataProcessService.CurrentWeatherModel.Parser, new[]{ "Base", "Dt", "CurrentRain", "CurrentCloud", "CurrentSys", "CurrentWeather" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.CurrentRain), global::DataProcessService.CurrentRain.Parser, new[]{ "_1H" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.CurrentCloud), global::DataProcessService.CurrentCloud.Parser, new[]{ "All" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.CurrentSys), global::DataProcessService.CurrentSys.Parser, new[]{ "Type", "Id", "Country", "Sunrise" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.CurrentWeather), global::DataProcessService.CurrentWeather.Parser, new[]{ "Id", "Main", "Description", "Icon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyWeatherModelRequest), global::DataProcessService.DailyWeatherModelRequest.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyWeatherModelResponse), global::DataProcessService.DailyWeatherModelResponse.Parser, new[]{ "DailyWeatherDataModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyWeatherDataModel), global::DataProcessService.DailyWeatherDataModel.Parser, new[]{ "DailyCity", "DailyListModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyCity), global::DataProcessService.DailyCity.Parser, new[]{ "Id", "Name", "Country", "Population", "Timezone", "Sunrise", "Sunset", "DailyCoord" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyCoord), global::DataProcessService.DailyCoord.Parser, new[]{ "Lat", "Lon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyListModel), global::DataProcessService.DailyListModel.Parser, new[]{ "Dt", "DailyMain", "DailyCloud", "DailyRain", "DailyWeatherModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyMain), global::DataProcessService.DailyMain.Parser, new[]{ "Temp", "Feelslike", "Tempmin", "Tempmax", "Pressure", "Sealevel", "Grndlevel", "Humidity", "Tempkf" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyCloud), global::DataProcessService.DailyCloud.Parser, new[]{ "All" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyRain), global::DataProcessService.DailyRain.Parser, new[]{ "_3H" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataProcessService.DailyWeatherModel), global::DataProcessService.DailyWeatherModel.Parser, new[]{ "Id", "Main", "Description", "Icon" }, null, null, null, null)
           }));
     }
     #endregion
@@ -123,7 +123,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[0]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -350,7 +350,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[1]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -382,10 +382,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "AirPollutionModel" field.</summary>
     public const int AirPollutionModelFieldNumber = 1;
-    private global::DataCaptureService.AirPollutionModel airPollutionModel_;
+    private global::DataProcessService.AirPollutionModel airPollutionModel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.AirPollutionModel AirPollutionModel {
+    public global::DataProcessService.AirPollutionModel AirPollutionModel {
       get { return airPollutionModel_; }
       set {
         airPollutionModel_ = value;
@@ -479,7 +479,7 @@ namespace DataCaptureService {
       }
       if (other.airPollutionModel_ != null) {
         if (airPollutionModel_ == null) {
-          AirPollutionModel = new global::DataCaptureService.AirPollutionModel();
+          AirPollutionModel = new global::DataProcessService.AirPollutionModel();
         }
         AirPollutionModel.MergeFrom(other.AirPollutionModel);
       }
@@ -500,7 +500,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (airPollutionModel_ == null) {
-              AirPollutionModel = new global::DataCaptureService.AirPollutionModel();
+              AirPollutionModel = new global::DataProcessService.AirPollutionModel();
             }
             input.ReadMessage(AirPollutionModel);
             break;
@@ -522,7 +522,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (airPollutionModel_ == null) {
-              AirPollutionModel = new global::DataCaptureService.AirPollutionModel();
+              AirPollutionModel = new global::DataProcessService.AirPollutionModel();
             }
             input.ReadMessage(AirPollutionModel);
             break;
@@ -549,7 +549,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[2]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -581,12 +581,12 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "AirListModel" field.</summary>
     public const int AirListModelFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::DataCaptureService.AirListModel> _repeated_airListModel_codec
-        = pb::FieldCodec.ForMessage(10, global::DataCaptureService.AirListModel.Parser);
-    private readonly pbc::RepeatedField<global::DataCaptureService.AirListModel> airListModel_ = new pbc::RepeatedField<global::DataCaptureService.AirListModel>();
+    private static readonly pb::FieldCodec<global::DataProcessService.AirListModel> _repeated_airListModel_codec
+        = pb::FieldCodec.ForMessage(10, global::DataProcessService.AirListModel.Parser);
+    private readonly pbc::RepeatedField<global::DataProcessService.AirListModel> airListModel_ = new pbc::RepeatedField<global::DataProcessService.AirListModel>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::DataCaptureService.AirListModel> AirListModel {
+    public pbc::RepeatedField<global::DataProcessService.AirListModel> AirListModel {
       get { return airListModel_; }
     }
 
@@ -728,7 +728,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[3]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -774,10 +774,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "Main" field.</summary>
     public const int MainFieldNumber = 2;
-    private global::DataCaptureService.AirMain main_;
+    private global::DataProcessService.AirMain main_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.AirMain Main {
+    public global::DataProcessService.AirMain Main {
       get { return main_; }
       set {
         main_ = value;
@@ -786,10 +786,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "AirComponent" field.</summary>
     public const int AirComponentFieldNumber = 3;
-    private global::DataCaptureService.AirComponent airComponent_;
+    private global::DataProcessService.AirComponent airComponent_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.AirComponent AirComponent {
+    public global::DataProcessService.AirComponent AirComponent {
       get { return airComponent_; }
       set {
         airComponent_ = value;
@@ -912,13 +912,13 @@ namespace DataCaptureService {
       }
       if (other.main_ != null) {
         if (main_ == null) {
-          Main = new global::DataCaptureService.AirMain();
+          Main = new global::DataProcessService.AirMain();
         }
         Main.MergeFrom(other.Main);
       }
       if (other.airComponent_ != null) {
         if (airComponent_ == null) {
-          AirComponent = new global::DataCaptureService.AirComponent();
+          AirComponent = new global::DataProcessService.AirComponent();
         }
         AirComponent.MergeFrom(other.AirComponent);
       }
@@ -943,14 +943,14 @@ namespace DataCaptureService {
           }
           case 18: {
             if (main_ == null) {
-              Main = new global::DataCaptureService.AirMain();
+              Main = new global::DataProcessService.AirMain();
             }
             input.ReadMessage(Main);
             break;
           }
           case 26: {
             if (airComponent_ == null) {
-              AirComponent = new global::DataCaptureService.AirComponent();
+              AirComponent = new global::DataProcessService.AirComponent();
             }
             input.ReadMessage(AirComponent);
             break;
@@ -976,14 +976,14 @@ namespace DataCaptureService {
           }
           case 18: {
             if (main_ == null) {
-              Main = new global::DataCaptureService.AirMain();
+              Main = new global::DataProcessService.AirMain();
             }
             input.ReadMessage(Main);
             break;
           }
           case 26: {
             if (airComponent_ == null) {
-              AirComponent = new global::DataCaptureService.AirComponent();
+              AirComponent = new global::DataProcessService.AirComponent();
             }
             input.ReadMessage(AirComponent);
             break;
@@ -1010,7 +1010,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[4]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1200,7 +1200,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[5]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1652,7 +1652,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[6]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1879,7 +1879,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[7]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1911,10 +1911,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "CurrentWeatherModel" field.</summary>
     public const int CurrentWeatherModelFieldNumber = 1;
-    private global::DataCaptureService.CurrentWeatherModel currentWeatherModel_;
+    private global::DataProcessService.CurrentWeatherModel currentWeatherModel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.CurrentWeatherModel CurrentWeatherModel {
+    public global::DataProcessService.CurrentWeatherModel CurrentWeatherModel {
       get { return currentWeatherModel_; }
       set {
         currentWeatherModel_ = value;
@@ -2008,7 +2008,7 @@ namespace DataCaptureService {
       }
       if (other.currentWeatherModel_ != null) {
         if (currentWeatherModel_ == null) {
-          CurrentWeatherModel = new global::DataCaptureService.CurrentWeatherModel();
+          CurrentWeatherModel = new global::DataProcessService.CurrentWeatherModel();
         }
         CurrentWeatherModel.MergeFrom(other.CurrentWeatherModel);
       }
@@ -2029,7 +2029,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (currentWeatherModel_ == null) {
-              CurrentWeatherModel = new global::DataCaptureService.CurrentWeatherModel();
+              CurrentWeatherModel = new global::DataProcessService.CurrentWeatherModel();
             }
             input.ReadMessage(CurrentWeatherModel);
             break;
@@ -2051,7 +2051,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (currentWeatherModel_ == null) {
-              CurrentWeatherModel = new global::DataCaptureService.CurrentWeatherModel();
+              CurrentWeatherModel = new global::DataProcessService.CurrentWeatherModel();
             }
             input.ReadMessage(CurrentWeatherModel);
             break;
@@ -2078,7 +2078,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[8]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2139,10 +2139,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "CurrentRain" field.</summary>
     public const int CurrentRainFieldNumber = 3;
-    private global::DataCaptureService.CurrentRain currentRain_;
+    private global::DataProcessService.CurrentRain currentRain_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.CurrentRain CurrentRain {
+    public global::DataProcessService.CurrentRain CurrentRain {
       get { return currentRain_; }
       set {
         currentRain_ = value;
@@ -2151,10 +2151,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "CurrentCloud" field.</summary>
     public const int CurrentCloudFieldNumber = 4;
-    private global::DataCaptureService.CurrentCloud currentCloud_;
+    private global::DataProcessService.CurrentCloud currentCloud_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.CurrentCloud CurrentCloud {
+    public global::DataProcessService.CurrentCloud CurrentCloud {
       get { return currentCloud_; }
       set {
         currentCloud_ = value;
@@ -2163,10 +2163,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "CurrentSys" field.</summary>
     public const int CurrentSysFieldNumber = 5;
-    private global::DataCaptureService.CurrentSys currentSys_;
+    private global::DataProcessService.CurrentSys currentSys_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.CurrentSys CurrentSys {
+    public global::DataProcessService.CurrentSys CurrentSys {
       get { return currentSys_; }
       set {
         currentSys_ = value;
@@ -2175,12 +2175,12 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "CurrentWeather" field.</summary>
     public const int CurrentWeatherFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::DataCaptureService.CurrentWeather> _repeated_currentWeather_codec
-        = pb::FieldCodec.ForMessage(50, global::DataCaptureService.CurrentWeather.Parser);
-    private readonly pbc::RepeatedField<global::DataCaptureService.CurrentWeather> currentWeather_ = new pbc::RepeatedField<global::DataCaptureService.CurrentWeather>();
+    private static readonly pb::FieldCodec<global::DataProcessService.CurrentWeather> _repeated_currentWeather_codec
+        = pb::FieldCodec.ForMessage(50, global::DataProcessService.CurrentWeather.Parser);
+    private readonly pbc::RepeatedField<global::DataProcessService.CurrentWeather> currentWeather_ = new pbc::RepeatedField<global::DataProcessService.CurrentWeather>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::DataCaptureService.CurrentWeather> CurrentWeather {
+    public pbc::RepeatedField<global::DataProcessService.CurrentWeather> CurrentWeather {
       get { return currentWeather_; }
     }
 
@@ -2334,19 +2334,19 @@ namespace DataCaptureService {
       }
       if (other.currentRain_ != null) {
         if (currentRain_ == null) {
-          CurrentRain = new global::DataCaptureService.CurrentRain();
+          CurrentRain = new global::DataProcessService.CurrentRain();
         }
         CurrentRain.MergeFrom(other.CurrentRain);
       }
       if (other.currentCloud_ != null) {
         if (currentCloud_ == null) {
-          CurrentCloud = new global::DataCaptureService.CurrentCloud();
+          CurrentCloud = new global::DataProcessService.CurrentCloud();
         }
         CurrentCloud.MergeFrom(other.CurrentCloud);
       }
       if (other.currentSys_ != null) {
         if (currentSys_ == null) {
-          CurrentSys = new global::DataCaptureService.CurrentSys();
+          CurrentSys = new global::DataProcessService.CurrentSys();
         }
         CurrentSys.MergeFrom(other.CurrentSys);
       }
@@ -2376,21 +2376,21 @@ namespace DataCaptureService {
           }
           case 26: {
             if (currentRain_ == null) {
-              CurrentRain = new global::DataCaptureService.CurrentRain();
+              CurrentRain = new global::DataProcessService.CurrentRain();
             }
             input.ReadMessage(CurrentRain);
             break;
           }
           case 34: {
             if (currentCloud_ == null) {
-              CurrentCloud = new global::DataCaptureService.CurrentCloud();
+              CurrentCloud = new global::DataProcessService.CurrentCloud();
             }
             input.ReadMessage(CurrentCloud);
             break;
           }
           case 42: {
             if (currentSys_ == null) {
-              CurrentSys = new global::DataCaptureService.CurrentSys();
+              CurrentSys = new global::DataProcessService.CurrentSys();
             }
             input.ReadMessage(CurrentSys);
             break;
@@ -2424,21 +2424,21 @@ namespace DataCaptureService {
           }
           case 26: {
             if (currentRain_ == null) {
-              CurrentRain = new global::DataCaptureService.CurrentRain();
+              CurrentRain = new global::DataProcessService.CurrentRain();
             }
             input.ReadMessage(CurrentRain);
             break;
           }
           case 34: {
             if (currentCloud_ == null) {
-              CurrentCloud = new global::DataCaptureService.CurrentCloud();
+              CurrentCloud = new global::DataProcessService.CurrentCloud();
             }
             input.ReadMessage(CurrentCloud);
             break;
           }
           case 42: {
             if (currentSys_ == null) {
-              CurrentSys = new global::DataCaptureService.CurrentSys();
+              CurrentSys = new global::DataProcessService.CurrentSys();
             }
             input.ReadMessage(CurrentSys);
             break;
@@ -2469,7 +2469,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[9]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2659,7 +2659,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[10]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2849,7 +2849,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[11]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3150,7 +3150,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[12]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3454,7 +3454,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[13]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3681,7 +3681,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[14]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3713,10 +3713,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyWeatherDataModel" field.</summary>
     public const int DailyWeatherDataModelFieldNumber = 1;
-    private global::DataCaptureService.DailyWeatherDataModel dailyWeatherDataModel_;
+    private global::DataProcessService.DailyWeatherDataModel dailyWeatherDataModel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.DailyWeatherDataModel DailyWeatherDataModel {
+    public global::DataProcessService.DailyWeatherDataModel DailyWeatherDataModel {
       get { return dailyWeatherDataModel_; }
       set {
         dailyWeatherDataModel_ = value;
@@ -3810,7 +3810,7 @@ namespace DataCaptureService {
       }
       if (other.dailyWeatherDataModel_ != null) {
         if (dailyWeatherDataModel_ == null) {
-          DailyWeatherDataModel = new global::DataCaptureService.DailyWeatherDataModel();
+          DailyWeatherDataModel = new global::DataProcessService.DailyWeatherDataModel();
         }
         DailyWeatherDataModel.MergeFrom(other.DailyWeatherDataModel);
       }
@@ -3831,7 +3831,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (dailyWeatherDataModel_ == null) {
-              DailyWeatherDataModel = new global::DataCaptureService.DailyWeatherDataModel();
+              DailyWeatherDataModel = new global::DataProcessService.DailyWeatherDataModel();
             }
             input.ReadMessage(DailyWeatherDataModel);
             break;
@@ -3853,7 +3853,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (dailyWeatherDataModel_ == null) {
-              DailyWeatherDataModel = new global::DataCaptureService.DailyWeatherDataModel();
+              DailyWeatherDataModel = new global::DataProcessService.DailyWeatherDataModel();
             }
             input.ReadMessage(DailyWeatherDataModel);
             break;
@@ -3880,7 +3880,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[15]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3913,10 +3913,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyCity" field.</summary>
     public const int DailyCityFieldNumber = 1;
-    private global::DataCaptureService.DailyCity dailyCity_;
+    private global::DataProcessService.DailyCity dailyCity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.DailyCity DailyCity {
+    public global::DataProcessService.DailyCity DailyCity {
       get { return dailyCity_; }
       set {
         dailyCity_ = value;
@@ -3925,12 +3925,12 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyListModel" field.</summary>
     public const int DailyListModelFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::DataCaptureService.DailyListModel> _repeated_dailyListModel_codec
-        = pb::FieldCodec.ForMessage(18, global::DataCaptureService.DailyListModel.Parser);
-    private readonly pbc::RepeatedField<global::DataCaptureService.DailyListModel> dailyListModel_ = new pbc::RepeatedField<global::DataCaptureService.DailyListModel>();
+    private static readonly pb::FieldCodec<global::DataProcessService.DailyListModel> _repeated_dailyListModel_codec
+        = pb::FieldCodec.ForMessage(18, global::DataProcessService.DailyListModel.Parser);
+    private readonly pbc::RepeatedField<global::DataProcessService.DailyListModel> dailyListModel_ = new pbc::RepeatedField<global::DataProcessService.DailyListModel>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::DataCaptureService.DailyListModel> DailyListModel {
+    public pbc::RepeatedField<global::DataProcessService.DailyListModel> DailyListModel {
       get { return dailyListModel_; }
     }
 
@@ -4026,7 +4026,7 @@ namespace DataCaptureService {
       }
       if (other.dailyCity_ != null) {
         if (dailyCity_ == null) {
-          DailyCity = new global::DataCaptureService.DailyCity();
+          DailyCity = new global::DataProcessService.DailyCity();
         }
         DailyCity.MergeFrom(other.DailyCity);
       }
@@ -4048,7 +4048,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (dailyCity_ == null) {
-              DailyCity = new global::DataCaptureService.DailyCity();
+              DailyCity = new global::DataProcessService.DailyCity();
             }
             input.ReadMessage(DailyCity);
             break;
@@ -4074,7 +4074,7 @@ namespace DataCaptureService {
             break;
           case 10: {
             if (dailyCity_ == null) {
-              DailyCity = new global::DataCaptureService.DailyCity();
+              DailyCity = new global::DataProcessService.DailyCity();
             }
             input.ReadMessage(DailyCity);
             break;
@@ -4105,7 +4105,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[16]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4228,10 +4228,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyCoord" field.</summary>
     public const int DailyCoordFieldNumber = 8;
-    private global::DataCaptureService.DailyCoord dailyCoord_;
+    private global::DataProcessService.DailyCoord dailyCoord_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.DailyCoord DailyCoord {
+    public global::DataProcessService.DailyCoord DailyCoord {
       get { return dailyCoord_; }
       set {
         dailyCoord_ = value;
@@ -4437,7 +4437,7 @@ namespace DataCaptureService {
       }
       if (other.dailyCoord_ != null) {
         if (dailyCoord_ == null) {
-          DailyCoord = new global::DataCaptureService.DailyCoord();
+          DailyCoord = new global::DataProcessService.DailyCoord();
         }
         DailyCoord.MergeFrom(other.DailyCoord);
       }
@@ -4486,7 +4486,7 @@ namespace DataCaptureService {
           }
           case 66: {
             if (dailyCoord_ == null) {
-              DailyCoord = new global::DataCaptureService.DailyCoord();
+              DailyCoord = new global::DataProcessService.DailyCoord();
             }
             input.ReadMessage(DailyCoord);
             break;
@@ -4536,7 +4536,7 @@ namespace DataCaptureService {
           }
           case 66: {
             if (dailyCoord_ == null) {
-              DailyCoord = new global::DataCaptureService.DailyCoord();
+              DailyCoord = new global::DataProcessService.DailyCoord();
             }
             input.ReadMessage(DailyCoord);
             break;
@@ -4563,7 +4563,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[17]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4790,7 +4790,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[18]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4838,10 +4838,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyMain" field.</summary>
     public const int DailyMainFieldNumber = 2;
-    private global::DataCaptureService.DailyMain dailyMain_;
+    private global::DataProcessService.DailyMain dailyMain_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.DailyMain DailyMain {
+    public global::DataProcessService.DailyMain DailyMain {
       get { return dailyMain_; }
       set {
         dailyMain_ = value;
@@ -4850,10 +4850,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyCloud" field.</summary>
     public const int DailyCloudFieldNumber = 3;
-    private global::DataCaptureService.DailyCloud dailyCloud_;
+    private global::DataProcessService.DailyCloud dailyCloud_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.DailyCloud DailyCloud {
+    public global::DataProcessService.DailyCloud DailyCloud {
       get { return dailyCloud_; }
       set {
         dailyCloud_ = value;
@@ -4862,10 +4862,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyRain" field.</summary>
     public const int DailyRainFieldNumber = 4;
-    private global::DataCaptureService.DailyRain dailyRain_;
+    private global::DataProcessService.DailyRain dailyRain_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::DataCaptureService.DailyRain DailyRain {
+    public global::DataProcessService.DailyRain DailyRain {
       get { return dailyRain_; }
       set {
         dailyRain_ = value;
@@ -4874,12 +4874,12 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "DailyWeatherModel" field.</summary>
     public const int DailyWeatherModelFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::DataCaptureService.DailyWeatherModel> _repeated_dailyWeatherModel_codec
-        = pb::FieldCodec.ForMessage(42, global::DataCaptureService.DailyWeatherModel.Parser);
-    private readonly pbc::RepeatedField<global::DataCaptureService.DailyWeatherModel> dailyWeatherModel_ = new pbc::RepeatedField<global::DataCaptureService.DailyWeatherModel>();
+    private static readonly pb::FieldCodec<global::DataProcessService.DailyWeatherModel> _repeated_dailyWeatherModel_codec
+        = pb::FieldCodec.ForMessage(42, global::DataProcessService.DailyWeatherModel.Parser);
+    private readonly pbc::RepeatedField<global::DataProcessService.DailyWeatherModel> dailyWeatherModel_ = new pbc::RepeatedField<global::DataProcessService.DailyWeatherModel>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::DataCaptureService.DailyWeatherModel> DailyWeatherModel {
+    public pbc::RepeatedField<global::DataProcessService.DailyWeatherModel> DailyWeatherModel {
       get { return dailyWeatherModel_; }
     }
 
@@ -5017,19 +5017,19 @@ namespace DataCaptureService {
       }
       if (other.dailyMain_ != null) {
         if (dailyMain_ == null) {
-          DailyMain = new global::DataCaptureService.DailyMain();
+          DailyMain = new global::DataProcessService.DailyMain();
         }
         DailyMain.MergeFrom(other.DailyMain);
       }
       if (other.dailyCloud_ != null) {
         if (dailyCloud_ == null) {
-          DailyCloud = new global::DataCaptureService.DailyCloud();
+          DailyCloud = new global::DataProcessService.DailyCloud();
         }
         DailyCloud.MergeFrom(other.DailyCloud);
       }
       if (other.dailyRain_ != null) {
         if (dailyRain_ == null) {
-          DailyRain = new global::DataCaptureService.DailyRain();
+          DailyRain = new global::DataProcessService.DailyRain();
         }
         DailyRain.MergeFrom(other.DailyRain);
       }
@@ -5055,21 +5055,21 @@ namespace DataCaptureService {
           }
           case 18: {
             if (dailyMain_ == null) {
-              DailyMain = new global::DataCaptureService.DailyMain();
+              DailyMain = new global::DataProcessService.DailyMain();
             }
             input.ReadMessage(DailyMain);
             break;
           }
           case 26: {
             if (dailyCloud_ == null) {
-              DailyCloud = new global::DataCaptureService.DailyCloud();
+              DailyCloud = new global::DataProcessService.DailyCloud();
             }
             input.ReadMessage(DailyCloud);
             break;
           }
           case 34: {
             if (dailyRain_ == null) {
-              DailyRain = new global::DataCaptureService.DailyRain();
+              DailyRain = new global::DataProcessService.DailyRain();
             }
             input.ReadMessage(DailyRain);
             break;
@@ -5099,21 +5099,21 @@ namespace DataCaptureService {
           }
           case 18: {
             if (dailyMain_ == null) {
-              DailyMain = new global::DataCaptureService.DailyMain();
+              DailyMain = new global::DataProcessService.DailyMain();
             }
             input.ReadMessage(DailyMain);
             break;
           }
           case 26: {
             if (dailyCloud_ == null) {
-              DailyCloud = new global::DataCaptureService.DailyCloud();
+              DailyCloud = new global::DataProcessService.DailyCloud();
             }
             input.ReadMessage(DailyCloud);
             break;
           }
           case 34: {
             if (dailyRain_ == null) {
-              DailyRain = new global::DataCaptureService.DailyRain();
+              DailyRain = new global::DataProcessService.DailyRain();
             }
             input.ReadMessage(DailyRain);
             break;
@@ -5144,7 +5144,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[19]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5232,10 +5232,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "pressure" field.</summary>
     public const int PressureFieldNumber = 5;
-    private double pressure_;
+    private int pressure_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double Pressure {
+    public int Pressure {
       get { return pressure_; }
       set {
         pressure_ = value;
@@ -5268,10 +5268,10 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "humidity" field.</summary>
     public const int HumidityFieldNumber = 8;
-    private double humidity_;
+    private int humidity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double Humidity {
+    public int Humidity {
       get { return humidity_; }
       set {
         humidity_ = value;
@@ -5309,10 +5309,10 @@ namespace DataCaptureService {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Feelslike, other.Feelslike)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Tempmin, other.Tempmin)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Tempmax, other.Tempmax)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Pressure, other.Pressure)) return false;
+      if (Pressure != other.Pressure) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Sealevel, other.Sealevel)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Grndlevel, other.Grndlevel)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Humidity, other.Humidity)) return false;
+      if (Humidity != other.Humidity) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Tempkf, other.Tempkf)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5325,10 +5325,10 @@ namespace DataCaptureService {
       if (Feelslike != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Feelslike);
       if (Tempmin != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Tempmin);
       if (Tempmax != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Tempmax);
-      if (Pressure != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Pressure);
+      if (Pressure != 0) hash ^= Pressure.GetHashCode();
       if (Sealevel != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Sealevel);
       if (Grndlevel != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Grndlevel);
-      if (Humidity != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Humidity);
+      if (Humidity != 0) hash ^= Humidity.GetHashCode();
       if (Tempkf != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Tempkf);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5364,9 +5364,9 @@ namespace DataCaptureService {
         output.WriteRawTag(33);
         output.WriteDouble(Tempmax);
       }
-      if (Pressure != 0D) {
-        output.WriteRawTag(41);
-        output.WriteDouble(Pressure);
+      if (Pressure != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Pressure);
       }
       if (Sealevel != 0D) {
         output.WriteRawTag(49);
@@ -5376,9 +5376,9 @@ namespace DataCaptureService {
         output.WriteRawTag(57);
         output.WriteDouble(Grndlevel);
       }
-      if (Humidity != 0D) {
-        output.WriteRawTag(65);
-        output.WriteDouble(Humidity);
+      if (Humidity != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(Humidity);
       }
       if (Tempkf != 0D) {
         output.WriteRawTag(73);
@@ -5410,9 +5410,9 @@ namespace DataCaptureService {
         output.WriteRawTag(33);
         output.WriteDouble(Tempmax);
       }
-      if (Pressure != 0D) {
-        output.WriteRawTag(41);
-        output.WriteDouble(Pressure);
+      if (Pressure != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Pressure);
       }
       if (Sealevel != 0D) {
         output.WriteRawTag(49);
@@ -5422,9 +5422,9 @@ namespace DataCaptureService {
         output.WriteRawTag(57);
         output.WriteDouble(Grndlevel);
       }
-      if (Humidity != 0D) {
-        output.WriteRawTag(65);
-        output.WriteDouble(Humidity);
+      if (Humidity != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(Humidity);
       }
       if (Tempkf != 0D) {
         output.WriteRawTag(73);
@@ -5452,8 +5452,8 @@ namespace DataCaptureService {
       if (Tempmax != 0D) {
         size += 1 + 8;
       }
-      if (Pressure != 0D) {
-        size += 1 + 8;
+      if (Pressure != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Pressure);
       }
       if (Sealevel != 0D) {
         size += 1 + 8;
@@ -5461,8 +5461,8 @@ namespace DataCaptureService {
       if (Grndlevel != 0D) {
         size += 1 + 8;
       }
-      if (Humidity != 0D) {
-        size += 1 + 8;
+      if (Humidity != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Humidity);
       }
       if (Tempkf != 0D) {
         size += 1 + 8;
@@ -5491,7 +5491,7 @@ namespace DataCaptureService {
       if (other.Tempmax != 0D) {
         Tempmax = other.Tempmax;
       }
-      if (other.Pressure != 0D) {
+      if (other.Pressure != 0) {
         Pressure = other.Pressure;
       }
       if (other.Sealevel != 0D) {
@@ -5500,7 +5500,7 @@ namespace DataCaptureService {
       if (other.Grndlevel != 0D) {
         Grndlevel = other.Grndlevel;
       }
-      if (other.Humidity != 0D) {
+      if (other.Humidity != 0) {
         Humidity = other.Humidity;
       }
       if (other.Tempkf != 0D) {
@@ -5537,8 +5537,8 @@ namespace DataCaptureService {
             Tempmax = input.ReadDouble();
             break;
           }
-          case 41: {
-            Pressure = input.ReadDouble();
+          case 40: {
+            Pressure = input.ReadInt32();
             break;
           }
           case 49: {
@@ -5549,8 +5549,8 @@ namespace DataCaptureService {
             Grndlevel = input.ReadDouble();
             break;
           }
-          case 65: {
-            Humidity = input.ReadDouble();
+          case 64: {
+            Humidity = input.ReadInt32();
             break;
           }
           case 73: {
@@ -5588,8 +5588,8 @@ namespace DataCaptureService {
             Tempmax = input.ReadDouble();
             break;
           }
-          case 41: {
-            Pressure = input.ReadDouble();
+          case 40: {
+            Pressure = input.ReadInt32();
             break;
           }
           case 49: {
@@ -5600,8 +5600,8 @@ namespace DataCaptureService {
             Grndlevel = input.ReadDouble();
             break;
           }
-          case 65: {
-            Humidity = input.ReadDouble();
+          case 64: {
+            Humidity = input.ReadInt32();
             break;
           }
           case 73: {
@@ -5630,7 +5630,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[20]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5820,7 +5820,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[21]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6010,7 +6010,7 @@ namespace DataCaptureService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.MessageTypes[22]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6057,13 +6057,13 @@ namespace DataCaptureService {
 
     /// <summary>Field number for the "main" field.</summary>
     public const int MainFieldNumber = 2;
-    private int main_;
+    private string main_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Main {
+    public string Main {
       get { return main_; }
       set {
-        main_ = value;
+        main_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6118,7 +6118,7 @@ namespace DataCaptureService {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Main != 0) hash ^= Main.GetHashCode();
+      if (Main.Length != 0) hash ^= Main.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Icon.Length != 0) hash ^= Icon.GetHashCode();
       if (_unknownFields != null) {
@@ -6143,9 +6143,9 @@ namespace DataCaptureService {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Main != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Main);
+      if (Main.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Main);
       }
       if (Description.Length != 0) {
         output.WriteRawTag(26);
@@ -6169,9 +6169,9 @@ namespace DataCaptureService {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (Main != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Main);
+      if (Main.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Main);
       }
       if (Description.Length != 0) {
         output.WriteRawTag(26);
@@ -6194,8 +6194,8 @@ namespace DataCaptureService {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Main != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Main);
+      if (Main.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Main);
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
@@ -6218,7 +6218,7 @@ namespace DataCaptureService {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Main != 0) {
+      if (other.Main.Length != 0) {
         Main = other.Main;
       }
       if (other.Description.Length != 0) {
@@ -6246,8 +6246,8 @@ namespace DataCaptureService {
             Id = input.ReadInt32();
             break;
           }
-          case 16: {
-            Main = input.ReadInt32();
+          case 18: {
+            Main = input.ReadString();
             break;
           }
           case 26: {
@@ -6277,8 +6277,8 @@ namespace DataCaptureService {
             Id = input.ReadInt32();
             break;
           }
-          case 16: {
-            Main = input.ReadInt32();
+          case 18: {
+            Main = input.ReadString();
             break;
           }
           case 26: {

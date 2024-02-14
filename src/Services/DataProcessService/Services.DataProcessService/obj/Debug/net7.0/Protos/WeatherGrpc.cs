@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace DataCaptureService {
+namespace DataProcessService {
   public static partial class GrpcWeather
   {
     static readonly string __ServiceName = "GrpcWeather";
@@ -46,20 +46,20 @@ namespace DataCaptureService {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::DataCaptureService.AirPollutionModelRequest> __Marshaller_AirPollutionModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataCaptureService.AirPollutionModelRequest.Parser));
+    static readonly grpc::Marshaller<global::DataProcessService.AirPollutionModelRequest> __Marshaller_AirPollutionModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataProcessService.AirPollutionModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::DataCaptureService.AirPollutionModelResponse> __Marshaller_AirPollutionModelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataCaptureService.AirPollutionModelResponse.Parser));
+    static readonly grpc::Marshaller<global::DataProcessService.AirPollutionModelResponse> __Marshaller_AirPollutionModelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataProcessService.AirPollutionModelResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::DataCaptureService.CurrentWeatherModelRequest> __Marshaller_CurrentWeatherModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataCaptureService.CurrentWeatherModelRequest.Parser));
+    static readonly grpc::Marshaller<global::DataProcessService.CurrentWeatherModelRequest> __Marshaller_CurrentWeatherModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataProcessService.CurrentWeatherModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::DataCaptureService.CurrentWeatherModelResponse> __Marshaller_CurrentWeatherModelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataCaptureService.CurrentWeatherModelResponse.Parser));
+    static readonly grpc::Marshaller<global::DataProcessService.CurrentWeatherModelResponse> __Marshaller_CurrentWeatherModelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataProcessService.CurrentWeatherModelResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::DataCaptureService.DailyWeatherModelRequest> __Marshaller_DailyWeatherModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataCaptureService.DailyWeatherModelRequest.Parser));
+    static readonly grpc::Marshaller<global::DataProcessService.DailyWeatherModelRequest> __Marshaller_DailyWeatherModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataProcessService.DailyWeatherModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::DataCaptureService.DailyWeatherModelResponse> __Marshaller_DailyWeatherModelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataCaptureService.DailyWeatherModelResponse.Parser));
+    static readonly grpc::Marshaller<global::DataProcessService.DailyWeatherModelResponse> __Marshaller_DailyWeatherModelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataProcessService.DailyWeatherModelResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::DataCaptureService.AirPollutionModelRequest, global::DataCaptureService.AirPollutionModelResponse> __Method_AirPollution = new grpc::Method<global::DataCaptureService.AirPollutionModelRequest, global::DataCaptureService.AirPollutionModelResponse>(
+    static readonly grpc::Method<global::DataProcessService.AirPollutionModelRequest, global::DataProcessService.AirPollutionModelResponse> __Method_AirPollution = new grpc::Method<global::DataProcessService.AirPollutionModelRequest, global::DataProcessService.AirPollutionModelResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AirPollution",
@@ -67,7 +67,7 @@ namespace DataCaptureService {
         __Marshaller_AirPollutionModelResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::DataCaptureService.CurrentWeatherModelRequest, global::DataCaptureService.CurrentWeatherModelResponse> __Method_CurrentWeather = new grpc::Method<global::DataCaptureService.CurrentWeatherModelRequest, global::DataCaptureService.CurrentWeatherModelResponse>(
+    static readonly grpc::Method<global::DataProcessService.CurrentWeatherModelRequest, global::DataProcessService.CurrentWeatherModelResponse> __Method_CurrentWeather = new grpc::Method<global::DataProcessService.CurrentWeatherModelRequest, global::DataProcessService.CurrentWeatherModelResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CurrentWeather",
@@ -75,7 +75,7 @@ namespace DataCaptureService {
         __Marshaller_CurrentWeatherModelResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::DataCaptureService.DailyWeatherModelRequest, global::DataCaptureService.DailyWeatherModelResponse> __Method_DailyWeather = new grpc::Method<global::DataCaptureService.DailyWeatherModelRequest, global::DataCaptureService.DailyWeatherModelResponse>(
+    static readonly grpc::Method<global::DataProcessService.DailyWeatherModelRequest, global::DataProcessService.DailyWeatherModelResponse> __Method_DailyWeather = new grpc::Method<global::DataProcessService.DailyWeatherModelRequest, global::DataProcessService.DailyWeatherModelResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DailyWeather",
@@ -85,7 +85,7 @@ namespace DataCaptureService {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::DataCaptureService.WeatherReflection.Descriptor.Services[0]; }
+      get { return global::DataProcessService.WeatherReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of GrpcWeather</summary>
@@ -93,19 +93,19 @@ namespace DataCaptureService {
     public abstract partial class GrpcWeatherBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::DataCaptureService.AirPollutionModelResponse> AirPollution(global::DataCaptureService.AirPollutionModelRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::DataProcessService.AirPollutionModelResponse> AirPollution(global::DataProcessService.AirPollutionModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::DataCaptureService.CurrentWeatherModelResponse> CurrentWeather(global::DataCaptureService.CurrentWeatherModelRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::DataProcessService.CurrentWeatherModelResponse> CurrentWeather(global::DataProcessService.CurrentWeatherModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::DataCaptureService.DailyWeatherModelResponse> DailyWeather(global::DataCaptureService.DailyWeatherModelRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::DataProcessService.DailyWeatherModelResponse> DailyWeather(global::DataProcessService.DailyWeatherModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -130,9 +130,9 @@ namespace DataCaptureService {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GrpcWeatherBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_AirPollution, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataCaptureService.AirPollutionModelRequest, global::DataCaptureService.AirPollutionModelResponse>(serviceImpl.AirPollution));
-      serviceBinder.AddMethod(__Method_CurrentWeather, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataCaptureService.CurrentWeatherModelRequest, global::DataCaptureService.CurrentWeatherModelResponse>(serviceImpl.CurrentWeather));
-      serviceBinder.AddMethod(__Method_DailyWeather, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataCaptureService.DailyWeatherModelRequest, global::DataCaptureService.DailyWeatherModelResponse>(serviceImpl.DailyWeather));
+      serviceBinder.AddMethod(__Method_AirPollution, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataProcessService.AirPollutionModelRequest, global::DataProcessService.AirPollutionModelResponse>(serviceImpl.AirPollution));
+      serviceBinder.AddMethod(__Method_CurrentWeather, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataProcessService.CurrentWeatherModelRequest, global::DataProcessService.CurrentWeatherModelResponse>(serviceImpl.CurrentWeather));
+      serviceBinder.AddMethod(__Method_DailyWeather, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataProcessService.DailyWeatherModelRequest, global::DataProcessService.DailyWeatherModelResponse>(serviceImpl.DailyWeather));
     }
 
   }

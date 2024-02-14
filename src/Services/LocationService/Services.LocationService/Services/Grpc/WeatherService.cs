@@ -1,5 +1,5 @@
 ﻿using BuildingBlock.Base.Exceptions;
-using DataCaptureService;
+using DataProcessService;
 using Grpc.Net.Client;
 using MediatR;
 using Microsoft.Extensions.Configuration;
@@ -44,17 +44,6 @@ namespace Services.LocationService.Services.Grpc
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
         public async Task<CurrentWeatherModel> GetCurrentWeatherAsync(string city)
         {
             CurrentWeatherQueryRequest currentWeatherQueryRequest = new(city);
@@ -72,6 +61,23 @@ namespace Services.LocationService.Services.Grpc
                 throw new ServiceErrorException(nameof(WeatherService), ex.Message);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public async Task<DailyWeatherDataModel> GetDailyWeatherAsync(string city)
         {

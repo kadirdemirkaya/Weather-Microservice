@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DataCaptureService;
+using DataProcessService;
 
 namespace Services.DataProcessService.Mappers
 {
@@ -79,9 +79,10 @@ namespace Services.DataProcessService.Mappers
                 .ForMember(dest => dest.Dt, opt => opt.MapFrom(src => src.Dt)).ReverseMap()
                 .ForMember(dest => dest.DailyWeatherModel, opt => opt.MapFrom(src => src.DWeatherModels)).ReverseMap()
                 .ForMember(dest => dest.Main, opt => opt.MapFrom(src => src.DailyMain)).ReverseMap()
-                .ForMember(dest => dest.DailyRain, opt => opt.MapFrom(src => src.Rain)).ReverseMap();
+                .ForMember(dest => dest.DailyRain, opt => opt.MapFrom(src => src.Rain)).ReverseMap()
+                .ForMember(dest => dest.Cloud, opt => opt.MapFrom(src => src.DailyCloud)).ReverseMap();
 
-            CreateMap<Models.Main, DailyMain>()
+            CreateMap<Models.Daily.Main, DailyMain>()
                 .ForMember(dest => dest.Feelslike, opt => opt.MapFrom(src => src.feels_like)).ReverseMap()
                 .ForMember(dest => dest.grnd_level, opt => opt.MapFrom(src => src.Grndlevel)).ReverseMap()
                 .ForMember(dest => dest.Humidity, opt => opt.MapFrom(src => src.humidity)).ReverseMap()
@@ -89,7 +90,8 @@ namespace Services.DataProcessService.Mappers
                 .ForMember(dest => dest.Sealevel, opt => opt.MapFrom(src => src.sea_level)).ReverseMap()
                 .ForMember(dest => dest.temp, opt => opt.MapFrom(src => src.Temp)).ReverseMap()
                 .ForMember(dest => dest.Tempmax, opt => opt.MapFrom(src => src.temp_max)).ReverseMap()
-                .ForMember(dest => dest.temp_min, opt => opt.MapFrom(src => src.Tempmin)).ReverseMap();
+                .ForMember(dest => dest.temp_min, opt => opt.MapFrom(src => src.Tempmin)).ReverseMap()
+                .ForMember(dest => dest.Tempkf, opt => opt.MapFrom(src => src.temp_kf)).ReverseMap();
 
             CreateMap<Models.Cloud, DailyCloud>()
                 .ForMember(dest => dest.All, opt => opt.MapFrom(src => src.all)).ReverseMap();
