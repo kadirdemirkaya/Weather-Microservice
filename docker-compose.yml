@@ -122,6 +122,60 @@
 
 
 
+# version: '3.4'
+
+# services:
+#   mongo:
+#     container_name: mongo-db
+#     image: mongo
+#     ports:
+#       - 18005:27017
+#     networks:
+#       - backend
+#     env_file:
+#       - locationveriable.env
+
+#   services.locationservice.api:
+#     container_name: location-api
+#     image: ${DOCKER_REGISTRY-}serviceslocationserviceapi
+#     build:
+#       context: .
+#       dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+#     ports:
+#       - 18006:80
+#     networks:
+#       - backend
+#     env_file:
+#       - locationveriable.env
+  
+#   rabbitmq:
+#     container_name: rabbitmq
+#     image: rabbitmq:3-management
+#     networks:
+#       - backend
+#     ports:
+#       - "5672:5672"
+#       - "15672:15672"
+#     volumes:
+#       - rabbitmq:/var/lib/rabbitmq
+
+       
+# networks:
+#   backend:
+#     driver: bridge
+
+# volumes:
+#   rabbitmq:
+
+
+
+
+
+
+
+
+
+
 version: '3.4'
 
 services:
@@ -159,10 +213,20 @@ services:
     volumes:
       - rabbitmq:/var/lib/rabbitmq
 
-       
+  redis:
+    container_name: redis
+    image: redis
+    networks:
+      - backend
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    
 networks:
   backend:
     driver: bridge
 
 volumes:
-  rabbitmq:
+  rabbitmq:    
+  redis_data:  

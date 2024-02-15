@@ -15,3 +15,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\R
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Redis\BuildingBlock.Redis\obj\Debug\net7.0\refint\BuildingBlock.Redis.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Redis\BuildingBlock.Redis\obj\Debug\net7.0\BuildingBlock.Redis.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Redis\BuildingBlock.Redis\obj\Debug\net7.0\ref\BuildingBlock.Redis.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Redis\BuildingBlock.Redis\obj\Debug\net7.0\BuildingBlock.Redis.sourcelink.json

@@ -31,3 +31,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\F
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Factory\BuildingBlock.Factory\bin\Debug\net7.0\BuildingBlock.PostgreSql.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Factory\BuildingBlock.Factory\bin\Debug\net7.0\BuildingBlock.Redis.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Factory\BuildingBlock.Factory\bin\Debug\net7.0\BuildingBlock.Redis.pdb
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Factory\BuildingBlock.Factory\obj\Debug\net7.0\BuildingBlock.Factory.sourcelink.json

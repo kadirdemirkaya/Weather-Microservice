@@ -25,13 +25,7 @@ namespace BuildingBlock.Redis
         {
             _inMemoryOptions = inMemoryOptions;
             if (_inMemoryOptions.Connection != null)
-            {
-                var connJson = JsonConvert.SerializeObject(RedisConfig.Connection, new JsonSerializerSettings()
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-                });
-                connectionFactory = ConnectionMultiplexer.Connect(JsonConvert.DeserializeObject<string>(connJson));
-            }
+                connectionFactory = ConnectionMultiplexer.Connect(inMemoryOptions.Connection.ToString());
             persistentConnection = new RedisPersistentConnection(connectionFactory, _inMemoryOptions);
             _redisDb = persistentConnection.CreateModel();
         }

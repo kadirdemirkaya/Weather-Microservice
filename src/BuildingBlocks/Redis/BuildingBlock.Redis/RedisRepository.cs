@@ -4,6 +4,7 @@ using BuildingBlock.Base.Enums;
 using BuildingBlock.Base.Extensions;
 using BuildingBlock.Base.Models.Base;
 using BuildingBlock.Base.Options;
+using Microsoft.AspNetCore.Connections;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using StackExchange.Redis;
@@ -22,6 +23,14 @@ namespace BuildingBlock.Redis
         private string connectionUrl;
         private RedisConfig RedisConfig;
         private InMemoryOptions inMemoryOptions;
+
+        public RedisRepository(RedisConfig redisConfig, IServiceProvider serviceProvider)
+        {
+            if (redisConfig.Connection != null)
+                _redis = ConnectionMultiplexer.Connect(redisConfig.Connection.ToString());
+            persistentConnection = new RedisPersistentConnection(_redis, redisConfig);
+            _redisDb = persistentConnection.CreateModel();
+        }
 
         public RedisRepository(IServiceProvider serviceProvider, IConfiguration configuration)
         {

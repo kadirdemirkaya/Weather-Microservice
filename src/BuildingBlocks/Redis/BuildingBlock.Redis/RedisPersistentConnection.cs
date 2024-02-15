@@ -40,14 +40,8 @@ namespace BuildingBlock.Redis
             RetryCount = retryCount;
             inMemoryOptions = inMemoryOptions;
 
-            if (inMemoryOptions.Connection != null)
-            {
-                var connJson = JsonConvert.SerializeObject(RedisConfig.Connection, new JsonSerializerSettings()
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-                });
-                _conString = connJson;
-            }
+            if (redisConfig.Connection != null)
+                _conString = redisConfig.Connection.ToString();
         }
 
         public RedisPersistentConnection(IConnectionMultiplexer redis, InMemoryOptions inMemoryOptions)

@@ -1,3 +1,4 @@
+using Amazon.Auth.AccessControlPolicy.ActionIdentifiers;
 using BBlockTest.Aggregate.Product;
 using BBlockTest.Aggregate.Weather;
 using BBlockTest.Constants;
@@ -8,12 +9,15 @@ using BBlockTest.Models.Data.Weather;
 using BuildingBlock.Base.Abstractions;
 using BuildingBlock.Base.Configs;
 using BuildingBlock.Base.Enums;
+using BuildingBlock.Base.Options;
 using BuildingBlock.Factory.Factories;
+using BuildingBlock.Redis;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using RabbitMQ.Client;
+using static BBlockTest.Constants.Constant;
 
 namespace BBlockTest
 {
@@ -424,6 +428,98 @@ namespace BBlockTest
                EventNameSuffix = "IntegrationEvent",
                EventBusConnectionString = "amqp://guest:guest@localhost:5672"
            };
+        #endregion
+
+        #region Redis Test
+
+        [Test]
+        public async Task redis_service_test_crud()
+        {
+            try
+            {
+                RedisServiceInject(services);
+
+                var _sp = services.BuildServiceProvider();
+                var _redisService = _sp.GetRequiredService<IRedisService<Weather, WeatherId>>();
+
+                var weather1 = new Weather();
+                weather1.Degree = 12;
+                weather1.Id = WeatherId.CreateUnique();
+
+                _redisService.Add(Redis.Key1, weather1, GetTimeSpan(10));
+
+                var res = _redisService.GetList<Weather>(Redis.Key1);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        [Test]
+        public async Task redis_repository_test_crud()
+        {
+            try
+            {
+                RedisRepositoryInject(services);
+
+                var weather1 = new Weather();
+                weather1.Degree = 12;
+                weather1.Id = WeatherId.CreateUnique();
+
+                var weather2 = new Weather();
+                weather2.Degree = 15;
+                weather2.Id = WeatherId.CreateUnique();
+
+                var _sp = services.BuildServiceProvider();
+                var _redisRepository = _sp.GetRequiredService<IRedisRepository<Weather, WeatherId>>();
+
+                //_redisRepository.Create(Redis.Key1, weather1, RedisDataType.OnlyLists);
+                //_redisRepository.Create(Redis.Key1, weather2, RedisDataType.OnlyLists);
+
+                var res = _redisRepository.GetAll(Redis.Key1, RedisDataType.OnlyLists);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        private void RedisServiceInject(ServiceCollection services)
+        {
+            services.AddScoped<IRedisService<Weather, WeatherId>>(sp =>
+            {
+                return new RedisService<Weather, WeatherId>(GetInMemoryOptions(), sp);
+            });
+        }
+
+        private void RedisRepositoryInject(ServiceCollection services)
+        {
+            services.AddScoped<IRedisRepository<Weather, WeatherId>>(sp =>
+            {
+                return new RedisRepository<Weather, WeatherId>(GetRedisConfig(), sp);
+            });
+        }
+
+        private TimeSpan GetTimeSpan(int num)
+            => TimeSpan.FromMinutes(num);
+
+        private RedisConfig GetRedisConfig()
+            => new()
+            {
+                Connection = Redis.RedisUrl,
+                ConnectionRetryCount = 5
+            };
+
+        private InMemoryOptions GetInMemoryOptions()
+            => new InMemoryOptions()
+            {
+                Connection = Redis.RedisUrl,
+                InMemoryType = Redis.memoryType,
+                RetryCount = Redis.RetryCount,
+                Password = "",
+                Username = ""
+            };
         #endregion
     }
 }
