@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using Serilog;
 using Services.DataCaptureService.Events;
 
-namespace Services.DataCaptureService.Features.Commands.DailyWeather
+namespace Services.DataCaptureService.Features.Commands.Daily.DailyWeather
 {
     public class DailyWeatherCommandHandler : IRequestHandler<DailyWeatherCommandRequest, DailyWeatherCommandResponse>
     {

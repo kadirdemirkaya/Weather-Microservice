@@ -13,6 +13,7 @@ namespace BuildingBlock.Redis
         private object lock_object = new object();
         private readonly int RetryCount;
         private bool _disposed;
+        private IServer _server;
         private string _conString;
         private RedisConfig RedisConfig;
         private EventBusConfig EventBusConfig;
@@ -50,13 +51,7 @@ namespace BuildingBlock.Redis
             this.inMemoryOptions = inMemoryOptions;
             RetryCount = inMemoryOptions.RetryCount;
             if (inMemoryOptions.Connection != null)
-            {
-                var connJson = JsonConvert.SerializeObject(inMemoryOptions.Connection, new JsonSerializerSettings()
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-                });
-                _conString = connJson;
-            }
+                _conString = inMemoryOptions.Connection.ToString();
         }
 
         public RedisPersistentConnection(IConnectionMultiplexer redis, EventBusConfig eventBusConfig, int retryCount = 5)
@@ -92,6 +87,19 @@ namespace BuildingBlock.Redis
                     if (connection is null)
                         connection = ConnectionMultiplexer.Connect(JsonConvert.DeserializeObject<string>(_conString));
                     return connection;
+                }
+            }
+        }
+
+        public IServer GetServer
+        {
+            get
+            {
+                lock (lock_object)
+                {
+                    if (connection is not null)
+                        _server = connection.GetServer(_conString);
+                    return _server;
                 }
             }
         }

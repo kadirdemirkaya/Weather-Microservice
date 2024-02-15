@@ -1,9 +1,11 @@
 ﻿using BuildingBlock.Base.Abstractions;
 using BuildingBlock.Base.Exceptions;
+using BuildingBlock.Redis;
 using Serilog;
 using Services.DataProcessService.Aggregate.Air;
 using Services.DataProcessService.Aggregate.Air.Events;
 using Services.DataProcessService.Aggregate.Air.ValueObjects;
+using Services.DataProcessService.Constants;
 
 namespace Services.DataProcessService.Events.EventHandlers
 {
@@ -11,13 +13,19 @@ namespace Services.DataProcessService.Events.EventHandlers
     {
         private readonly IUnitOfWork _unitOfWork;
         private bool res = false;
-        public AirWeathIntegrationEventHandler(IUnitOfWork unitOfWork)
+        private readonly IRedisService<AirPollutionWeather, AirPollutionWeatherId> _redisService;
+        private string key;
+        public AirWeathIntegrationEventHandler(IUnitOfWork unitOfWork, IRedisService<AirPollutionWeather, AirPollutionWeatherId> redisService)
         {
             _unitOfWork = unitOfWork;
+            _redisService = redisService;
+            key = Constant.Keys.AirPollutionModel;
         }
 
         public async Task Handle(AirWeathIntegrationEvent @event)
         {
+            _redisService.DeleteKeys(key);
+
             AirPollutionWeather airPollutionWeather = AirPollutionWeather.Create(AirPollutionWeatherId.CreateUnique(), Coord.Create(@event.WeatherData.coord.lat, @event.WeatherData.coord.lon));
 
             foreach (var lst in @event.WeatherData.list)

@@ -26,7 +26,9 @@ namespace BuildingBlock.Base.Abstractions
 
         T Get<T>(string key) where T : class;
         List<T> GetList<T>(string key) where T : class;
-
+        int GetStringKeyCount();
+        bool DeleteAllKeys();
+        void DeleteKeys(string key);
     }
     public interface IRedisService<T> : ICaching<T> where T : class
     {
@@ -48,5 +50,9 @@ namespace BuildingBlock.Base.Abstractions
         T Get<T>(string key) where T : class;
         List<T> GetList<T>(string key) where T : class;
 
+        int GetStringKeyCount();
+        bool DeleteAllKeys();
+
+        void DeleteKeys(string key);
     }
 }

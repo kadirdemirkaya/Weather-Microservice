@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using BuildingBlock.Redis.EventBusRedis;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services.DataProcessService.Data;
@@ -15,9 +16,9 @@ namespace Services.DataProcessService
                     .MediatrServiceRegistration()
                     .RepositoryServiceRegistration()
                     .UnitOfWorkServiceRegistration()
+                    .ServiceRegistration()
                     //.EventBusServiceRegistration(configuration)
                     .SeedServiceRegistration()
-                    .ServiceRegistration()
                     .GrpcServiceRegistration();
 
             return services;

@@ -1,6 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Services.DataProcessService.Abstractions;
 using Services.DataProcessService.Data;
+using Services.DataProcessService.Features.Commands.Currnet.CreateCurrentWeatherInMemory;
+using Services.DataProcessService.Features.Queries.Current.GetAirPollutionInMemory;
 using Services.DataProcessService.Models;
 
 namespace Services.DataProcessService.Services
@@ -8,20 +11,26 @@ namespace Services.DataProcessService.Services
     public class CurrentWeatherService : ICurrentWeatherService
     {
         private readonly WeatherDbContext _context;
-
-        public CurrentWeatherService(WeatherDbContext context)
+        private readonly IMediator _mediator;
+        public CurrentWeatherService(WeatherDbContext context, IMediator mediator)
         {
             _context = context;
+            _mediator = mediator;
         }
 
         public async Task<CurrentWeatherModel> GetCurrentWeatherModelAsync(Coord coord)
         {
-            var data = await _context.Set<Aggregate.CurrentWeather>()
+            GetCurrentWeatherInMemoryQueryRequest getCurrentRequest = new(coord);
+            GetCurrentWeatherInMemoryQueryResponse getCurrentResponse = await _mediator.Send(getCurrentRequest);
+            if (getCurrentResponse.CurrentWeatherModel is not null)
+                return getCurrentResponse.CurrentWeatherModel;
+
+            CurrentWeatherModel? currentWeatherModel = await _context.Set<Aggregate.CurrentWeather>()
                 .Where(c => c.Coord.Lat == coord.lat && c.Coord.Lon == coord.lon)
                 .Include(c => c.CWeathers)
                 .Select(a => new CurrentWeatherModel
                 {
-                    @base= a.Base,
+                    @base = a.Base,
                     dt = a.Dt,
                     Cloud = new Cloud()
                     {
@@ -46,7 +55,11 @@ namespace Services.DataProcessService.Services
                         main = c.Main
                     }).ToList()
                 }).FirstOrDefaultAsync();
-            return data;
+
+            CreateCurrentWeatherInMemoryCommandRequest createCurrentRequest = new(coord, currentWeatherModel);
+            CreateCurrentWeatherInMemoryCommandResponse createCurrentResponse = await _mediator.Send(createCurrentRequest);
+
+            return createCurrentResponse.response is true ? currentWeatherModel : default;
         }
     }
 }

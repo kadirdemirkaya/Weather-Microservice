@@ -6,6 +6,7 @@ using Services.DataProcessService.Aggregate.Air.Events;
 using Services.DataProcessService.Aggregate.Current.Events;
 using Services.DataProcessService.Aggregate.Current.ValueObjects;
 using Services.DataProcessService.Aggregate.ValueObjects;
+using Services.DataProcessService.Constants;
 
 namespace Services.DataProcessService.Events.EventHandlers
 {
@@ -13,15 +14,17 @@ namespace Services.DataProcessService.Events.EventHandlers
     {
         private readonly IUnitOfWork _unitOfWork;
         private bool res = false;
-
+        private readonly IRedisService<CurrentWeather, CurrentWeatherId> _redisService;
+        private string key;
         public CurrentWeathIntegrationEventHandler(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            key = Constant.Keys.CurrentWeatherModel;
         }
 
         public async Task Handle(CurrentWeathIntegrationEvent @event)
         {
-            //var currentWeather = _mapper.Map<Services.DataProcessService.Aggregate.CurrentWeather>(@event.WeatherData);
+            _redisService.DeleteKeys(key);
 
             CurrentWeather currentWeatherEnt = CurrentWeather.CreateCurrentWeather(Coord.Create
                 (@event.WeatherData.coord.lon, @event.WeatherData.coord.lat), @event.WeatherData.@base, Main.Create(@event.WeatherData.main.temp, @event.WeatherData.main.feels_like, @event.WeatherData.main.temp_min, @event.WeatherData.main.temp_max, @event.WeatherData.main.pressure, @event.WeatherData.main.humidity, @event.WeatherData.main.sea_level, @event.WeatherData.main.grnd_level), @event.WeatherData.visibility, Wind.Create(@event.WeatherData.wind.speed, @event.WeatherData.wind.deg, @event.WeatherData.wind.gust), Rain.Create(@event.WeatherData.rain._1h), Cloud.Create(@event.WeatherData.clouds.all), @event.WeatherData.dt, Sys.Create(@event.WeatherData.sys.type, @event.WeatherData.sys.id, @event.WeatherData.sys.country, @event.WeatherData.sys.sunrise), @event.WeatherData.timezone, @event.WeatherData.id, @event.WeatherData.name, @event.WeatherData.cod);

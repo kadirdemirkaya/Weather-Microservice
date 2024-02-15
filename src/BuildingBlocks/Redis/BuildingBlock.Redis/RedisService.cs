@@ -3,6 +3,7 @@ using BuildingBlock.Base.Configs;
 using BuildingBlock.Base.Extensions;
 using BuildingBlock.Base.Models.Base;
 using BuildingBlock.Base.Options;
+using Elastic.CommonSchema;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using StackExchange.Redis;
@@ -16,6 +17,7 @@ namespace BuildingBlock.Redis
         private RedisPersistentConnection persistentConnection;
         private IConnectionMultiplexer connectionFactory;
         private IDatabase _redisDb;
+        private IServer _server;
         private bool _disposed;
         private string connectionUrl;
         private RedisConfig RedisConfig;
@@ -25,25 +27,14 @@ namespace BuildingBlock.Redis
         {
             _inMemoryOptions = inMemoryOptions;
             if (_inMemoryOptions.Connection != null)
-                connectionFactory = ConnectionMultiplexer.Connect(inMemoryOptions.Connection.ToString());
+            {
+                connectionUrl = inMemoryOptions.Connection.ToString();
+                connectionFactory = ConnectionMultiplexer.Connect(connectionUrl);
+            }
             persistentConnection = new RedisPersistentConnection(connectionFactory, _inMemoryOptions);
             _redisDb = persistentConnection.CreateModel();
+            _server = persistentConnection.GetServer;
         }
-
-        //public RedisService(InMemoryOptions inMemoryOptions, IServiceProvider serviceProvider)
-        //{
-        //    _inMemoryOptions = inMemoryOptions;
-        //    if (_inMemoryOptions.Connection != null)
-        //    {
-        //        var connJson = JsonConvert.SerializeObject(RedisConfig.Connection, new JsonSerializerSettings()
-        //        {
-        //            ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-        //        });
-        //        connectionFactory = ConnectionMultiplexer.Connect(JsonConvert.DeserializeObject<string>(connJson));
-        //    }
-        //    persistentConnection = new RedisPersistentConnection(connectionFactory, _inMemoryOptions);
-        //    _redisDb = persistentConnection.CreateModel();
-        //}
 
         public IDatabase GetDatabase
         {
@@ -325,6 +316,39 @@ namespace BuildingBlock.Redis
             {
                 _redisDb = GetDatabase;
             }
+        }
+
+        public int GetStringKeyCount()
+        {
+            var keys = _server.Keys(pattern: "*");
+            int stringKeyCount = 0;
+            foreach (var key in keys)
+                if (_redisDb.KeyType(key) == RedisType.String)
+                    stringKeyCount++;
+            return stringKeyCount;
+        }
+
+        public bool DeleteAllKeys()
+        {
+            RedisResult? redisResult = _redisDb.Execute("FLUSHALL");
+            return redisResult.ToString() == "OK" ? true : false;
+        }
+
+        public void DeleteKeys(string key)
+        {
+            if (!key.EndsWith("*"))
+                key += "*";
+
+            var cursor = 0;
+            do
+            {
+                var scanResult = _redisDb.Execute("SCAN", cursor, "MATCH", key);
+                cursor = (int)((RedisResult[])scanResult)[0];
+                var keys = (RedisResult[])((RedisResult[])scanResult)[1];
+
+                foreach (var redisKey in keys)
+                    _redisDb.KeyDelete((string)redisKey);
+            } while (cursor != 0);
         }
 
         private static class TypeLock<T>
@@ -637,6 +661,21 @@ namespace BuildingBlock.Redis
             {
                 _redisDb = GetDatabase;
             }
+        }
+
+        public int GetStringKeyCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteAllKeys()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteKeys(string key)
+        {
+            throw new NotImplementedException();
         }
 
         private static class TypeLock<T>

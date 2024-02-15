@@ -10,3 +10,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\B
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Base\BuildingBlock.Base\obj\Debug\net7.0\refint\BuildingBlock.Base.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Base\BuildingBlock.Base\obj\Debug\net7.0\BuildingBlock.Base.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Base\BuildingBlock.Base\obj\Debug\net7.0\ref\BuildingBlock.Base.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Base\BuildingBlock.Base\obj\Debug\net7.0\BuildingBlock.Base.sourcelink.json

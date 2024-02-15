@@ -15,3 +15,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\M
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mongo\BuildingBlock.Mongo\obj\Debug\net7.0\refint\BuildingBlock.Mongo.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mongo\BuildingBlock.Mongo\obj\Debug\net7.0\BuildingBlock.Mongo.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mongo\BuildingBlock.Mongo\obj\Debug\net7.0\ref\BuildingBlock.Mongo.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Mongo\BuildingBlock.Mongo\obj\Debug\net7.0\BuildingBlock.Mongo.sourcelink.json

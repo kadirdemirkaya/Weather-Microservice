@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Services.DataCaptureService.Features.Commands.DailyWeather
+namespace Services.DataCaptureService.Features.Commands.Daily.DailyWeather
 {
     public record DailyWeatherCommandRequest(
        string responseContent

@@ -13,3 +13,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\R
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\RabbitMq\BuildingBlock.RabbitMq\obj\Debug\net7.0\refint\BuildingBlock.RabbitMq.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\RabbitMq\BuildingBlock.RabbitMq\obj\Debug\net7.0\BuildingBlock.RabbitMq.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\RabbitMq\BuildingBlock.RabbitMq\obj\Debug\net7.0\ref\BuildingBlock.RabbitMq.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\RabbitMq\BuildingBlock.RabbitMq\obj\Debug\net7.0\BuildingBlock.RabbitMq.sourcelink.json

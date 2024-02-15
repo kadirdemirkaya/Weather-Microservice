@@ -21,7 +21,6 @@
 		<Folder Include="Aggregate\Air\Enums\" />
 		<Folder Include="Aggregate\Current\Enums\" />
 		<Folder Include="Events\Events\" />
-		<Folder Include="Features\Commands\" />
 		<Folder Include="Setups\" />
 		<Folder Include="Exceptions\" />
 		<Folder Include="Dtos\" />

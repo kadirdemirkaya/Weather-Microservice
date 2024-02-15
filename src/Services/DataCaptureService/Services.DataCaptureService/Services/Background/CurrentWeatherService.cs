@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Hosting;
-using Services.DataCaptureService.Constants;
-using Services.DataCaptureService.Features.Commands.CurrentWeather;
+using Services.DataCaptureService.Features.Commands.Current.CurrentWeather;
 using Services.DataCaptureService.Models;
 
 namespace Services.DataCaptureService.Services.Background
@@ -22,7 +21,7 @@ namespace Services.DataCaptureService.Services.Background
             while (!stoppingToken.IsCancellationRequested)
             {
                 //await SendRequest(Constant.Urls.currentUrl);
-                await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(20), stoppingToken);
             }
         }
 

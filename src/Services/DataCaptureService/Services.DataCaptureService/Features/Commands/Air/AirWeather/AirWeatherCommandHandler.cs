@@ -2,7 +2,7 @@
 using MediatR;
 using Services.DataCaptureService.Events;
 
-namespace Services.DataCaptureService.Features.Commands.AirWeather
+namespace Services.DataCaptureService.Features.Commands.Air.AirWeather
 {
     public class AirWeatherCommandHandler : IRequestHandler<AirWeatherCommandRequest, AirWeatherCommandResponse>
     {

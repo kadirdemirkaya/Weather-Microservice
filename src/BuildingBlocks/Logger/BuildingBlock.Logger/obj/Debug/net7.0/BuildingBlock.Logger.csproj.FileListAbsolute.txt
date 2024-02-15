@@ -13,3 +13,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\L
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\refint\BuildingBlock.Logger.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\ref\BuildingBlock.Logger.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Logger\BuildingBlock.Logger\obj\Debug\net7.0\BuildingBlock.Logger.sourcelink.json

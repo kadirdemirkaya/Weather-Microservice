@@ -33,6 +33,7 @@ namespace Services.DataProcessService.Constants
             public const string Syss = $"{nameof(Sys)}s";
             public const string Winds = $"{nameof(Wind)}s";
         }
+
         public static class FilePaths
         {
             private static string currentDirectory = Directory.GetCurrentDirectory();
@@ -40,6 +41,13 @@ namespace Services.DataProcessService.Constants
             private static IEnumerable<string> txtFiles = Directory.EnumerateFiles(logsPath, "*.txt");
 
             public static List<string> txtLogFiles = txtFiles.ToList();
+        }
+
+        public static class Keys
+        {
+            public const string AirPollutionModel = "AirPollutionModel";
+            public const string CurrentWeatherModel = "CurrentWeatherModel";
+            public const string DailyWeatherModel = "DailyWeatherModel";
         }
 
         public static class Urls

@@ -15,3 +15,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\E
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\refint\BuildingBlock.Email.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\ref\BuildingBlock.Email.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Email\BuildingBlock.Email\obj\Debug\net7.0\BuildingBlock.Email.sourcelink.json

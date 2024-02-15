@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Services.DataProcessService.Abstractions;
 using Services.DataProcessService.Aggregate.Daily;
 using Services.DataProcessService.Data;
+using Services.DataProcessService.Features.Commands.Daily;
+using Services.DataProcessService.Features.Queries.Daily.GetDailyWeatherInMemmory;
 using Services.DataProcessService.Models.Daily;
 
 namespace Services.DataProcessService.Services
@@ -9,15 +12,22 @@ namespace Services.DataProcessService.Services
     public class DailyWeatherService : IDailyWeatherService
     {
         private readonly WeatherDbContext _context;
+        private readonly IMediator _mediator;
 
-        public DailyWeatherService(WeatherDbContext context)
+        public DailyWeatherService(WeatherDbContext context, IMediator mediator)
         {
             _context = context;
+            _mediator = mediator;
         }
 
         public async Task<DailyWeatherModel> GetDWeatherModelAsync(Models.Coord coord)
         {
-            return await _context.Set<DailyWeather>()
+            GetDailyWeatherInMemmoryQueryRequest getDailyRequest = new(coord);
+            GetDailyWeatherInMemmoryQueryResponse getDailyResponse = await _mediator.Send(getDailyRequest);
+            if (getDailyResponse.DailyWeatherModel is not null)
+                return getDailyResponse.DailyWeatherModel;
+
+            DailyWeatherModel? dailyWeatherModel = await _context.Set<DailyWeather>()
                 .Where(d => d.City.Lat == coord.lat && d.City.Lon == coord.lon)
                 .Include(d => d.DLists)
                 .ThenInclude(d => d.Dweather)
@@ -70,6 +80,11 @@ namespace Services.DataProcessService.Services
                         }).ToList()
                     }).ToList()
                 }).FirstOrDefaultAsync();
+
+            CreateDailyWeatherInMemoryCommandRequest createDailyRequest = new(coord, dailyWeatherModel);
+            CreateDailyWeatherInMemoryCommandResponse createDailyResponse = await _mediator.Send(createDailyRequest);
+
+            return createDailyResponse.response is true ? dailyWeatherModel : default;
         }
     }
 }

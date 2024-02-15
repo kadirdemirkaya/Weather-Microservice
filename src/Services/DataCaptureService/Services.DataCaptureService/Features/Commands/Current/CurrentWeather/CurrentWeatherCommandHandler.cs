@@ -3,7 +3,7 @@ using MediatR;
 using Newtonsoft.Json.Linq;
 using Services.DataCaptureService.Events;
 
-namespace Services.DataCaptureService.Features.Commands.CurrentWeather
+namespace Services.DataCaptureService.Features.Commands.Current.CurrentWeather
 {
     public class CurrentWeatherCommandHandler : IRequestHandler<CurrentWeatherCommandRequest, CurrentWeatherCommandResponse>
     {

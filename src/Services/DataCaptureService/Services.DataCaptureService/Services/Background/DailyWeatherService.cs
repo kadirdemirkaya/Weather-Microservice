@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Hosting;
-using Services.DataCaptureService.Features.Commands.DailyWeather;
+using Services.DataCaptureService.Features.Commands.Daily.DailyWeather;
 using Services.DataCaptureService.Models;
 
 namespace Services.DataCaptureService.Services.Background
@@ -22,7 +22,7 @@ namespace Services.DataCaptureService.Services.Background
             while (!stoppingToken.IsCancellationRequested)
             {
                 //await SendRequest(Constant.Urls.dailyUrl);
-                await Task.Delay(TimeSpan.FromSeconds(3), stoppingToken);
+                await Task.Delay(TimeSpan.FromHours(3), stoppingToken);
             }
         }
 

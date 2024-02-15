@@ -15,3 +15,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\M
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\MsSql\BuildingBlock.MsSql\obj\Debug\net7.0\refint\BuildingBlock.MsSql.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\MsSql\BuildingBlock.MsSql\obj\Debug\net7.0\BuildingBlock.MsSql.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\MsSql\BuildingBlock.MsSql\obj\Debug\net7.0\ref\BuildingBlock.MsSql.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\MsSql\BuildingBlock.MsSql\obj\Debug\net7.0\BuildingBlock.MsSql.sourcelink.json

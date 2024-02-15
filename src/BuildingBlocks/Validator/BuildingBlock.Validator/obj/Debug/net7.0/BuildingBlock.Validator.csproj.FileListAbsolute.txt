@@ -13,3 +13,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\V
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\refint\BuildingBlock.Validator.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\ref\BuildingBlock.Validator.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Validator\BuildingBlock.Validator\obj\Debug\net7.0\BuildingBlock.Validator.sourcelink.json

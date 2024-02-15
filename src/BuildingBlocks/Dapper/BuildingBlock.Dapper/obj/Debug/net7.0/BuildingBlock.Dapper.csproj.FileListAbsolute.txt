@@ -19,3 +19,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\D
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Dapper\BuildingBlock.Dapper\obj\Debug\net7.0\refint\BuildingBlock.Dapper.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Dapper\BuildingBlock.Dapper\obj\Debug\net7.0\BuildingBlock.Dapper.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Dapper\BuildingBlock.Dapper\obj\Debug\net7.0\ref\BuildingBlock.Dapper.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\Dapper\BuildingBlock.Dapper\obj\Debug\net7.0\BuildingBlock.Dapper.sourcelink.json

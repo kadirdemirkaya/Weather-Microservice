@@ -6,6 +6,7 @@ using Services.DataProcessService.Aggregate.Daily;
 using Services.DataProcessService.Aggregate.Daily.Entities;
 using Services.DataProcessService.Aggregate.Daily.Events;
 using Services.DataProcessService.Aggregate.Daily.ValueObjects;
+using Services.DataProcessService.Constants;
 
 namespace Services.DataProcessService.Events.EventHandlers
 {
@@ -13,13 +14,18 @@ namespace Services.DataProcessService.Events.EventHandlers
     {
         private readonly IUnitOfWork _unitOfWork;
         private bool res = false;
+        private readonly IRedisService<DailyWeather, DailyWeatherId> _redisService;
+        private string key;
         public DailyWeathIntegrationEventHandler(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            key = Constant.Keys.DailyWeatherModel;
         }
 
         public async Task Handle(DailyWeathIntegrationEvent @event)
         {
+            _redisService.DeleteKeys(key);
+
             DailyWeather dailyWeather = DailyWeather.Create(DailyWeatherId.CreateUnique(), @event.WeatherData.cod, @event.WeatherData.message, @event.WeatherData.cnt, City.Create(@event.WeatherData.city.id, @event.WeatherData.city.name, @event.WeatherData.city.coord.lon, @event.WeatherData.city.coord.lat, @event.WeatherData.city.country, @event.WeatherData.city.population, @event.WeatherData.city.timezone, @event.WeatherData.city.sunrise, @event.WeatherData.city.sunset));
 
             foreach (var lst in @event.WeatherData.list)

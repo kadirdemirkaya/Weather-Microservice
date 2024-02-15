@@ -14,6 +14,7 @@ namespace BuildingBlock.Base.Abstractions
         IEnumerable<T?>? GetAll(string? key, RedisDataType dataType);
         bool Delete(string key, string? id, RedisDataType dataType);
         bool Update(string key, T value, RedisDataType dataType);
+        long Count(string key, RedisDataType dataType);
     }
     public interface IRedisRepository<T>
          where T : class
@@ -25,5 +26,6 @@ namespace BuildingBlock.Base.Abstractions
         IEnumerable<T?>? GetAll(string? key, RedisDataType dataType);
         bool Delete(string key, string? id, RedisDataType dataType);
         bool Update(string key, T value, RedisDataType dataType);
+        long Count(string key, RedisDataType dataType);
     }
 }

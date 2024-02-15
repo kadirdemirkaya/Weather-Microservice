@@ -1,5 +1,6 @@
 ﻿using BuildingBlock.Base.Configs;
 using BuildingBlock.Base.Enums;
+using BuildingBlock.Base.Options;
 using Microsoft.Extensions.Configuration;
 
 namespace Services.DataProcessService.Configurations.Configs
@@ -73,6 +74,17 @@ namespace Services.DataProcessService.Configurations.Configs
                 EventBusType = EventBusType.RabbitMQ,
                 EventNameSuffix = _configuration["EventBusOptions:EventNameSuffix"],
                 EventBusConnectionString = _configuration["EventBusOptions:EventBusConnectionString"]
+            };
+        }
+
+        public static RedisConfig GetRedisConfig()
+        {
+            IConfiguration _configuration = GetConfiguration();
+
+            return new()
+            {
+                Connection = $"{_configuration["RedisOptions:Host"]}:{_configuration["RedisOptions:Port"]}",
+                ConnectionRetryCount = int.Parse(_configuration["ConnectionRetryCount:ConnectionRetryCount"])
             };
         }
     }

@@ -391,5 +391,29 @@ namespace BuildingBlock.Redis
                 return default;
             }
         }
+
+        public long Count(string key, RedisDataType dataType)
+        {
+            var db = _redis.GetDatabase();
+
+            try
+            {
+                switch (dataType)
+                {
+                    case RedisDataType.Sets:
+                        long lengthSet = db.SetLength(key);
+                        return lengthSet;
+                    case RedisDataType.Lists:
+                        long lengthList = db.ListLength(key);
+                        return lengthList;
+                }
+                return default;
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine("ERROR MESSAGE IN THE REDISCRUDCOMMON : " + ex.Message);
+                return default;
+            }
+        }
     }
 }

@@ -15,3 +15,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\P
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\PostgreSql\BuildingBlock.PostgreSql\obj\Debug\net7.0\refint\BuildingBlock.PostgreSql.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\PostgreSql\BuildingBlock.PostgreSql\obj\Debug\net7.0\BuildingBlock.PostgreSql.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\PostgreSql\BuildingBlock.PostgreSql\obj\Debug\net7.0\ref\BuildingBlock.PostgreSql.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\BuildingBlocks\PostgreSql\BuildingBlock.PostgreSql\obj\Debug\net7.0\BuildingBlock.PostgreSql.sourcelink.json
