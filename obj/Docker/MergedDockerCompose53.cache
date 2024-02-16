@@ -1,0 +1,100 @@
+name: dockercompose13092348111822341576
+services:
+  mongo:
+    container_name: mongo-db
+    environment:
+      ASPNETCORE_ENVIRONMEN_STATE: Production
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionUrl: mongodb://mongo:27017/WeatherDbContext
+      DatabaseName: WeatherDbContext
+      TableName: Location
+    image: mongo
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 27017
+      published: "18005"
+      protocol: tcp
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 5672
+      published: "5672"
+      protocol: tcp
+    - mode: ingress
+      target: 15672
+      published: "15672"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: rabbitmq
+      target: /var/lib/rabbitmq
+      volume: {}
+  redis:
+    container_name: redis
+    image: redis
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 6379
+      published: "6379"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: redis_data
+      target: /data
+      volume: {}
+  services.locationservice.api:
+    build:
+      context: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice
+      dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
+    container_name: location-api
+    environment:
+      ASPNETCORE_ENVIRONMEN_STATE: Production
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      ConnectionUrl: mongodb://mongo:27017/WeatherDbContext
+      DatabaseName: WeatherDbContext
+      TableName: Location
+    image: serviceslocationserviceapi
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "18006"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Casper\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Casper\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  backend:
+    name: dockercompose13092348111822341576_backend
+    driver: bridge
+volumes:
+  rabbitmq:
+    name: dockercompose13092348111822341576_rabbitmq
+  redis_data:
+    name: dockercompose13092348111822341576_redis_data

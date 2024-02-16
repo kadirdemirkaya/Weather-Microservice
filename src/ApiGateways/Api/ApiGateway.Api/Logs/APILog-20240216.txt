@@ -1,0 +1,28 @@
+2024-02-16 10:20:39.490 +03:00 [INF] User profile is available. Using 'C:\Users\Casper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-16 10:20:40.234 +03:00 [INF] Now listening on: https://localhost:7101
+2024-02-16 10:20:40.238 +03:00 [INF] Now listening on: http://localhost:5018
+2024-02-16 10:20:40.257 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-16 10:20:40.259 +03:00 [INF] Hosting environment: Development
+2024-02-16 10:20:40.270 +03:00 [INF] Content root path: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\ApiGateways\Api\ApiGateway.Api
+2024-02-16 10:20:47.250 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - -
+2024-02-16 10:20:48.066 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - - - 200 - text/html;charset=utf-8 820.9900ms
+2024-02-16 10:20:48.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/_vs/browserLink - -
+2024-02-16 10:20:48.292 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 215.9439ms
+2024-02-16 10:20:48.394 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - -
+2024-02-16 10:20:48.873 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 478.7759ms
+2024-02-16 10:21:19.250 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7101/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?city=Istanbul - -
+2024-02-16 10:21:19.281 +03:00 [WRN] requestId: 0HN1ENV3SMIPI:00000001, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather, verb: GET.
+2024-02-16 10:21:19.285 +03:00 [WRN] requestId: 0HN1ENV3SMIPI:00000001, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match Route configuration for upstream path: /api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather, request method: GET
+2024-02-16 10:21:19.390 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7101/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?city=Istanbul - - - 404 0 - 139.7165ms
+2024-02-16 10:37:33.962 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7101/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?city=Istanbul - -
+2024-02-16 10:37:34.050 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/ClientAndServer/{everything}
+2024-02-16 10:37:34.060 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000002, previousRequestId: no previous request id, message: No authentication needed for /ClientAndServer/ClientAndServer/Server/Weather/Current-Weather
+2024-02-16 10:37:34.084 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000002, previousRequestId: no previous request id, message: /api/ClientAndServer/{everything} route does not require user to be authorized
+2024-02-16 10:37:34.097 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000002, previousRequestId: no previous request id, message: The UseServiceDiscovery mode of the route '^(?i)/ClientAndServer/.+$' is enabled.
+2024-02-16 10:37:34.103 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000002, previousRequestId: no previous request id, message: Getting service discovery provider of Type 'Consul'...
+2024-02-16 10:37:53.114 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000002, previousRequestId: no previous request id, message: 400 (Bad Request) status code, request uri: https://localhost:7282/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?city=Istanbul
+2024-02-16 10:37:53.153 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7101/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?city=Istanbul - - - 400 287 application/json 19191.0212ms
+2024-02-16 10:38:25.930 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7101/ClientAndServer/ClientAndServer/Server/Weather/Daily-Weather?city=Istanbul - -
+2024-02-16 10:38:25.945 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/ClientAndServer/{everything}
+2024-02-16 10:38:25.998 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000003, previousRequestId: no previous request id, message: No authentication needed for /ClientAndServer/ClientAndServer/Server/Weather/Daily-Weather
+2024-02-16 10:38:26.001 +03:00 [INF] requestId: 0HN1ENV3SMIPI:00000003, previousRequestId: no previous request id, message: /api/ClientAndServer/{everything} route does not require user to be authorized

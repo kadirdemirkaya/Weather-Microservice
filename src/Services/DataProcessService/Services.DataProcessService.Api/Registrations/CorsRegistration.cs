@@ -8,10 +8,12 @@ namespace Services.DataProcessService.Api.Registrations
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowOrigin",
+                options.AddPolicy("AllowSpecificOrigin",
                     builder =>
                     {
-                        builder.AllowAnyHeader()
+                        builder
+                           .WithOrigins("https://localhost:7282", "https://localhost:7252", "http://localhost:5154", "http://localhost:5002")
+                           .AllowAnyHeader()
                            .AllowAnyMethod()
                            .SetIsOriginAllowed(_ => true)
                            .AllowCredentials();
@@ -23,7 +25,7 @@ namespace Services.DataProcessService.Api.Registrations
 
         public static WebApplication CorsApplicationRegistration(this WebApplication app)
         {
-            app.UseCors("AllowOrigin");
+            app.UseCors("AllowSpecificOrigin");
 
             return app;
         }

@@ -6,10 +6,12 @@
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowOrigin",
+                options.AddPolicy("AllowSpecificOrigin",
                     builder =>
                     {
-                        builder.AllowAnyHeader()
+                        builder
+                           .WithOrigins("https://localhost:7101", "http://localhost:5018")
+                           .AllowAnyHeader()
                            .AllowAnyMethod()
                            .SetIsOriginAllowed(_ => true)
                            .AllowCredentials();
@@ -21,7 +23,7 @@
 
         public static WebApplication CorsApplicationRegistration(this WebApplication app)
         {
-            app.UseCors("AllowOrigin");
+            app.UseCors("AllowSpecificOrigin");
 
             return app;
         }

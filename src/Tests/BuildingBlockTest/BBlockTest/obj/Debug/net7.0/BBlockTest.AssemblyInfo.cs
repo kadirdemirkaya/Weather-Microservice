@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BBlockTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0896a69c88aefdf47b48566457971261a4d7c9cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a28975ace65933ccdbd7ecb7f5c7ee25b3730ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("BBlockTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BBlockTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

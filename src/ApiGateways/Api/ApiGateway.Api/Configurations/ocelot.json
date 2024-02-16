@@ -1,0 +1,22 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "ClientAndServerService",
+
+      "DownstreamPathTemplate": "/api/ClientAndServer/{everything}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/ClientAndServer/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamScheme": "https"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7101",
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
+}

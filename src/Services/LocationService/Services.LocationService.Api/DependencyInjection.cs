@@ -11,8 +11,7 @@ namespace Services.LocationService.Api
                     .CorsServiceRegistration()
                     .HealthCheckServiceRegistration()
                     .SessionServiceRegistration()
-                    .SwaggerServiceRegistration()
-                    .ConsulServiceRegistration();
+                    .SwaggerServiceRegistration();
 
             return services;
         }
@@ -24,8 +23,7 @@ namespace Services.LocationService.Api
                .ControllerApplicationRegistration()
                .HealthCheckApplicationRegistration()
                .SessionApplicationRegistration()
-               .SwaggerApplicationRegistration()
-               .ConsulApplicationBuilderRegsitration(lifetime, configuration);
+               .SwaggerApplicationRegistration();
 
             return app;
         }

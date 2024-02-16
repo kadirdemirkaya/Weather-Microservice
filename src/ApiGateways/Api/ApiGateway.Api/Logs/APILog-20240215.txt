@@ -1,0 +1,63 @@
+2024-02-15 20:40:47.157 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-15 20:40:47.405 +03:00 [INF] User profile is available. Using 'C:\Users\Casper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-15 20:40:47.718 +03:00 [INF] Now listening on: https://localhost:7101
+2024-02-15 20:40:47.720 +03:00 [INF] Now listening on: http://localhost:5018
+2024-02-15 20:40:47.730 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-15 20:40:47.752 +03:00 [INF] Hosting environment: Development
+2024-02-15 20:40:47.753 +03:00 [INF] Content root path: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\ApiGateways\Api\ApiGateway.Api
+2024-02-15 20:40:50.176 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger - -
+2024-02-15 20:40:50.520 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger - - - 301 0 - 348.8347ms
+2024-02-15 20:40:50.534 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - -
+2024-02-15 20:40:50.739 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - - - 200 - text/html;charset=utf-8 205.0707ms
+2024-02-15 20:40:50.747 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/swagger-ui-bundle.js - -
+2024-02-15 20:40:50.747 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/swagger-ui.css - -
+2024-02-15 20:40:50.748 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/swagger-ui-standalone-preset.js - -
+2024-02-15 20:40:50.749 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/_vs/browserLink - -
+2024-02-15 20:40:50.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 180.2145ms
+2024-02-15 20:40:50.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/swagger-ui.css - - - 200 144929 text/css 181.1803ms
+2024-02-15 20:40:50.937 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 189.0735ms
+2024-02-15 20:40:50.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 195.5509ms
+2024-02-15 20:40:51.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - -
+2024-02-15 20:40:51.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/favicon-32x32.png - -
+2024-02-15 20:40:51.276 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/favicon-32x32.png - - - 200 628 image/png 4.4523ms
+2024-02-15 20:40:51.297 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 64.0712ms
+2024-02-15 22:49:29.861 +03:00 [INF] User profile is available. Using 'C:\Users\Casper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-15 22:49:30.306 +03:00 [INF] Now listening on: https://localhost:7101
+2024-02-15 22:49:30.309 +03:00 [INF] Now listening on: http://localhost:5018
+2024-02-15 22:49:30.324 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-15 22:49:30.326 +03:00 [INF] Hosting environment: Development
+2024-02-15 22:49:30.330 +03:00 [INF] Content root path: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\ApiGateways\Api\ApiGateway.Api
+2024-02-15 22:54:34.484 +03:00 [INF] User profile is available. Using 'C:\Users\Casper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-15 22:54:35.011 +03:00 [INF] Now listening on: https://localhost:7101
+2024-02-15 22:54:35.014 +03:00 [INF] Now listening on: http://localhost:5018
+2024-02-15 22:54:35.034 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-15 22:54:35.036 +03:00 [INF] Hosting environment: Development
+2024-02-15 22:54:35.047 +03:00 [INF] Content root path: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\ApiGateways\Api\ApiGateway.Api
+2024-02-15 22:56:29.844 +03:00 [INF] User profile is available. Using 'C:\Users\Casper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-15 22:56:30.624 +03:00 [INF] Now listening on: https://localhost:7101
+2024-02-15 22:56:30.627 +03:00 [INF] Now listening on: http://localhost:5018
+2024-02-15 22:56:30.637 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-15 22:56:30.644 +03:00 [INF] Hosting environment: Development
+2024-02-15 22:56:30.652 +03:00 [INF] Content root path: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\ApiGateways\Api\ApiGateway.Api
+2024-02-15 22:56:57.029 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - -
+2024-02-15 22:56:57.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - - - 200 - text/html;charset=utf-8 826.3988ms
+2024-02-15 22:56:57.910 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/_vs/browserLink - -
+2024-02-15 22:56:58.042 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 131.5947ms
+2024-02-15 22:56:58.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - -
+2024-02-15 22:56:58.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 378.4968ms
+2024-02-15 22:58:36.512 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7101/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?Istanbul - -
+2024-02-15 22:58:36.599 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7101/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?Istanbul - - - 404 0 - 87.1011ms
+2024-02-15 23:00:26.916 +03:00 [INF] User profile is available. Using 'C:\Users\Casper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-15 23:00:27.302 +03:00 [INF] Now listening on: https://localhost:7101
+2024-02-15 23:00:27.305 +03:00 [INF] Now listening on: http://localhost:5018
+2024-02-15 23:00:27.328 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-15 23:00:27.330 +03:00 [INF] Hosting environment: Development
+2024-02-15 23:00:27.340 +03:00 [INF] Content root path: C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\ApiGateways\Api\ApiGateway.Api
+2024-02-15 23:00:52.987 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - -
+2024-02-15 23:00:53.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/_vs/browserLink - -
+2024-02-15 23:00:53.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - - - 200 - text/html;charset=utf-8 816.8846ms
+2024-02-15 23:00:53.902 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 106.8398ms
+2024-02-15 23:00:54.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - -
+2024-02-15 23:00:54.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 279.5070ms
+2024-02-15 23:01:03.220 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7101/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?city=Istanbul - -
+2024-02-15 23:01:03.240 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7101/api/ClientAndServer/ClientAndServer/Server/Weather/Current-Weather?city=Istanbul - - - 404 0 - 19.5352ms

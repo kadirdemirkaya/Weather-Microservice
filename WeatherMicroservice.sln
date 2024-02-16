@@ -128,9 +128,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.DataCaptureService
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.DataCaptureService.Api", "src\Services\DataCaptureService\Services.DataCaptureService.Api\Services.DataCaptureService.Api.csproj", "{FF380CD2-18BF-4833-B41D-B66A2932B480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.ClientAndServerService.Api", "src\Services\ClientAndServerService\Services.ClientAndServerService.Api\Services.ClientAndServerService.Api.csproj", "{0063A29D-9C06-4482-A7AD-E96D16142725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.ClientAndServerService.Api", "src\Services\ClientAndServerService\Services.ClientAndServerService.Api\Services.ClientAndServerService.Api.csproj", "{0063A29D-9C06-4482-A7AD-E96D16142725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.ClientAndServerService", "src\Services\ClientAndServerService\Services.ClientAndServerService\Services.ClientAndServerService.csproj", "{32430B6B-6593-45B0-956D-F20FB2841828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.ClientAndServerService", "src\Services\ClientAndServerService\Services.ClientAndServerService\Services.ClientAndServerService.csproj", "{32430B6B-6593-45B0-956D-F20FB2841828}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway.Api", "src\ApiGateways\Api\ApiGateway.Api\ApiGateway.Api.csproj", "{E6496408-0E95-4FD8-BB7F-20B84CABA2E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -246,6 +248,10 @@ Global
 		{32430B6B-6593-45B0-956D-F20FB2841828}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32430B6B-6593-45B0-956D-F20FB2841828}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32430B6B-6593-45B0-956D-F20FB2841828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6496408-0E95-4FD8-BB7F-20B84CABA2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6496408-0E95-4FD8-BB7F-20B84CABA2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6496408-0E95-4FD8-BB7F-20B84CABA2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6496408-0E95-4FD8-BB7F-20B84CABA2E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -311,6 +317,7 @@ Global
 		{FF380CD2-18BF-4833-B41D-B66A2932B480} = {9EBA9E37-E4AF-41C8-B880-309168F78459}
 		{0063A29D-9C06-4482-A7AD-E96D16142725} = {E212582E-BB1E-4964-9D06-281A7F32789D}
 		{32430B6B-6593-45B0-956D-F20FB2841828} = {E212582E-BB1E-4964-9D06-281A7F32789D}
+		{E6496408-0E95-4FD8-BB7F-20B84CABA2E7} = {A8C7F799-C517-4373-8633-5D360404588F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {612F3A74-208C-4793-9455-5A154CEE7BAC}

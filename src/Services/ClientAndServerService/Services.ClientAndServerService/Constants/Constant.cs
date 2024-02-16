@@ -16,5 +16,14 @@
 
             public static List<string> txtLogFiles = txtFiles.ToList();
         }
+
+        public static class ClientAndServerService
+        {
+            public const string Tag = "ClientAndServer";
+            public const string ID = "ClientAndServerService";
+            public const string Name = "ClientAndServerService";
+            public const string Host = "localhost";
+            public const string Port = "7282";
+        }
     }
 }
