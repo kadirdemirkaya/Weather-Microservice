@@ -26,7 +26,6 @@ namespace Services.ClientAndServerService.Api.Registrations
 
             var consulClient = app.ApplicationServices.GetRequiredService<IConsulClient>();
             var loggingFactory = app.ApplicationServices.GetRequiredService<ILoggerFactory>();
-            var logger = loggingFactory.CreateLogger<IApplicationBuilder>();
 
             var agentServiceRegist = GetAgentServiceRegistration();
             var agentServiceRegsitId = agentServiceRegist.ID;

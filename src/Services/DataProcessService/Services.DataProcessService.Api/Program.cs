@@ -1,3 +1,4 @@
+using Serilog;
 using Services.DataProcessService;
 using Services.DataProcessService.Api;
 

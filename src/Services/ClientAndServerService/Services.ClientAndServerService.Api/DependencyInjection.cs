@@ -10,8 +10,8 @@ namespace Services.ClientAndServerService.Api
                     .CorsServiceRegistration()
                     .HealthCheckServiceRegistration()
                     .SessionServiceRegistration()
-                    .SwaggerServiceRegistration()
-                    .ConsulServiceRegistration();
+                    .SwaggerServiceRegistration();
+                    //.ConsulServiceRegistration();
 
             return services;
         }
@@ -23,8 +23,8 @@ namespace Services.ClientAndServerService.Api
                .SessionApplicationRegistration()
                .SwaggerApplicationRegistration()
                .AuthenticationApplicationRegistration()
-               .ControllerApplicationRegistration()
-               .ConsulApplicationBuilderRegsitration(app.Services.GetRequiredService<IHostApplicationLifetime>(), configuration);
+               .ControllerApplicationRegistration();
+               //.ConsulApplicationBuilderRegsitration(app.Services.GetRequiredService<IHostApplicationLifetime>(), configuration);
 
             return app;
         }

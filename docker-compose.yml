@@ -1,86 +1,58 @@
-# version: '3.4'
-
-# services:
-#   mongo:
-#     container_name: mongo-db
-#     image: mongo
-#     ports:
-#       - 18005:27017
-#     networks:
-#       - backend
-#     env_file:
-#       - locationveriable.env
-
-#   services.locationservice.api:
-#     container_name: location-api
-#     image: ${DOCKER_REGISTRY-}serviceslocationserviceapi
-#     build:
-#       context: .
-#       dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
-#     ports:
-#       - 18006:80
-#     networks:
-#       - backend
-#     env_file:
-#       - locationveriable.env
-  
-#   rabbitmq:
-#     container_name: rabbitmq
-#     image: rabbitmq:3-management
-#     networks:
-#       - backend
-#     ports:
-#       - "5672:5672"
-#       - "15672:15672"
-#     volumes:
-#       - rabbitmq:/var/lib/rabbitmq
-
-#   redis:
-#     container_name: redis
-#     image: redis
-#     networks:
-#       - backend
-#     ports:
-#       - "6379:6379"
-#     volumes:
-#       - redis_data:/data
-    
-# networks:
-#   backend:
-#     driver: bridge
-
-# volumes:
-#   rabbitmq:    
-#   redis_data:  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 version: '3.4'
 
 services:
-  mongo:
-    container_name: mongo-db
-    image: mongo
+
+  apigateway.api:
+    container_name: apigateway-api
+    image: ${DOCKER_REGISTRY-}apigatewayapi
+    build:
+      context: .
+      dockerfile: src/ApiGateways/Api/ApiGateway.Api/Dockerfile
     ports:
-      - 18005:27017
+      - 18004:5018
     networks:
       - backend
     env_file:
-      - locationveriable.env
+      - weatherveriable.env
+
+  services.clientandserverservice.api:
+    container_name: clientandserver-api
+    image: ${DOCKER_REGISTRY-}servicesclientandserverserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/ClientAndServerService/Services.ClientAndServerService.Api/Dockerfile
+    ports:
+      - 18005:80
+    networks:
+      - backend
+    env_file:
+      - weatherveriable.env
+    
+  services.datacaptureservice.api:
+    container_name: datacapture-api
+    image: ${DOCKER_REGISTRY-}servicesdatacaptureserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/DataCaptureService/Services.DataCaptureService.Api/Dockerfile
+    ports:
+      - 18006:80
+    networks:
+      - backend
+    env_file:
+      - weatherveriable.env
+
+  services.dataprocessservice.api:
+    container_name: dataprocess-api
+    image: ${DOCKER_REGISTRY-}servicesdataprocessserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/DataProcessService/Services.DataProcessService.Api/Dockerfile
+    ports:
+      - 18007:80
+    networks:
+      - backend
+    env_file:
+      - weatherveriable.env
 
   services.locationservice.api:
     container_name: location-api
@@ -89,11 +61,63 @@ services:
       context: .
       dockerfile: src/Services/LocationService/Services.LocationService.Api/Dockerfile
     ports:
-      - 18006:80
+      - 18008:80
     networks:
       - backend
     env_file:
-      - locationveriable.env
+      - weatherveriable.env
+    
+  services.userinfoservice.api:
+    container_name: userinfo-api
+    image: ${DOCKER_REGISTRY-}servicesuserinfoserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/UserInfoService/Services.UserInfoService.Api/Dockerfile
+    ports:
+      - 18009:80
+    networks:
+      - backend
+    env_file:
+      - weatherveriable.env
+
+  mongo:
+    container_name: mongo-db
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+    env_file:
+      - weatherveriable.env
+    volumes:
+      - mongodb_data:/data/db
+
+  postgresql:
+    image: postgres
+    container_name: postgresql
+    networks:
+      - backend
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: WeatherDbContex
+      POSTGRES_USER: postgresql
+      POSTGRES_PASSWORD: "123"
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server
+    container_name: mssql
+    networks:
+      - backend
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "pa55w0rd!"
+    volumes:
+      - mssql_data:/var/opt/mssql
   
   rabbitmq:
     container_name: rabbitmq
@@ -133,3 +157,6 @@ networks:
 volumes:
   rabbitmq:    
   redis_data:  
+  mongodb_data:
+  postgresql_data:
+  mssql_data:  

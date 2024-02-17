@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mssql-config
+data:
+  mssql-service-url: mssql-clusterip-service
+  mssql-loadbalancer-url: mssql-loadbalancer
+  mssql-port: "1433"
+  mssql-password: cGE1NXcwcmQh
+  mssql-user: c2E=

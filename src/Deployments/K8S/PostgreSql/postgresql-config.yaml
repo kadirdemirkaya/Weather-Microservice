@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgresql-credentials
+data:
+  POSTGRES_USER: postgresql
+  POSTGRES_PASSWORD: "123"

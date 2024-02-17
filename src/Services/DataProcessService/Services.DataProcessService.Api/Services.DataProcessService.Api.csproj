@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>04bf9ad7-61a2-4282-ab99-c01ed07b34c4</UserSecretsId>
+	  <DockerfileTag>dataprocessservis:7.0</DockerfileTag>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..</DockerfileContext>
   </PropertyGroup>

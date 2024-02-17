@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clientandserver-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clientandserver
+  template:
+    metadata:
+      labels:
+        app: clientandserver
+    spec:
+      containers:
+        - name: clientandserver
+          image: clientandserverservis:2.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clientandserver-clusterip-service
+spec:
+  type: ClusterIP
+  selector:
+    app: clientandserver
+  ports:
+    - name: clientandserver
+      protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clientandserver-loadbalancer-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: clientandserver
+  ports:
+    - name: clientandserver
+      protocol: TCP
+      port: 80
+      targetPort: 80

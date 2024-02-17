@@ -177,3 +177,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInf
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService.Api\bin\Debug\net7.0\Grpc.Net.Client.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService.Api\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService.Api\bin\Debug\net7.0\Grpc.Net.Common.dll
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\UserInfoService\Services.UserInfoService.Api\obj\Debug\net7.0\Services.UserInfoService.Api.sourcelink.json

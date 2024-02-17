@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgresql-volume
+data:
+  postgresql-init-script.sh: |
+    #!/bin/bash
+    set -e
+
+    DATA_DIRECTORY="/var/lib/postgresql/data"
+
+    mkdir -p "$DATA_DIRECTORY"
+
+    if [ ! "$(ls -A "$DATA_DIRECTORY")" ]; then

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-config
+data:
+  mongodb-init-script.sh: |
+    #!/bin/bash
+    echo "Starting MongoDB..."
+    exec mongod --fork --logpath /var/log/mongodb.log --dbpath /data/db

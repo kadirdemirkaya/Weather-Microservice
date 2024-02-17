@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rabbitmq-config
+data:
+  rabbitmq-host: rabbitmq-clusterip-service
+  rabbitmq-port: "5672"

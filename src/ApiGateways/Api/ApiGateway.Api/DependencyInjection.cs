@@ -8,10 +8,10 @@ namespace ApiGateway.Api
         {
             services.ConsulServiceRegistration()
                     .ControllerServiceRegistration()
-                    .CorsServiceRegistration()
                     .HealthCheckServiceRegistration()
                     .SessionServiceRegistration()
-                    .SwaggerServiceRegistration();
+                    .SwaggerServiceRegistration()
+                    .CorsServiceRegistration();
 
             return services;
         }

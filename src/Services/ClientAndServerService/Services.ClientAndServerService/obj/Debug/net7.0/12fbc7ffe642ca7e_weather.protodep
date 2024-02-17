@@ -1,2 +1,0 @@
-obj\Debug\net7.0\Protos/Weather.cs \
-obj\Debug\net7.0\Protos/WeatherGrpc.cs: Protos/weather.proto

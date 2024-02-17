@@ -150,3 +150,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientA
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService.Api\obj\Debug\net7.0\Services.ClientAndServerService.Api.genruntimeconfig.cache
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService.Api\obj\Debug\net7.0\ref\Services.ClientAndServerService.Api.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService.Api\obj\Debug\net7.0\Services.ClientAndServerService.Api.sourcelink.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\ClientAndServerService\Services.ClientAndServerService.Api\bin\Debug\net7.0\appsettings.Production.json

@@ -132,7 +132,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.ClientAndServerSer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.ClientAndServerService", "src\Services\ClientAndServerService\Services.ClientAndServerService\Services.ClientAndServerService.csproj", "{32430B6B-6593-45B0-956D-F20FB2841828}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway.Api", "src\ApiGateways\Api\ApiGateway.Api\ApiGateway.Api.csproj", "{E6496408-0E95-4FD8-BB7F-20B84CABA2E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Api", "src\ApiGateways\Api\ApiGateway.Api\ApiGateway.Api.csproj", "{E6496408-0E95-4FD8-BB7F-20B84CABA2E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MsSql", "MsSql", "{09B0529D-D651-4E36-A828-5A8FD55A73D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -318,6 +320,7 @@ Global
 		{0063A29D-9C06-4482-A7AD-E96D16142725} = {E212582E-BB1E-4964-9D06-281A7F32789D}
 		{32430B6B-6593-45B0-956D-F20FB2841828} = {E212582E-BB1E-4964-9D06-281A7F32789D}
 		{E6496408-0E95-4FD8-BB7F-20B84CABA2E7} = {A8C7F799-C517-4373-8633-5D360404588F}
+		{09B0529D-D651-4E36-A828-5A8FD55A73D8} = {C4EB6F8B-D455-4673-AA69-4872C6F1E64A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {612F3A74-208C-4793-9455-5A154CEE7BAC}

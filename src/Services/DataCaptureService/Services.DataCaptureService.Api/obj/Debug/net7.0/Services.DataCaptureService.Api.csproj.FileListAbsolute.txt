@@ -163,3 +163,4 @@ C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCap
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService.Api\bin\Debug\net7.0\BuildingBlock.HealthCheck.dll
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService.Api\bin\Debug\net7.0\BuildingBlock.HealthCheck.pdb
 C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService.Api\obj\Debug\net7.0\Services.DataCaptureService.Api.sourcelink.json
+C:\Users\Casper\Desktop\GitHub Projects\WeatherMicroservice\src\Services\DataCaptureService\Services.DataCaptureService.Api\bin\Debug\net7.0\appsettings.Production.json

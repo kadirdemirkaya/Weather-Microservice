@@ -1,3 +1,28 @@
+//{
+//  "Routes": [
+//    {
+//      "UseServiceDiscovery": true,
+//      "ServiceName": "ClientAndServerService",
+
+//      "DownstreamPathTemplate": "/api/ClientAndServer/{everything}",
+//      "DownstreamScheme": "https",
+//      "UpstreamPathTemplate": "/ClientAndServer/{everything}",
+//      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+//      "UpstreamScheme": "https"
+//    }
+//  ],
+//  "GlobalConfiguration": {
+//    "BaseUrl": "https://localhost:7100",
+//    "ServiceDiscoveryProvider": {
+//      "Host": "localhost",
+//      "Port": 8500,
+//      "Type": "Consul"
+//    }
+//  }
+//}
+
+
+
 {
   "Routes": [
     {
@@ -12,9 +37,9 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7101",
+    "BaseUrl": "http://localhost:5018",
     "ServiceDiscoveryProvider": {
-      "Host": "localhost",
+      "Host": "http://localhost:5018",
       "Port": 8500,
       "Type": "Consul"
     }

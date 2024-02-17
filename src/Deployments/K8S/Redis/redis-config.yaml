@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+data:
+  redis-host: redis-clusterip-service
+  redis-port: "6379"
+  redis.conf: |
+    requirepass 12345
+    appendonly yes

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Services.DataCaptureService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a28975ace65933ccdbd7ecb7f5c7ee25b3730ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e36ca5c8d061e801ec70823647d1e55b410b6c8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Services.DataCaptureService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Services.DataCaptureService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
