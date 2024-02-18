@@ -7,6 +7,8 @@ using Services.ClientAndServerService.Features.User.Commands.UserRegister;
 using Services.ClientAndServerService.Features.Weather.Queries.AirPollutionWeather;
 using Services.ClientAndServerService.Features.Weather.Queries.CurrentWeather;
 using Services.ClientAndServerService.Features.Weather.Queries.DailyWeather;
+using Services.ClientAndServerService.Models;
+using System.Net;
 
 namespace Services.ClientAndServerService.Api.Controllers
 {
@@ -22,6 +24,8 @@ namespace Services.ClientAndServerService.Api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [Route("ClientAndServer/Server/User/User-Register")]
         public async Task<IActionResult> UserRegister([FromBody] UserRegisterModelDto userRegisterModelDto)
         {
@@ -31,6 +35,8 @@ namespace Services.ClientAndServerService.Api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(UserLoginResponseModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [Route("ClientAndServer/Server/User/User-Login")]
         public async Task<IActionResult> UserLogin([FromBody] UserLoginModelDto userLoginModelDto)
         {
@@ -40,6 +46,8 @@ namespace Services.ClientAndServerService.Api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [Route("ClientAndServer/Server/User/User-Logout")]
         public async Task<IActionResult> UserLogout()
         {
@@ -56,6 +64,8 @@ namespace Services.ClientAndServerService.Api.Controllers
 
 
         [HttpGet]
+        [ProducesResponseType(typeof(CurrentWeatherModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [Route("ClientAndServer/Server/Weather/Current-Weather")]
         public async Task<IActionResult> CurrentWeather([FromQuery] string city)
         {
@@ -65,6 +75,8 @@ namespace Services.ClientAndServerService.Api.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(DailyWeatherDataModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [Route("ClientAndServer/Server/Weather/Daily-Weather")]
         public async Task<IActionResult> DailyWeather([FromQuery] string city)
         {
@@ -74,6 +86,8 @@ namespace Services.ClientAndServerService.Api.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(AirPollutionModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [Route("ClientAndServer/Server/Weather/Air-Pollution-Weather")]
         public async Task<IActionResult> AirPollutionWeather([FromQuery] string city)
         {

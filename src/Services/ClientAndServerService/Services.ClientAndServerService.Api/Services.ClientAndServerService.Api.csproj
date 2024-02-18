@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>7e4cbab9-4e85-498d-b579-23567e2df4fd</UserSecretsId>
-	<DockerfileTag>clientandserverservis:2.0</DockerfileTag>
+	<DockerfileTag>clientandserverservis:3.0</DockerfileTag>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..</DockerfileContext>
   </PropertyGroup>

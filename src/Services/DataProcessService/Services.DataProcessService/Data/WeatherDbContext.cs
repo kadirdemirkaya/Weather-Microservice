@@ -29,7 +29,7 @@ namespace Services.DataProcessService.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;port=5432;Database=WeatherDbContext;User Id=postgres;Password=123");
+            optionsBuilder.UseNpgsql("Server=postgresql-clusterip-service;port=5433;Database=WeatherDbContext;User Id=postgresql;Password=123");
             base.OnConfiguring(optionsBuilder);
         }
 

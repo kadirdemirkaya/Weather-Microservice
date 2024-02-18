@@ -1,3 +1,62 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: mongodb-deployment
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: mongodb
+#   template:
+#     metadata:
+#       labels:
+#         app: mongodb
+#     spec:
+#       containers:
+#         - name: mongodb
+#           image: mongo
+#           ports:
+#             - containerPort: 27017
+#           volumeMounts:
+#             - name: mongodb-data
+#               mountPath: /data/db
+#             - name: mongodb-init-script
+#               mountPath: /docker-entrypoint-initdb.d/mongodb-init-script.sh
+#               subPath: mongodb-init-script.sh
+#               readOnly: true
+#       volumes:
+#         - name: mongodb-data
+#           emptyDir: {}
+#         - name: mongodb-init-script
+#           configMap:
+#             name: mongodb-config
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: mongodb-clusterip-service
+# spec:
+#   type: ClusterIP
+#   selector:
+#     app: mongodb
+#   ports:
+#     - protocol: TCP
+#       port: 27018
+#       targetPort: 27017
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: mongodb-loadbalancer-service
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     app: mongodb
+#   ports:
+#     - protocol: TCP
+#       port: 27018
+#       targetPort: 27017
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,6 +83,13 @@ spec:
               mountPath: /docker-entrypoint-initdb.d/mongodb-init-script.sh
               subPath: mongodb-init-script.sh
               readOnly: true
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "1000m"
+            limits:
+              memory: "4Gi"
+              cpu: "2000m"
       volumes:
         - name: mongodb-data
           emptyDir: {}
@@ -34,9 +100,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  type: ClusterIP
   name: mongodb-clusterip-service
 spec:
+  type: ClusterIP
   selector:
     app: mongodb
   ports:

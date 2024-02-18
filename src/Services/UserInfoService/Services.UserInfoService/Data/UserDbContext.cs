@@ -22,7 +22,7 @@ namespace Services.UserInfoService.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=UserInfoDbContext;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(GetConfigs.GetDatabaseConfig().ConnectionString.ToString());
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

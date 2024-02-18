@@ -1,7 +1,7 @@
 ﻿using BuildingBlock.Base.Abstractions;
 using MediatR;
-using Services.LocationService.Aggregate;
 using Services.LocationService.Aggregate.ValueObjects;
+using Services.LocationService.Aggregate;
 
 namespace Services.LocationService.Features.Queries.Location.DailyWeather
 {

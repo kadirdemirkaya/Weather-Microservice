@@ -10,7 +10,7 @@ namespace Services.UserInfoService
         public UserDbContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<UserDbContext> dbContextOptionsBuilder = new();
-            dbContextOptionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=UserInfoDbContext;Trusted_Connection=True;");
+            dbContextOptionsBuilder.UseSqlServer(GetConfigs.GetDatabaseConfig().ConnectionString.ToString());
             return new(dbContextOptionsBuilder.Options);
         }
     }

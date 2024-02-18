@@ -9,7 +9,7 @@ namespace Services.DataProcessService
         public WeatherDbContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<WeatherDbContext> dbContextOptionsBuilder = new();
-            dbContextOptionsBuilder.UseNpgsql("Server=localhost;port=5432;Database=WeatherDbContext;User Id=postgres;Password=123");
+            dbContextOptionsBuilder.UseNpgsql("Server=postgresql-clusterip-service;port=5433;Database=WeatherDbContext;User Id=postgresql;Password=123");
             return new(dbContextOptionsBuilder.Options);
         }
     }
