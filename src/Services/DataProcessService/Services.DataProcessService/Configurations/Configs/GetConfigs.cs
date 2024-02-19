@@ -1,6 +1,5 @@
 ﻿using BuildingBlock.Base.Configs;
 using BuildingBlock.Base.Enums;
-using BuildingBlock.Base.Options;
 using Microsoft.Extensions.Configuration;
 
 namespace Services.DataProcessService.Configurations.Configs

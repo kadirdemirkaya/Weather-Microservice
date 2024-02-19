@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Services.DataProcessService.Configurations.Configs;
 using Services.DataProcessService.Data;
 using Services.DataProcessService.Registrations;
 
@@ -11,7 +12,6 @@ namespace Services.DataProcessService
     {
         public static IServiceCollection DataProcessServiceRegistration(this IServiceCollection services, IConfiguration configuration)
         {
-
             services.DatabaseServiceRegistration(configuration)
                     .MapperServiceRegistration()
                     .MediatrServiceRegistration()

@@ -11,3 +11,6 @@
 /src/Services/DataProcessService/Services.DataProcessService/Migrations/*
 /src/Services/LocationService/Services.LocationService/Migrations/*
 /src/Services/UserInfoService/Services.UserInfoService/Migrations/*
+/src/Tests/BuildingBlockTest/BBlockTest/Migrations/WeatherDb/*
+/src/Tests/BuildingBlockTest/BBlockTest/Migrations/*
+/src/ApiGateways/Api/ApiGateway.Api/Logs/*

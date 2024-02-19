@@ -1,5 +1,5 @@
 ﻿using BuildingBlock.Base.Abstractions;
-using BuildingBlock.Base.Concrete;
+using BuildingBlock.Base.Concretes;
 using Microsoft.Extensions.DependencyInjection;
 using Services.ClientAndServerService.Abstractions;
 using Services.ClientAndServerService.Services.Grpc;

@@ -1,5 +1,5 @@
 ﻿using BuildingBlock.Base.Abstractions;
-using BuildingBlock.Base.Concrete;
+using BuildingBlock.Base.Concretes;
 using BuildingBlock.Base.Extensions;
 using BuildingBlock.Base.Options;
 using BuildingBlock.Redis;

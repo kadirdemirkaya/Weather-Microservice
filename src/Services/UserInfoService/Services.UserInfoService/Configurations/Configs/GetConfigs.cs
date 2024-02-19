@@ -26,17 +26,6 @@ namespace Services.UserInfoService.Configurations.Configs
         {
             IConfiguration _configuration = GetConfiguration();
 
-            #region docker .env, get configuration
-            //return new()
-            //{
-            //    ConnectionString = _configuration["ConnectionUrl"],
-            //    DatabaseName = _configuration["DatabaseName"],
-            //    DatabaseType = BuildingBlock.Base.Enums.DatabaseType.Mongo,
-            //    TableName = _configuration["TableName"],
-            //    RetryCount = 5
-            //};
-            #endregion
-
             return new()
             {
                 ConnectionString = _configuration["DatabaseOptions:ConnectionUrl"],

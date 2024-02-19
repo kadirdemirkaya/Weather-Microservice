@@ -74,8 +74,10 @@ namespace Services.DataCaptureService.Services.Background
                         }
                     }
                 }
+                #region test code
                 //string responseContent = Constant.Urls.exampleCurrentData;
                 //await _mediator.Send(new CurrentWeatherCommandRequest(responseContent));
+                #endregion
             }
         }
         public List<LatAndLotModel> GetLatAndLotModels()

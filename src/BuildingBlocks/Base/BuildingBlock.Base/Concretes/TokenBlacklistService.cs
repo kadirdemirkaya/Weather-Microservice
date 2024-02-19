@@ -1,6 +1,6 @@
 ﻿using BuildingBlock.Base.Abstractions;
 
-namespace BuildingBlock.Base.Concrete
+namespace BuildingBlock.Base.Concretes
 {
     public class TokenBlacklistService : ITokenBlacklistService
     {

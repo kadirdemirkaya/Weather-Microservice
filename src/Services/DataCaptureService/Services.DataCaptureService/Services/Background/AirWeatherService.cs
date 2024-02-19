@@ -73,9 +73,11 @@ namespace Services.DataCaptureService.Services.Background
                         await Console.Out.WriteLineAsync("Failed to get response from the server. Status code: " + response.StatusCode);
                     }
                 }
+                #region test code
                 //string responseContent = Constant.Urls.exampleAirData;
                 //await _mediator.Send(new AirWeatherCommandRequest(responseContent));
                 //}
+                #endregion
             }
         }
 

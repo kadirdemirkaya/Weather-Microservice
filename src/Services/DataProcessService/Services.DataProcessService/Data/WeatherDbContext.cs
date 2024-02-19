@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BuildingBlock.Base.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using Services.DataProcessService.Aggregate;
 using Services.DataProcessService.Aggregate.Air;
 using Services.DataProcessService.Aggregate.Air.Entities;
 using Services.DataProcessService.Aggregate.Current.Entities;
 using Services.DataProcessService.Aggregate.Daily;
 using Services.DataProcessService.Aggregate.Daily.Entities;
+using Services.DataProcessService.Configurations.Configs;
 
 namespace Services.DataProcessService.Data
 {
@@ -29,12 +31,13 @@ namespace Services.DataProcessService.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=postgresql-clusterip-service;port=5433;Database=WeatherDbContext;User Id=postgresql;Password=123");
+            optionsBuilder.UseNpgsql(GetConfigs.GetDatabaseConfig().ConnectionString.ToString());
             base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Ignore<List<IDomainEvent>>();
             modelBuilder.ApplyConfigurationsFromAssembly(AssemblyReference.Assembly);
             base.OnModelCreating(modelBuilder);
         }

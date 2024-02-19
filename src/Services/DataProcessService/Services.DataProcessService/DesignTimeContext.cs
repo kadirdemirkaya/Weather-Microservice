@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Services.DataProcessService.Configurations.Configs;
 using Services.DataProcessService.Data;
 
 namespace Services.DataProcessService
@@ -9,7 +10,7 @@ namespace Services.DataProcessService
         public WeatherDbContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<WeatherDbContext> dbContextOptionsBuilder = new();
-            dbContextOptionsBuilder.UseNpgsql("Server=postgresql-clusterip-service;port=5433;Database=WeatherDbContext;User Id=postgresql;Password=123");
+            dbContextOptionsBuilder.UseNpgsql(GetConfigs.GetDatabaseConfig().ConnectionString.ToString());
             return new(dbContextOptionsBuilder.Options);
         }
     }

@@ -34,7 +34,6 @@ namespace BuildingBlock.Redis
 
         public RedisRepository(IServiceProvider serviceProvider, IConfiguration configuration)
         {
-            //inMemoryOptions = configuration.GetSection(nameof(InMemoryOptions)).Get<InMemoryOptions>();
             inMemoryOptions = configuration.GetOptions<InMemoryOptions>(nameof(InMemoryConfig));
 
             if (inMemoryOptions.Connection != null)

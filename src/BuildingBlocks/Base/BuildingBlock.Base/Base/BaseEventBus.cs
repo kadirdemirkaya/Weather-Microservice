@@ -45,7 +45,7 @@ namespace BuildingBlock.Base.Base
 
         public async Task<bool> ProcessEvent(string eventName, string message)
         {
-            eventName = ProcessEventName(eventName); //Trim isim al
+            eventName = ProcessEventName(eventName); 
 
             var processed = false;
 

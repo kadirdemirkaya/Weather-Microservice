@@ -103,12 +103,7 @@ namespace BuildingBlock.PostgreSql
                 policy.Execute(() =>
                 {
                     #region
-                    //using (SqlConnection connection = new SqlConnection(_connectionString))
-                    //{
-                    //    connection.Open();
-                    //    connection.StateChange += Connection_StateChange;
-                    //    return true;
-                    //}
+                    //to do
                     #endregion
                 });
 

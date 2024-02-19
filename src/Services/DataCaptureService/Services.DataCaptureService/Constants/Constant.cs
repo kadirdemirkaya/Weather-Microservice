@@ -11,7 +11,6 @@
 
         public static class Urls
         {
-
             public const string currentUrl = $"https://api.openweathermap.org/data/2.5/weather?lat=41.16343020&lon=28.76644080&appid={"APIKEY"}";
             public const string dailyUrl = $"https://api.openweathermap.org/data/2.5/forecast?lat=41.16343020&lon=28.76644080&appid={"APIKEY"}";
             public const string airUrl = $"http://api.openweathermap.org/data/2.5/air_pollution?lat=41.16343020&lon=28.76644080&appid={"APIKEY"}";

@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace BBlockTest
 {
+    #region sql design time
     //public class DesignTimeContext : IDesignTimeDbContextFactory<ProductDbContext>
     //{
     //    public ProductDbContext CreateDbContext(string[] args)
@@ -15,6 +16,7 @@ namespace BBlockTest
     //        return new(dbContextOptionsBuilder.Options);
     //    }
     //}
+    #endregion
 
     public class DesignTimeContext2 : IDesignTimeDbContextFactory<WeatherDbContext>
     {

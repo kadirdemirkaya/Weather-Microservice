@@ -63,7 +63,7 @@ namespace BuildingBlock.Jwt
 
             if (emailClaim != null)
             {
-                #region procedure get 
+                #region get procedure  
                 //var user = await _dapperService.GetEntityStoredProcedure(BuildingBlock.Dapper.Constant.ProcedureNames.GetUserByEmail, GetDynamicParametersForUser(emailClaim.Value));
 
                 //return new() { Email = user.Email, FullName = user.FullName, Id = user.Id.Id };
@@ -154,7 +154,7 @@ namespace BuildingBlock.Jwt
 
             if (emailClaim != null)
             {
-                #region procedure get
+                #region get procedure 
                 //var user = await _dapperService.GetEntityStoredProcedure(BuildingBlock.Dapper.Constant.ProcedureNames.GetUserByEmail, GetDynamicParametersForUser(emailClaim.Value));
 
                 //return new() { Email = user.Email, FullName = user.FullName, Id = user.Id.Id };

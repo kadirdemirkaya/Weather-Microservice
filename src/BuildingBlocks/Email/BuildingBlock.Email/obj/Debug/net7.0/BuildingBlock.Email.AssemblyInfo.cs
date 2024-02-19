@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildingBlock.Email")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95226471a4c4921c6e0d8dc848fe826b83bc59aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8d8c8f3d64c63b6306fb4e227df0ee933fb11ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildingBlock.Email")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildingBlock.Email")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

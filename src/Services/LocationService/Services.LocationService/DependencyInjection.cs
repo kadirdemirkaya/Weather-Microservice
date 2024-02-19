@@ -11,8 +11,6 @@ namespace Services.LocationService
         public static IServiceCollection LocationServiceRegistration(this IServiceCollection services, IConfiguration configuration)
         {
             var config = GetConfigs.GetDatabaseConfig();
-            Console.WriteLine("MONGODB URL --------------------=> " + config.ConnectionString);
-            Serilog.Log.Warning("MONGODB URL --------------------=> " + config.ConnectionString);
 
             services.SetupServiceRegistration()
                     .RepositoryServiceRegistration()
@@ -29,10 +27,6 @@ namespace Services.LocationService
 
         public static WebApplicationBuilder LocationServiceBuilderRegistration(this WebApplicationBuilder builder, IConfiguration configuration)
         {
-            var config = GetConfigs.GetDatabaseConfig();
-            Console.WriteLine("MONGODB URL --------------------=> " + config.ConnectionString);
-            Serilog.Log.Warning("MONGODB URL --------------------=> " + config.ConnectionString);
-
             builder.LoggerServiceRegistration(configuration);
 
             return builder;

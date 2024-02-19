@@ -18,8 +18,6 @@ namespace Services.UserInfoService.Services
 
         public async Task<Role> GetUserRole(UserId Id)
         {
-            //var role = await _unitOfWork.GetReadRepository<RoleUser, RoleUserId>().GetAsync(r => r.UserId == Id);
-            //return await _unitOfWork.GetReadRepository<Role, RoleId>().GetAsync(r => r.Id == role.RoleId);
             var role = await _unitOfWork.GetReadRepository<RoleUser, RoleUserId>().GetAsync(ru => ru.UserId == Id, true, ru => ru.Role);
             return role.Role;
         }
