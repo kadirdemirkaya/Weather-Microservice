@@ -38,7 +38,7 @@ Message Broker: RabbitMQ is a message broker and manages communication between m
 
 Docker + K8S: Docker allows each microservice to be run in a separate container. This allows each microservice to be deployed and scaled independently. K8S (Kubernetes) provides the management and coordination of these containers.
 
-Http + Grpc: While HTTP provides text-based exchange of information between client and server, gRPC runs on HTTP/2 and exchanges data with low latency and high efficiency using Protobuf.
+HTTP + gRPC: While HTTP provides text-based exchange of information between client and server, gRPC runs on HTTP/2 and exchanges data with low latency and high efficiency using Protobuf.
 
 #### Services
 
