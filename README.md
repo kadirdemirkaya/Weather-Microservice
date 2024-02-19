@@ -9,16 +9,18 @@ The CQRS model also includes background services and event-based messaging tools
 - Postman
 - Ef Core
 - Swagger
--Visual Studio
--MediatR
+- Visual Studio
+- MediatR
 - Serilog
 - MongoDB
 - PostgreSql
 - MsSql
--RabbitMQ
+- Grpc
+- RabbitMQ
 - Serilog
+- HealthCheck
 - Redis
--Ocelot
+- Ocelot
 - Mapper
 
 
