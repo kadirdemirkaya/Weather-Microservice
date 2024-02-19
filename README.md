@@ -42,6 +42,8 @@ HTTP + gRPC: While HTTP provides text-based exchange of information between clie
 
 #### Services
 
+- ApiGateway.Api : It does the job of redirecting external requests to my ClientAndServerService
+
 - ClientAndServerService: It is a service that communicates with other services. It communicates with all services itself and the Client takes care of this.
 
 - UserInfoService: It is a service that contains user transactions.
