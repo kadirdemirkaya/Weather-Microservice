@@ -67,7 +67,9 @@ If you want to start the project directly, you can apply the docker-compose file
 
 ![Screenshot 2024-02-19 191048](https://github.com/kadirdemirkaya/WeatherMicroservice/assets/126807887/c83a55c3-ed97-4b31-ba8e-e803e56cf560)
 
-You can get it up and running via kubernetes without needing any changes. Services should look like in the picture.
+You can stand it up via kubernetes without needing any changes and you need to execute the command below. The services should look like the picture.
+
+- kubectl apply -f '.yml PATH'
 
 ![Ekran görüntüsü 2024-02-19 135413](https://github.com/kadirdemirkaya/WeatherMicroservice/assets/126807887/7df27ef7-3ed6-46ab-b327-93f549104a13)
 
