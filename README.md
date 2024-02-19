@@ -5,7 +5,7 @@ The CQRS model also includes background services and event-based messaging tools
 ### Technologies and Libraries
 
 - .NET 7
-- ASP.NET API
+- ASP.NET Core API
 - Postman
 - Ef Core
 - Swagger
