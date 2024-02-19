@@ -1,7 +1,8 @@
 
 # WeatherMicroservice
 
-The CQRS model also includes background services and event-based messaging tools, caching, etc. The general content of this project is a microservice project that provides weather information based on location.
+The CQRS model also includes background services and event-based messaging tools, caching, etc. The general content of this project is a microservice project that provides weather information based on location.Weather information is taken from the OpenWeather website.
+
 ### Technologies and Libraries
 
 - .NET 7
@@ -22,7 +23,6 @@ The CQRS model also includes background services and event-based messaging tools
 - Redis
 - Ocelot
 - Mapper
-
 
 ### Architectural
 
