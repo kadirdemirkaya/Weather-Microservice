@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildingBlock.Dapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76a30720bc78306fdcfa3873ed6d75159d65ffc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3489f4bccf2923d974b202b32764d9adfc2f1df")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildingBlock.Dapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildingBlock.Dapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

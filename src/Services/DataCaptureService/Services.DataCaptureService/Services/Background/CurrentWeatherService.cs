@@ -90,9 +90,5 @@ namespace Services.DataCaptureService.Services.Background
             return latAndLotModels;
         }
     }
-    //public static double FahrenheitToCelsius(double fahrenheit)
-    //{
-    //    return (fahrenheit - 32) * 5 / 9;
-    //}
 }
 

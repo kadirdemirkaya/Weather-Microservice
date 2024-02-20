@@ -89,9 +89,5 @@ namespace Services.DataCaptureService.Services.Background
             latAndLotModels.Add(new() { City = "Antalya", Lat = 36.9081, Lot = 30.6956 });
             return latAndLotModels;
         }
-        //public static double FahrenheitToCelsius(double fahrenheit)
-        //{
-        //    return (fahrenheit - 32) * 5 / 9;
-        //}
     }
 }
