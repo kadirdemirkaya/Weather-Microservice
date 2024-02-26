@@ -63,6 +63,8 @@ You can run it via Terminal.
 
 Apart from the technologies used in the project, server etc. If used, changes must be made to the .json extension files of the projects.
 
+The data capture service must be entered in the background services and you must add an APIKEY with the key you obtained from the OpenWeather site.
+
 If you want to start the project directly, you can apply the docker-compose file, the values ​​will be ready and you should see the services as in the picture.
 
 - docker-compose up -d
