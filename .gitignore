@@ -35,17 +35,5 @@ msbuild.log
 msbuild.err
 msbuild.wrn
 
-/.vs
-/src/Services/ClientAndServerService/Services.ClientAndServerService.Api/Logs/*
-/src/Services/DataCaptureService/Services.DataCaptureService.Api/Logs/*
-/src/Services/DataProcessService/Services.DataProcessService.Api/Logs/*
-/src/Services/LocationService/Services.LocationService.Api/Logs/*
-/src/Services/UserInfoService/Services.UserInfoService.Api/Logs/*
-/src/Services/ClientAndServerService/Services.ClientAndServerService/Migrations/*
-/src/Services/DataCaptureService/Services.DataCaptureService/Migrations/*
-/src/Services/DataProcessService/Services.DataProcessService/Migrations/*
-/src/Services/LocationService/Services.LocationService/Migrations/*
-/src/Services/UserInfoService/Services.UserInfoService/Migrations/*
-/src/Tests/BuildingBlockTest/BBlockTest/Migrations/WeatherDb/*
-/src/Tests/BuildingBlockTest/BBlockTest/Migrations/*
-/src/ApiGateways/Api/ApiGateway.Api/Logs/*
+**/Logs/*
+**/Migrations/*
