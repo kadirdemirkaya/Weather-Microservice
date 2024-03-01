@@ -26,7 +26,7 @@ The CQRS model also includes background services and event-based messaging tools
 
 ### Architectural
 
- ![Screenshot 2024-02-19 174529](https://github.com/kadirdemirkaya/WeatherMicroservice/assets/126807887/5dd3fb35-7aa4-4706-ba78-19c91e055d92)
+ ![Sema](https://github.com/kadirdemirkaya/Weather-Microservice/assets/126807887/e94bbadb-21dc-49b5-bacc-16b037d00362)
 
  API Gateway: Ocelot and Nginx are tools that enable clients to connect to microservices.
 
@@ -69,11 +69,12 @@ If you want to start the project directly, you can apply the docker-compose file
 
 - docker-compose up -d
 
-![Screenshot 2024-02-19 191048](https://github.com/kadirdemirkaya/WeatherMicroservice/assets/126807887/c83a55c3-ed97-4b31-ba8e-e803e56cf560)
+![dck-dep](https://github.com/kadirdemirkaya/Weather-Microservice/assets/126807887/0867302e-60b3-465a-8c10-130feb8a6b80)
 
 You can stand it up via kubernetes without needing any changes and you need to execute the command below. The services should look like the picture.
 
 - kubectl apply -f '.yml PATH'
 
-![Ekran görüntüsü 2024-02-19 135413](https://github.com/kadirdemirkaya/WeatherMicroservice/assets/126807887/7df27ef7-3ed6-46ab-b327-93f549104a13)
+![kub-dep](https://github.com/kadirdemirkaya/Weather-Microservice/assets/126807887/6e7d9924-500e-463d-86a3-7f25517f9add)
+
 
