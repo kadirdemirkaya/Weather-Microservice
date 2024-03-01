@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Services.UserInfoService.Api.props" />
-</Project>

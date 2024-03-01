@@ -396,9 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-*.bin
-*.data
-*.obj
+
+/.bin/
+/.data/
+/.obj/
 
 **/Logs/*
 **/Migrations/*

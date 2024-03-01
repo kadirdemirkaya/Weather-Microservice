@@ -1,2 +1,0 @@
-obj\Debug\net7.0\Protos/Location.cs \
-obj\Debug\net7.0\Protos/LocationGrpc.cs: Protos/location.proto
