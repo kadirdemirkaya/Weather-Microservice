@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "C8FL6RhpJ5z/L4PfTTVsP5jSSjTjxvKNp/l4E0ObwQqQ3KTIjghk+PmeolqdygJhoQIkKKBnkPROO59gVIg8KA==",
+  "dgSpecHash": "lUOydoEIRaLA7RBbSQ7b+s55tBXU3ki0q+u3f11KRpRs7rA7rcFTWgoUqdB798Tm8iaPoLug8wFJo9h2TbWq8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mongo\\BuildingBlock.Mongo\\BuildingBlock.Mongo.csproj",
   "expectedPackageFiles": [

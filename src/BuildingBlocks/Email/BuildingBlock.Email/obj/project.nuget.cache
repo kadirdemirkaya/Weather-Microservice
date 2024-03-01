@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "To5At1JRYyTQfKkI4P7JevymHvXqKOTRSpZUZ1MlbethYzmIlrUFqKRdER050fQCPX8DYJWK+6h6YnJs5DKcLw==",
+  "dgSpecHash": "7h0xnOvPf+jnMQ2+59ZnXMJresP2c8nMadEbnXT/yzbTCD0EaE5C1ZxkvheAkPuQObShjxGvKQ0Wtb92qbowAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Email\\BuildingBlock.Email\\BuildingBlock.Email.csproj",
   "expectedPackageFiles": [

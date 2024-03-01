@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iUq070hjzTise2uq0pJztW2WXmg0gfjiPz/223N4cFjgUjc8LXzssz8hfpOHxWby30ecWsnWXI78BZ9CbJ28mg==",
+  "dgSpecHash": "M9tMK4jVIm5H6r5pLdEltEDdjU1fIivaJdw7UgqqOxuuOL48+UtKjOZVfEtMnAf/KZKM8miy0JV0U2r+CjblDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Redis\\BuildingBlock.Redis\\BuildingBlock.Redis.csproj",
   "expectedPackageFiles": [

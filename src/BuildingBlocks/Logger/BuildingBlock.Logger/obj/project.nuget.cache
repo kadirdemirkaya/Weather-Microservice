@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ivw3VgScuhOUCBBu+pVWLIK+zvhndZdddrl0QVqKtHcmioxkwhiDwbb5qHa0FbrSUhIyPUSG0iFA+rlTR7faMw==",
+  "dgSpecHash": "h/Rvt64k1qHvWUDGaymOWw0f8sf4CPpprRhZSdXXGDCwTCc57UOjBEcg+vdI55tf1hnYqQXBmdqfYe/qCdXOvA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Logger\\BuildingBlock.Logger\\BuildingBlock.Logger.csproj",
   "expectedPackageFiles": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hV66uCoWLmmDHyjxBrnYgf5CBY2rsytrrdlEAJQiTNZfbcMD8BoAOkBBZP24W+bes1+wHB7nfe3MEINZHjQqWQ==",
+  "dgSpecHash": "rxJrk0P91PsM7W07DKQKe6yc1vHO53zkzNUC2jBLVTBSsx3jbYpz8MT0uC2oGLhcsL/PlrO/W8xyG/lzTCIQHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Mapper\\BuildingBlock.Mapper\\BuildingBlock.Mapper.csproj",
   "expectedPackageFiles": [

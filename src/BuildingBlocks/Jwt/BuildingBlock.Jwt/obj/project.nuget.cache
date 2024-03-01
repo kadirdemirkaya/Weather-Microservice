@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/Z5xCVcZ8Ly32P9NC3s7dRbTQa9Yv5yPx7tf7QQRzTrGf8FhTVwUu4A5hMlQiy+9KvehntmdqfI0Ek7l0L3Xzw==",
+  "dgSpecHash": "rZTQSqDy46L888ypk9uv6AJamsYP19THkVLhbhy8a0q/LckIGCenXflnNgNVWiMg8p4NmcQAlVj7qKKct/BKZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Jwt\\BuildingBlock.Jwt\\BuildingBlock.Jwt.csproj",
   "expectedPackageFiles": [

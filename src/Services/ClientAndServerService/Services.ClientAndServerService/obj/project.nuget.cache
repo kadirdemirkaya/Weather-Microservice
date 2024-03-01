@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ieKZoSNqopa7MxBVCj34fXyxYacjPGqkqaa7j6H02NaSINEHmxUG6zQoYP/rn+jewcbYwdL185RBlUekSFTCHg==",
+  "dgSpecHash": "0u1Kzf/3AGxht110bnaXQwcQ4tjI+3NCZ2PscooyzWxFA6aq0ymwWxRnjhVe3DkkSH9lq5ldZmWpCHZOWHUivA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\Services\\ClientAndServerService\\Services.ClientAndServerService\\Services.ClientAndServerService.csproj",
   "expectedPackageFiles": [

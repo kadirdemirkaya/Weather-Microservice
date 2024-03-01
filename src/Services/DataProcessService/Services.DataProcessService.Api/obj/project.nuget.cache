@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oh+5EeIeuedGg8quG1cdK0+F5nY0Jqocw5YVksgKnm1kOKaj+YMs6pN52LYN5Y63cK45bzPm+DlnBUrvg4dhtA==",
+  "dgSpecHash": "1NqE0xzX5q9RsZy5ry3xPuEO64nzt1yUBNEP6fMdO1WChOYOFEzeiSK/6Q0VAOgpM8eLWVJodOv6SCVd4nFyzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\Services\\DataProcessService\\Services.DataProcessService.Api\\Services.DataProcessService.Api.csproj",
   "expectedPackageFiles": [

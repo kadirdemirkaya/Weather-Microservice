@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Bg/T78Y+0dQ+Dq+D7h37esprZQGIf1Ge8Sgv71aHZnfC+iB+ZzHYqg8IO4KDYksEiXUlXnLvWRcLPb+nzFjvdQ==",
+  "dgSpecHash": "1J0iUyejmflRLiVaaIMGrEeD+zkF0NVAcTFeV1RD/eJBcayKt57xYxB15wBTXMtwS/mgqFtzNeeZ+sBnVtgwYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Dapper\\BuildingBlock.Dapper\\BuildingBlock.Dapper.csproj",
   "expectedPackageFiles": [

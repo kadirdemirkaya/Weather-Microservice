@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/UrSULCjnV9HUverHlBwpeaq/bBy5CTmD4v5kn5FAeAk9zgq1XYN+2ao5FQlBjv55Zmg3oezx3P4kvsGrHQgjQ==",
+  "dgSpecHash": "vTf0hXWF2Kb6a0O0PUKNd+zKgjh/EgNOC9HmMxe5B059kZmYw31qrUXEiwnUJ5p1IGhh9Pf5/plFH8sWA/GWlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\MsSql\\BuildingBlock.MsSql\\BuildingBlock.MsSql.csproj",
   "expectedPackageFiles": [

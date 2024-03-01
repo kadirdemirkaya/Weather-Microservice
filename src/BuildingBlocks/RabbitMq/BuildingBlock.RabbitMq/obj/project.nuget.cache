@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jd8q1hdhvOqeCbGTmc/k7tmsyXwvW/ZvqhbXp4QwR87czFQ7NZA8fm1c+hyy2riuKwmh104NpxLBOmKw5fwfOA==",
+  "dgSpecHash": "gozr5iKjDeDez0YkejCUZIGEW8GOXv6oZjrRYVxilYguJ/ghkLXjmATmGHTZ5yHacpLacwr+q+iBet7+315oTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\RabbitMq\\BuildingBlock.RabbitMq\\BuildingBlock.RabbitMq.csproj",
   "expectedPackageFiles": [

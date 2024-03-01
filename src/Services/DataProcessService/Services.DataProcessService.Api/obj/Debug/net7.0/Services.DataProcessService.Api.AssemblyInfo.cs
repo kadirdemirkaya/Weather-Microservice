@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Services.DataProcessService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3489f4bccf2923d974b202b32764d9adfc2f1df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6406069edf7e118fcf927476dd37edba5e22d44")]
 [assembly: System.Reflection.AssemblyProductAttribute("Services.DataProcessService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Services.DataProcessService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

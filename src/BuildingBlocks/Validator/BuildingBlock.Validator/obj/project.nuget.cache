@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mKtu0ZBuqapLDV71OWxeTAcoqR3yHtrLR61P13ZmK2b6TUI9QOY36DJOqYfJ+p2TBI2C34zQCqAWi8+l1w2KCQ==",
+  "dgSpecHash": "s3fNcBRQwhfAZrC2gagQZi3ctgQ8nE58SFKwxb6tTYaYytIjfJxyQ50gZ1cv+8Cs/LPg0jgXwlD3bCy5IGvCcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\Validator\\BuildingBlock.Validator\\BuildingBlock.Validator.csproj",
   "expectedPackageFiles": [

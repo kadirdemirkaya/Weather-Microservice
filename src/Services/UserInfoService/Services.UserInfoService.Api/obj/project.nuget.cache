@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1f0XSq+Lz7dTR9ixNSVJsbqA6ttDG2SN7SuBry9F0HP3BkGfdECQz3lvSIaM0VSu9E60nCEcXwEE0Bmvn1kDvA==",
+  "dgSpecHash": "3V/p2dsRXa2/KP0zZuPAuCVd2cSDUnpJFM6kgPSoNGWf11ncSAhJDVFlApKm6b1MROlD9Fyv548ulBnrPSi/9w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\Services\\UserInfoService\\Services.UserInfoService.Api\\Services.UserInfoService.Api.csproj",
   "expectedPackageFiles": [

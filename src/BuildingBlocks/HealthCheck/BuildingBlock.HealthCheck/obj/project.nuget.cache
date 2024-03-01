@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q/uhI4R3js7b+IvEsIoh9mD6dgRD9FkgQ631hw1N7feR9Nn9YrlHtHxXFMRyXNZLPcnjUhu7GSn1QMoYMM6jaA==",
+  "dgSpecHash": "9qFzd9s6fqa9moJ34TWjYKH9p/nRXbII+IK+zJOUwKqXUllBIdFzYIFQ3+1sZGyexdLi4Y1to4dcrUTEJW/egQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\HealthCheck\\BuildingBlock.HealthCheck\\BuildingBlock.HealthCheck.csproj",
   "expectedPackageFiles": [

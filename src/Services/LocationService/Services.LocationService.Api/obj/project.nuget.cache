@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LPErEFlf5W6UeeLZK81GToDeFv+hgBzCOVSWKg/Tfw2vzKBU4pm5rKCPBfFNpgNvFwfC6Ozw+K4KIVOjvHON2g==",
+  "dgSpecHash": "os9ojiqYB8HaQvEOSJphy+wohAIXwdiqK+dhXL07gqyT0QJO4EFd2TbbdowEFzetja2M25dJyShGSJAiYdnkSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\Services\\LocationService\\Services.LocationService.Api\\Services.LocationService.Api.csproj",
   "expectedPackageFiles": [

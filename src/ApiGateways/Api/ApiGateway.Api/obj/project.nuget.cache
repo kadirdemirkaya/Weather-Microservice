@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vwUEAGap3r5FVCMlJYJzHrYWOW7cLQL9+/kHn9Tel7Ez7d6kRqBqHFwgY/OPdaQ+bZYU5oZONen2LrUWERvEcw==",
+  "dgSpecHash": "NIexI6+i8gnYYM+3iuKh2sJcXcDL3JG00mKzik0FvMbeKNHLfTWIN3eg1cMN8bLFb7MpBJa3yycoEzdiYsa4tQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\ApiGateways\\Api\\ApiGateway.Api\\ApiGateway.Api.csproj",
   "expectedPackageFiles": [

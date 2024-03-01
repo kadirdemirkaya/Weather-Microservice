@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M1IZzRpex2AMYesd5oYWSUrX0YXK/Y2Z0H9zumwupPBrDE8FSDnm8Xr1tpoYrUqt+CDObOlLpIdWZ7IjbI5P9Q==",
+  "dgSpecHash": "Fkghf8lf/iXCXAeAZNKl3m40YVYmRWZKkNvLRsYa5wI2cv4ia60ymiBGhMBQZ39wvoHpw7K98tkOPkUauNWA0g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\Tests\\BuildingBlockTest\\BBlockTest\\BBlockTest.csproj",
   "expectedPackageFiles": [

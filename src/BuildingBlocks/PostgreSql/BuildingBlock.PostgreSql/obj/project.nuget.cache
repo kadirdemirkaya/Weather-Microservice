@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "htjAVVYXw+3vkCHe3BNrFcO+FRCob15UsKwH2h7ltJddzYzJTWBc8YCahpM0zocPsJ+gG2LULvNJuaqQnmqkcQ==",
+  "dgSpecHash": "+W2S1l9B009RaW66WAhv93Amw9z0H5WGIBIPJVsEXR80UowP3hqAna8BaFIwjfPt+YL9TfIh/Ta66G00m++xMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\BuildingBlocks\\PostgreSql\\BuildingBlock.PostgreSql\\BuildingBlock.PostgreSql.csproj",
   "expectedPackageFiles": [

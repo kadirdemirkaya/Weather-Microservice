@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IdKrV5CkaZxJXQhDafD86ugiTjYMhjp5rP3qGU7+k6rPfdT8nFF2XMaVvAFCYlgOPZFqIb3q4t7ymWQsj+qNLg==",
+  "dgSpecHash": "rKb4nPNdHbJh9/AZoOncAlBsP1Gig0gHRqYgoGm6VYFXiLLE8SmuWfv714SyTymwg8/aWELRlvNlz5z2/HwfrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\Services\\DataCaptureService\\Services.DataCaptureService\\Services.DataCaptureService.csproj",
   "expectedPackageFiles": [

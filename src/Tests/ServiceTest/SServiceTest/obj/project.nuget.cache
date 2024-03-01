@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VvBlPV2uG1rqIgQcFSbl3CB/z2BpJp/MPUTusWO/AsBd1qiSGtUDyjwT68FrRJN8fLL/BaU8fvZpb7hsuYFoiA==",
+  "dgSpecHash": "jj0clQf2nge/pQ6/tTyGe0HFAv5jIOgBaa+P5TBStgb4LaOg8iSkJCGfMKWGZ/UdLbPZaHR9G6/OwMo4WXdubQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Casper\\Desktop\\GitHub Projects\\WeatherMicroservice\\src\\Tests\\ServiceTest\\SServiceTest\\SServiceTest.csproj",
   "expectedPackageFiles": [
