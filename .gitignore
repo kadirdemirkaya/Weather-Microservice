@@ -398,7 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 /.bin/
-/.data/
+/data/
 /.obj/
 
 **/Logs/*
